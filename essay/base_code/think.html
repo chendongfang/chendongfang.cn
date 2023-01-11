@@ -1,505 +1,320 @@
-
-<!DOCTYPE html>
-<html lang="zh-CN" class="no-js no-svg">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="https://gmpg.org/xfn/11">
-
-<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
-<title>编程思想 &#8211; 陈东方</title>
-<meta name='robots' content='max-image-preview:large' />
-<link rel="alternate" type="application/rss+xml" title="陈东方 &raquo; Feed" href="http://chendongfang.com/feed/" />
-<link rel="alternate" type="application/rss+xml" title="陈东方 &raquo; 评论Feed" href="http://chendongfang.com/comments/feed/" />
-<link rel="alternate" type="application/rss+xml" title="陈东方 &raquo; 编程思想评论Feed" href="http://chendongfang.com/%e7%bc%96%e7%a8%8b%e6%80%9d%e6%83%b3/feed/" />
-<script>
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/chendongfang.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1"}};
-/*! This file is auto-generated */
-!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
-</script>
-<style>
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 0.07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel='stylesheet' id='dashicons-css' href='http://chendongfang.com/wp-includes/css/dashicons.min.css?ver=6.1.1' media='all' />
-<link rel='stylesheet' id='admin-bar-css' href='http://chendongfang.com/wp-includes/css/admin-bar.min.css?ver=6.1.1' media='all' />
-<link rel='stylesheet' id='wp-block-library-css' href='http://chendongfang.com/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1' media='all' />
-<style id='wp-block-library-theme-inline-css'>
-.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:"0 0 1em 0"}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}
-</style>
-<link rel='stylesheet' id='classic-theme-styles-css' href='http://chendongfang.com/wp-includes/css/classic-themes.min.css?ver=1' media='all' />
-<style id='global-styles-inline-css'>
-body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
-:where(.wp-block-columns.is-layout-flex){gap: 2em;}
-.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
-</style>
-<link rel='stylesheet' id='twentyseventeen-style-css' href='http://chendongfang.com/wp-content/themes/twentyseventeen/style.css?ver=20201208' media='all' />
-<link rel='stylesheet' id='twentyseventeen-block-style-css' href='http://chendongfang.com/wp-content/themes/twentyseventeen/assets/css/blocks.css?ver=20190105' media='all' />
-<!--[if lt IE 9]>
-<link rel='stylesheet' id='twentyseventeen-ie8-css' href='http://chendongfang.com/wp-content/themes/twentyseventeen/assets/css/ie8.css?ver=20161202' media='all' />
-<![endif]-->
-<!--[if lt IE 9]>
-<script src='http://chendongfang.com/wp-content/themes/twentyseventeen/assets/js/html5.js?ver=20161020' id='html5-js'></script>
-<![endif]-->
-<script src='http://chendongfang.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
-<script src='http://chendongfang.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
-<link rel="https://api.w.org/" href="http://chendongfang.com/wp-json/" /><link rel="alternate" type="application/json" href="http://chendongfang.com/wp-json/wp/v2/posts/184" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://chendongfang.com/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://chendongfang.com/wp-includes/wlwmanifest.xml" />
-<meta name="generator" content="WordPress 6.1.1" />
-<link rel="canonical" href="http://chendongfang.com/%e7%bc%96%e7%a8%8b%e6%80%9d%e6%83%b3/" />
-<link rel='shortlink' href='http://chendongfang.com/?p=184' />
-<link rel="alternate" type="application/json+oembed" href="http://chendongfang.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fchendongfang.com%2F%25e7%25bc%2596%25e7%25a8%258b%25e6%2580%259d%25e6%2583%25b3%2F" />
-<link rel="alternate" type="text/xml+oembed" href="http://chendongfang.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fchendongfang.com%2F%25e7%25bc%2596%25e7%25a8%258b%25e6%2580%259d%25e6%2583%25b3%2F&#038;format=xml" />
-<link rel="pingback" href="http://chendongfang.com/xmlrpc.php">
-<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style media="print">#wpadminbar { display:none; }</style>
-	<style media="screen">
-	html { margin-top: 32px !important; }
-	@media screen and ( max-width: 782px ) {
-		html { margin-top: 46px !important; }
-	}
-</style>
-	<link rel="icon" href="http://chendongfang.com/wp-content/uploads/2021/01/logo-100x100.jpg" sizes="32x32" />
-<link rel="icon" href="http://chendongfang.com/wp-content/uploads/2021/01/logo.jpg" sizes="192x192" />
-<link rel="apple-touch-icon" href="http://chendongfang.com/wp-content/uploads/2021/01/logo.jpg" />
-<meta name="msapplication-TileImage" content="http://chendongfang.com/wp-content/uploads/2021/01/logo.jpg" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title>JAVA - 陈东方</title>
 </head>
+<body>
+      <style>
+    li{
+    list-style: none;
+    }
+    </style>
 
-<body class="post-template-default single single-post postid-184 single-format-standard logged-in admin-bar no-customize-support wp-embed-responsive has-header-image has-sidebar colors-light">
-	<script>
-		(function() {
-			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
 
-				request = true;
-	
-			b[c] = b[c].replace( rcs, ' ' );
-			// The customizer requires postMessage and CORS (if the site is cross domain).
-			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
-		}());
-	</script>
-			<div id="wpadminbar" class="nojq nojs">
-						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="工具栏">
-				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://chendongfang.com/wp-admin/about.php'><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">关于WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://chendongfang.com/wp-admin/about.php'>关于WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://cn.wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://cn.wordpress.org/support/'>文档</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://cn.wordpress.org/support/forums/'>支持</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://cn.wordpress.org/support/forum/suggestions/'>反馈</a></li></ul></div></li><li id='wp-admin-bar-site-name' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://chendongfang.com/wp-admin/'>陈东方</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-site-name-default' class="ab-submenu"><li id='wp-admin-bar-dashboard'><a class='ab-item' href='http://chendongfang.com/wp-admin/'>仪表盘</a></li></ul><ul id='wp-admin-bar-appearance' class="ab-submenu"><li id='wp-admin-bar-themes'><a class='ab-item' href='http://chendongfang.com/wp-admin/themes.php'>主题</a></li><li id='wp-admin-bar-widgets'><a class='ab-item' href='http://chendongfang.com/wp-admin/widgets.php'>小工具</a></li><li id='wp-admin-bar-menus'><a class='ab-item' href='http://chendongfang.com/wp-admin/nav-menus.php'>菜单</a></li><li id='wp-admin-bar-header' class="hide-if-customize"><a class='ab-item' href='http://chendongfang.com/wp-admin/themes.php?page=custom-header'>页眉</a></li></ul></div></li><li id='wp-admin-bar-customize' class="hide-if-no-customize"><a class='ab-item' href='http://chendongfang.com/wp-admin/customize.php?url=http%3A%2F%2Fchendongfang.com%2F%25e7%25bc%2596%25e7%25a8%258b%25e6%2580%259d%25e6%2583%25b3%2F'>自定义</a></li><li id='wp-admin-bar-updates'><a class='ab-item' href='http://chendongfang.com/wp-admin/update-core.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label" aria-hidden="true">8</span><span class="screen-reader-text updates-available-text">有 8 个更新可用</span></a></li><li id='wp-admin-bar-comments'><a class='ab-item' href='http://chendongfang.com/wp-admin/edit-comments.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text comments-in-moderation-text">0条评论待审</span></a></li><li id='wp-admin-bar-new-content' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://chendongfang.com/wp-admin/post-new.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label">新建</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-new-content-default' class="ab-submenu"><li id='wp-admin-bar-new-post'><a class='ab-item' href='http://chendongfang.com/wp-admin/post-new.php'>文章</a></li><li id='wp-admin-bar-new-media'><a class='ab-item' href='http://chendongfang.com/wp-admin/media-new.php'>媒体</a></li><li id='wp-admin-bar-new-page'><a class='ab-item' href='http://chendongfang.com/wp-admin/post-new.php?post_type=page'>页面</a></li><li id='wp-admin-bar-new-user'><a class='ab-item' href='http://chendongfang.com/wp-admin/user-new.php'>用户</a></li></ul></div></li><li id='wp-admin-bar-edit'><a class='ab-item' href='http://chendongfang.com/wp-admin/post.php?post=184&#038;action=edit'>编辑文章</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://chendongfang.com/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">搜索</label><input type="submit" class="adminbar-button" value="搜索" /></form></div></li><li id='wp-admin-bar-my-account' class="menupop with-avatar"><a class='ab-item' aria-haspopup="true" href='http://chendongfang.com/wp-admin/profile.php'>您好，<span class="display-name">admin</span><img alt='' src='http://0.gravatar.com/avatar/?s=26&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/?s=52&#038;d=mm&#038;r=g 2x' class='avatar avatar-26 photo avatar-default' height='26' width='26' loading='lazy' decoding='async'/></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-user-actions' class="ab-submenu"><li id='wp-admin-bar-user-info'><a class='ab-item' tabindex="-1" href='http://chendongfang.com/wp-admin/profile.php'><img alt='' src='http://2.gravatar.com/avatar/?s=64&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo avatar-default' height='64' width='64' loading='lazy' decoding='async'/><span class='display-name'>admin</span></a></li><li id='wp-admin-bar-edit-profile'><a class='ab-item' href='http://chendongfang.com/wp-admin/profile.php'>编辑个人资料</a></li><li id='wp-admin-bar-logout'><a class='ab-item' href='http://chendongfang.com/wp-login.php?action=logout&#038;_wpnonce=3cc301ecf6'>注销</a></li></ul></div></li></ul>			</div>
-						<a class="screen-reader-shortcut" href="http://chendongfang.com/wp-login.php?action=logout&#038;_wpnonce=3cc301ecf6">注销</a>
-					</div>
 
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content">跳至内容</a>
-
-	<header id="masthead" class="site-header" role="banner">
-
-		<div class="custom-header">
-
-		<div class="custom-header-media">
-			<div id="wp-custom-header" class="wp-custom-header"><img src="http://chendongfang.com/wp-content/uploads/2021/01/2.jpg" width="1280" height="853" alt="陈东方信息技术咨询工作室" srcset="http://chendongfang.com/wp-content/uploads/2021/01/2.jpg 1280w, http://chendongfang.com/wp-content/uploads/2021/01/2-300x200.jpg 300w, http://chendongfang.com/wp-content/uploads/2021/01/2-1024x682.jpg 1024w, http://chendongfang.com/wp-content/uploads/2021/01/2-768x512.jpg 768w" sizes="100vw" /></div>		</div>
-
-	<div class="site-branding">
-	<div class="wrap">
-
-		
-		<div class="site-branding-text">
-							<p class="site-title"><a href="http://chendongfang.com/" rel="home">陈东方</a></p>
-			
-							<p class="site-description">专注于互联网领域的科学技术与商业服务</p>
-					</div><!-- .site-branding-text -->
-
-		
-	</div><!-- .wrap -->
-</div><!-- .site-branding -->
-
-</div><!-- .custom-header -->
-
-					<div class="navigation-top">
-				<div class="wrap">
-					<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="顶部菜单">
-	<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
-		<svg class="icon icon-bars" aria-hidden="true" role="img"> <use href="#icon-bars" xlink:href="#icon-bars"></use> </svg><svg class="icon icon-close" aria-hidden="true" role="img"> <use href="#icon-close" xlink:href="#icon-close"></use> </svg>菜单	</button>
-
-	<div class="menu-%e8%8f%9c%e5%8d%95-container"><ul id="top-menu" class="menu"><li id="menu-item-223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-223"><a href="http://chendongfang.com/">首页</a></li>
-<li id="menu-item-457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-457"><a href="http://chendongfang.com/%e4%ba%a7%e5%93%81%e7%b3%bb%e5%88%97/">产品系列<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
-<ul class="sub-menu">
-	<li id="menu-item-300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-300"><a href="http://chendongfang.com/%e4%ba%a7%e5%93%81%e4%bb%8b%e7%bb%8d-%e4%bc%81%e4%b8%9a%e5%8a%9e%e5%85%ac%e8%87%aa%e5%8a%a8%e5%8c%96%e7%b3%bb%e7%bb%9foa/">产品系列-办公自动化OA</a></li>
-	<li id="menu-item-301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-301"><a href="http://chendongfang.com/%e4%ba%a7%e5%93%81%e4%bb%8b%e7%bb%8d-%e5%ae%a2%e6%88%b7%e5%85%b3%e7%b3%bb%e7%ae%a1%e7%90%86%e7%b3%bb%e7%bb%9fcrm/">产品系列-客户关系管理CRM</a></li>
-	<li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="http://chendongfang.com/%e5%8d%b3%e6%97%b6%e9%80%9a%e8%ae%afim/">产品系列-即时通讯IM</a></li>
-	<li id="menu-item-296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-296"><a href="http://chendongfang.com/%e4%ba%a7%e5%93%81%e4%bb%8b%e7%bb%8d-%e5%88%86%e9%94%80%e7%b3%bb%e7%bb%9fdms/">产品系列-分销系统DMS</a></li>
-	<li id="menu-item-298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-298"><a href="http://chendongfang.com/%e4%ba%a7%e5%93%81%e4%bb%8b%e7%bb%8d-%e7%94%9f%e4%ba%a7%e5%88%b6%e9%80%a0%e7%b3%bb%e7%bb%9fmes/">产品系列-生产制造MES</a></li>
-	<li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-299"><a href="http://chendongfang.com/%e4%ba%a7%e5%93%81%e4%bb%8b%e7%bb%8d-%e4%bc%81%e4%b8%9a%e7%ae%a1%e7%90%86%e7%b3%bb%e7%bb%9ferp/">产品系列-企业管理ERP</a></li>
-	<li id="menu-item-297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297"><a href="http://chendongfang.com/%e4%ba%a7%e5%93%81%e4%bb%8b%e7%bb%8d-%e5%9c%a8%e7%ba%bf%e5%95%86%e5%9f%8ees/">产品系列-在线商城ES</a></li>
-</ul>
-</li>
-<li id="menu-item-461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-461"><a href="http://chendongfang.com/%e9%a6%96%e9%a1%b5-%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88/">解决方案<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
-<ul class="sub-menu">
-	<li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334"><a href="http://chendongfang.com/%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88-%e8%bd%af%e4%bb%b6%e5%ae%9a%e5%88%b6%e6%9c%8d%e5%8a%a1/">解决方案-软件定制服务</a></li>
-	<li id="menu-item-314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-314"><a href="http://chendongfang.com/%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88-%e4%bc%81%e4%b8%9a%e6%8a%80%e6%9c%af%e9%a1%be%e9%97%ae%e4%b8%8e%e5%92%a8%e8%af%a2/">解决方案-技术顾问服务</a></li>
-	<li id="menu-item-313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313"><a href="http://chendongfang.com/%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88-%e4%bc%81%e4%b8%9a%e6%95%b0%e5%ad%97%e5%8c%96%e8%bd%ac%e5%9e%8b/">解决方案-企业数字化转型</a></li>
-</ul>
-</li>
-<li id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211"><a href="http://chendongfang.com/cust/">客户案例</a></li>
-<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-460"><a href="http://chendongfang.com/%e9%a6%96%e9%a1%b5-%e5%9f%b9%e8%ae%ad%e8%af%be%e7%a8%8b/">培训课程<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
-<ul class="sub-menu">
-	<li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="http://chendongfang.com/%e5%8d%b3%e6%97%b6%e9%80%9a%e4%bf%a1im%e5%ae%9e%e6%88%98/">培训课程-即时通信IM实战</a></li>
-	<li id="menu-item-277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-277"><a href="http://chendongfang.com/%e8%af%be%e7%a8%8b%e5%9f%b9%e8%ae%ad-%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84%e5%ae%9e%e6%88%98/">课程培训-系统架构实战</a></li>
-	<li id="menu-item-278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-278"><a href="http://chendongfang.com/%e5%9f%b9%e8%ae%ad%e8%af%be%e7%a8%8b-%e5%a4%a7%e6%95%b0%e6%8d%ae%e5%ae%9e%e6%88%98/">培训课程-大数据实战</a></li>
-	<li id="menu-item-276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a href="http://chendongfang.com/%e5%9f%b9%e8%ae%ad%e8%af%be%e7%a8%8b-%e6%8a%80%e6%9c%af%e7%ae%a1%e7%90%86%e5%ae%9e%e6%88%98/">培训课程-技术管理实战</a></li>
-	<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="http://chendongfang.com/%e9%ab%98%e6%95%88%e8%ae%ba%e6%96%87%e5%86%99%e4%bd%9c/">培训课程-学术论文写作</a></li>
-</ul>
-</li>
-<li id="menu-item-216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216"><a href="http://chendongfang.com/about/">关于我们</a></li>
-<li id="menu-item-391" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-391"><a href="http://chendongfang.com/%e8%81%94%e7%b3%bb%e6%88%91%e4%bb%ac/">联系我们</a></li>
-<li id="menu-item-91" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-91"><a href="http://chendongfang.com/category/article/">研究成果<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
-<ul class="sub-menu">
-	<li id="menu-item-246" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-246"><a href="http://chendongfang.com/category/article/">技术文章</a></li>
-	<li id="menu-item-247" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-247"><a href="http://chendongfang.com/category/business/">商业分析</a></li>
-	<li id="menu-item-248" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-248"><a href="http://chendongfang.com/category/tech/">技术分析</a></li>
-</ul>
-</li>
-<li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="http://chendongfang.com/copyright/">本站声明</a></li>
-</ul></div>
-	</nav><!-- #site-navigation -->
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		
-	</header><!-- #masthead -->
-
-	
-	<div class="site-content-contain">
-		<div id="content" class="site-content">
-
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			
-<article id="post-184" class="post-184 post type-post status-publish format-standard hentry category-article">
-		<header class="entry-header">
-		<div class="entry-meta"><span class="posted-on"><span class="screen-reader-text">发布于</span><a href="http://chendongfang.com/%e7%bc%96%e7%a8%8b%e6%80%9d%e6%83%b3/" rel="bookmark"><time class="entry-date published" datetime="2022-10-12T17:56:00+08:00">2022年10月12日</time><time class="updated" datetime="2022-12-12T19:39:50+08:00">2022年12月12日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="http://chendongfang.com/author/admin/">admin</a></span></span></div><!-- .entry-meta --><h1 class="entry-title">编程思想</h1>	</header><!-- .entry-header -->
-
-	
-	<!-- .entry-content -->
-<div class="entry-content">
-		
+<!-- wp:heading {"level":1} -->
 <h1>1.&nbsp;<strong>编程思想</strong><strong></strong></h1>
+<!-- /wp:heading -->
 
-
-
+<!-- wp:heading -->
 <h2>1.1&nbsp;<strong>面向函数</strong><strong></strong></h2>
+<!-- /wp:heading -->
 
-
-
+<!-- wp:paragraph -->
 <p>面向对象的编程和面向函数的编程有着同样悠久的历史。但早期编程大都是面向函数的。因为早期的计算机都是用来做数据分析使用。是一种分析数据并获得结果的过程。同样的数据集会被不同的函数所使用。在这个时期里面向函数也被称为面向过程。每个函数有着标准的输入，输出和处理。输入和输出的数据并不相同，写在不同的纸带上。所以不用担心数据更改导致的状态错误。后来因为内存和硬盘的出现。函数输入和输出的目标统一变成了内存和硬盘。不但要考虑函数执行的过程是否会出现错误。还要考虑输入和输出的结果是否会导致迭代的错误。所谓迭代的错误是指函数重复执行是否会导致内存或硬盘的数据出错。所以在这个时期被叫做面向函数编程。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>面向表达式语言也称为应用式语言(App!icative Language)或函数式语言(Functional Language)，是一种全新的程序设计语言。函数式程序没有诸如指令计数器、数据存储器和程序当前状态之类的概念。这种语言的程序是纯数学意义上的函数，它作用于程序的输入，得到的结果值就是程序的输出。因此它不具有副作用，保证了程序各部分的并发执行，不会影响正确结果的获得，对高度并行的系统结构，更适宜于采用函数式语言来设计并发程序。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>在函数式程序设计系统中，程序是一个表达式，计算过程仅由函数来描述。对运算的顺序并无显式的描写，运算顺序只蕴涵于各函数调用之间的依赖关系中，且与运行程序的实际运算结构无关。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>构成函数程序的主要成分是<a href="https://baike.baidu.com/item/%E5%8E%9F%E5%87%BD%E6%95%B0?fromModule=lemma_inlink">原函数</a>(Primitive Functions)、<a href="https://baike.baidu.com/item/%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0?fromModule=lemma_inlink">复合函数</a>和定义。原函数的主要功能是实现由对象到对象的映射，或是把一个对象变换成另一个对象。常用的原函数有<a href="https://baike.baidu.com/item/%E9%80%89%E6%8B%A9%E5%87%BD%E6%95%B0?fromModule=lemma_inlink">选择函数</a>，算术函数，交叉置换函数，比较、<a href="https://baike.baidu.com/item/%E6%B5%8B%E8%AF%95%E5%87%BD%E6%95%B0?fromModule=lemma_inlink">测试函数</a>，加1、减1函数，附加序列函数，<a href="https://baike.baidu.com/item/%E5%88%86%E9%85%8D%E5%87%BD%E6%95%B0?fromModule=lemma_inlink">分配函数</a>，取序列尾函数等。复合函数的主要功能是利用函数构成算符，将已有的函数构成新的复杂函数，常用的程序构成算符有：组合算符“O”，构造算符“[]”，条件算符“→”，插入算符“/”，作用于全体(Apply to A11)算符“α”等。复合函数只有经定义“f”并输入到机器后方能应用。用户定义的函数由形式参数表和函数体两部分组成。函数定义的过程也就是建立形式参数表中形式参数与函数体中的变量之间约束关系的过程。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>归约机是一种面向函数式程序设计语言的计算机，属于需求驱动的系统结构。指令的执行顺序取决于对这些指令产生结果数据的需求，而这种需求又源于函数式程序设计语言对表达式的归约。归约操作主要是函数作用和子表达式变换。归约过程就是将每个最内层可归约表达式用其值来替换，这样又形成了新的最内层可归约表达式，然后再对其进行归约，最后，整个程序全部被归约，仅留下最终结果。&nbsp;[1]</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>主要特点</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p></p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>函数式语言的主要特点是：</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>1)直接由原函数构成，层次分明。所编程序为静态的、非重复的，便于错误检测。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>2)程序与数据分开，数据结构不是程序的组成部分，同一个函数程序可处理不同的对象，程序具有通用性。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>3)程序中包括了固有并行性，便于检测和并行。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>4)程序无状态并采用数据存储单元。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>5)无赋值语句，不使用GOTO类控制语句，所使用的程序构成算符，遵从许多基本代数定理，因而由函数式语言所编写的程序的正确性，易于得到证明。&nbsp;[1]&nbsp;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>结构</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p></p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>归约机按其归约模型可分为串归约机和图归约机两类，两者的区别主要是对函数表达式所使用的存储方式不同，串归约机以字符串形式存储，图归约机以图的形式存储。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>串归约机</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>串归约机的例子是Mago提出的细胞树形结构多处理机FFP。FFP规约机的结构如图1所示。</p>
+<!-- /wp:paragraph -->
 
+<!-- wp:image {"id":194,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-20.png" alt="" class="wp-image-194"/></figure>
+<!-- /wp:image -->
 
-
-<figure class="wp-block-image size-large"><img decoding="async" width="602" height="290" src="http://chendongfang.com/wp-content/uploads/2022/12/image-20.png" alt="" class="wp-image-194" srcset="http://chendongfang.com/wp-content/uploads/2022/12/image-20.png 602w, http://chendongfang.com/wp-content/uploads/2022/12/image-20-300x145.png 300w" sizes="(max-width: 602px) 100vw, 602px" /></figure>
-
-
-
+<!-- wp:paragraph -->
 <p>图1</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>图1中线性L单元阵列是一个带有逻辑功能的存储系统，L单元不仅存放FFP表达式(程序和数据)，还执行机器中大部分的工作，因而它又是一个PE(处理单元)。相邻的L单元互联成一个线性阵列，这一线性连接仅为了进行存储管理。前端机控制整个系统，包括对FFP机使用的基本操作进行定义，控制<a href="https://baike.baidu.com/item/%E8%BE%85%E5%8A%A9%E5%AD%98%E5%82%A8%E5%99%A8/9230243?fromModule=lemma_inlink">辅助存储器</a>与管理I/O。辅助存储器同L阵列的两端相连，随后机器从辅助存储器取出信息到阵列，使其开始工作。若L阵列中的信息超出其存储容量，把溢出部分移入辅助存储器，L单元间经由互联网进行通信，并具有某些处理功能。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>FFP机的实现方案有多种，图2所示的二叉树互联网结构是最简单的方案，二叉树网络的内部节点称T单元，叶节点称L单元，树根连到前端机。这种结构具有易于构造和易于扩展的优点。</p>
+<!-- /wp:paragraph -->
 
+<!-- wp:image {"id":193,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-19.png" alt="" class="wp-image-193"/></figure>
+<!-- /wp:image -->
 
-
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="539" height="253" src="http://chendongfang.com/wp-content/uploads/2022/12/image-19.png" alt="" class="wp-image-193" srcset="http://chendongfang.com/wp-content/uploads/2022/12/image-19.png 539w, http://chendongfang.com/wp-content/uploads/2022/12/image-19-300x141.png 300w" sizes="(max-width: 539px) 100vw, 539px" /></figure>
-
-
-
+<!-- wp:paragraph -->
 <p>图2</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>FFP机的工作过程可分为多个操作周期，每个周期又可分为三个阶段：分解阶段、执行阶段和存储管理阶段。FFP机能较好地完成程序自动分解，机器运行时按程序的实际需要可不断重构系统。机器以函数式语言FFP编程，无需程序员干预而自动地开发并行性。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>图3表示向量(3，2，5，1)各元素平方和与各元素相除的计算过程。</p>
+<!-- /wp:paragraph -->
 
+<!-- wp:image {"id":192,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-18.png" alt="" class="wp-image-192"/></figure>
+<!-- /wp:image -->
 
-
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="667" height="197" src="http://chendongfang.com/wp-content/uploads/2022/12/image-18.png" alt="" class="wp-image-192" srcset="http://chendongfang.com/wp-content/uploads/2022/12/image-18.png 667w, http://chendongfang.com/wp-content/uploads/2022/12/image-18-300x89.png 300w" sizes="(max-width: 667px) 100vw, 667px" /></figure>
-
-
-
+<!-- wp:paragraph -->
 <p>图3</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>图归约机</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>图归约机将函数定义、表达式和目标以图的形式存储于机器中，因此进行归约的对象是图，最常用的是二叉树和N叉树。<a href="https://baike.baidu.com/item/%E8%8B%B1%E5%9B%BD%E5%B8%9D%E5%9B%BD%E7%90%86%E5%B7%A5%E5%AD%A6%E9%99%A2/7278704?fromModule=lemma_inlink">英国帝国理工学院</a>的ALICE<a href="https://baike.baidu.com/item/%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E7%B3%BB%E7%BB%9F/8191804?fromModule=lemma_inlink">多处理器系统</a>，其目标语言HOPE是纯函数式语言，程序由函数定义集组成。函数通过重写来加以归约，由存放在函数定义数据库中的代码替换函数加以实现。ALICE图归约机样机的结构如图1所示，它是一个由16个处理器和24个存储模块构成的多处理器系统，由全互连的Delta交叉开关网实现处理器和存储模块之间的互连。图4中示出了处理器及存储模块的内部结构。每个处理器含有五个Transputer，其中两个从事重写操作，每个带有64KB Cache；第三个用作Cache的管理；另外两个分别作接受和发送信息包用。存储模块的内部较简单，只有一个Transputer进行信息包的发送和接收操作，存储容量为2MB。&nbsp;[1]&nbsp;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:heading -->
 <h2>1.2&nbsp;<strong>面向过程</strong><strong></strong></h2>
+<!-- /wp:heading -->
 
-
-
+<!-- wp:paragraph -->
 <p>面向过程的结构化程序设计分三种基本结构：顺序结构、选择结构、循环结构</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>原则：</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>1,自顶向下：指从问题的全局下手，把一个复杂的任务分解成许多易于控制和处理的子任务，子任务还可能做进一步分解，如此 重复，直到每个子任务都容易解决为止。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>2，逐步求精</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>3，模块化：指解决一个复杂问题是自顶向下逐层把软件系统划分成一个个较小的、相对独立但又相互关联的模块的过程。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:heading -->
 <h2>1.3&nbsp;<strong>面向对象</strong><strong></strong></h2>
+<!-- /wp:heading -->
 
-
-
+<!-- wp:paragraph -->
 <p>对象的含义是指具体的某一个事物，即在现实生活中能够看得见摸得着的事物。在面向对象程序设计中，对象所指的是计算机系统中的某一个成分。在面向对象程序设计中，对象包含两个含义，其中一个是数据，另外一个是动作。对象则是数据和动作的结合体。对象不仅能够进行操作，同时还能够及时记录下操作结果。&nbsp;[3]</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>方法是指对象能够进行的操作，方法同时还有另外一个名称，叫做<a href="https://baike.baidu.com/item/%E5%87%BD%E6%95%B0/18686609?fromModule=lemma_inlink">函数</a>。方法是类中的定义函数，其具体的作用就是对对象进行描述操作。&nbsp;[3]&nbsp;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p><a href="https://baike.baidu.com/item/%E7%BB%A7%E6%89%BF/20267560?fromModule=lemma_inlink">继承</a>简单地说就是一种层次模型，这种层次模型能够被重用。层次结构的上层具有通用性，但是下层结构则具有特殊性。在继承的过程中类则可以从最顶层的部分继承一些方法和变量。类除了可以继承以外同时还能够进行修改或者添加。通过这样的方式能够有效提高工作效率。在这里举一个例子，当类X继承了类Y后，此时的类X则是一个派生类，而类Y属于一个基类。&nbsp;[3]&nbsp;&nbsp;继承是从一般演绎到特殊的过程，可以减少知识表示的冗余内容，知识库的维护和修正都非常方便。更有利于衍生复杂的系统。&nbsp;[4]</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p><a href="https://baike.baidu.com/item/%E7%B1%BB/6824577?fromModule=lemma_inlink">类</a>是具有相同特性（数据元素）和行为（功能）的对象的抽象。因此，对象的抽象是类，类的具体化就是对象，也可以说类的实例是对象，类实际上就是一种数据类型。类具有属性，它是对象的状态的抽象，用数据结构来描述类的属性。类具有操作，它是对象的行为的抽象，用操作名和实现该操作的方法来描述。&nbsp;[2]&nbsp;类映射的每一个对象都具有这些数据和操作方法，类的继承具有层次性和结构性，高层次对象封装复杂行为，具体细节对该层次知识保持透明，可以减小问题求解的复杂度。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p><a href="https://baike.baidu.com/item/%E5%B0%81%E8%A3%85/2796965?fromModule=lemma_inlink">封装</a>是将数据和代码捆绑到一起，对象的某些数据和代码可以是私有的，不能被外界访问，以此实现对数据和代码不同级别的访问权限。防止了程序相互依赖性而带来的变动影响，面向对象的封装比传统语言的封装更为清晰、更为有力。有效实现了两个目标：对数据和行为的包装和信息隐藏。&nbsp;[1]</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>多态是指不同事物具有不同表现形式的能力。<a href="https://baike.baidu.com/item/%E5%A4%9A%E6%80%81/2282489?fromModule=lemma_inlink">多态</a>机制使具有不同内部结构的对象可以共享相同的外部接口，通过这种方式减少代码的复杂度。一个接口，多种方式。&nbsp;[1]&nbsp;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>动态绑定指的是将一个过程调用与相应代码链接起来的行为。<a href="https://baike.baidu.com/item/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/3987987?fromModule=lemma_inlink">动态绑定</a>是指与给定的过程调用相关联的代码只有在运行期才可知的一种绑定，它是多态实现的具体形式。&nbsp;[1]&nbsp;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>消息传递：对象之间需要相互沟通，沟通的途径就是对象之间收发信息。消息内容包括接收消息的对象的标识，需要调用的函数的标识，以及必要的信息。消息传递的概念使得对现实世界的描述更容易。&nbsp;[1]&nbsp;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>面向对象的方法就是利用抽象、封装等机制，借助于对象、类、继承、消息传递等概念进行软件系统构造的软件开发方法。&nbsp;[1]&nbsp;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:heading {"level":1} -->
 <h1>2.&nbsp;<strong>虚拟机中实现</strong><strong></strong></h1>
+<!-- /wp:heading -->
 
-
-
+<!-- wp:heading -->
 <h2>2.1&nbsp;<strong>关键字实现</strong><strong></strong></h2>
+<!-- /wp:heading -->
 
+<!-- wp:paragraph -->
+<p>--todo</p>
+<!-- /wp:paragraph -->
 
-
-<p>&#8211;todo</p>
-
-
-
+<!-- wp:heading -->
 <h2>2.2&nbsp;<strong>函数实现</strong><strong></strong></h2>
+<!-- /wp:heading -->
 
+<!-- wp:paragraph -->
+<p>--todo</p>
+<!-- /wp:paragraph -->
 
-
-<p>&#8211;todo</p>
-
-
-
+<!-- wp:heading -->
 <h2>2.3&nbsp;<strong>对象实现</strong><strong></strong></h2>
+<!-- /wp:heading -->
 
-
-
+<!-- wp:paragraph -->
 <p>Java跟c++语言一样，都是面向对象的语言，那么面向对象的语言都有个共同的两点</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>在面向对象的软件中，对象（Object）是某个类（Class）的实例。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>一切皆对象</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>在JVM的内存结构中，对象保存在堆内存中，而我们在对对象进行操作时，其实操作的是对象的引用。<br>那么对象本身在JVM中的结构是什么样的呢？这个就需要基于HotSpot虚拟机来研究了</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>简单的介绍一下HotSpot虚拟机<br>HotSpot虚拟机是基于c++来实现的，他是Sun JDK和OpenJDK中所带的虚拟机，也是目前使用范围最广的虚拟机 。他的热点代码探测能力可以通过执行计数器找出最具有编译价值的代码，然后通知JIT编译器以方法为单位进行编译。 如果一个方法被频繁调用，或方法中有效循环次数很多，将会分别触发标准编译和OSR（栈上替换）编译动作。 通过编译器与解释器恰当地协同工作，可以在最优化的程序响应时间与最佳执行性能中取得平衡，而且无须等待本地代码输出才能执行程序， 即时编译的时间压力也相对减小，这样有助于引入更多的代码优化技术，输出质量更高的本地代码。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>在HotSpot虚拟机中，有个叫oop-klass model的设计模型<br>Java的对象模型定义在oops目录下，模型主要定义了Java语言相关的模型结构，是Java面向对象特征在虚拟机中的映射。在模型树中主要由klass，oop，metadata，handle来组织（klass继承自metadata），这里我们主要讲klass，和oop两个模型</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>在oopsHierarchy.hpp里定义了oop和klass各自的体系</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>oop-klass结构<br></p>
+<!-- /wp:paragraph -->
 
+<!-- wp:image {"id":191,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-17.png" alt="" class="wp-image-191"/></figure>
+<!-- /wp:image -->
 
-
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="601" height="481" src="http://chendongfang.com/wp-content/uploads/2022/12/image-17.png" alt="" class="wp-image-191" srcset="http://chendongfang.com/wp-content/uploads/2022/12/image-17.png 601w, http://chendongfang.com/wp-content/uploads/2022/12/image-17-300x240.png 300w" sizes="(max-width: 601px) 100vw, 601px" /></figure>
-
-
-
+<!-- wp:paragraph -->
 <p>oop模型</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>Java对象在虚拟机中的表示<br>hotspot/src/share/vm/oops/oopsHierarchy.hpp</p>
+<!-- /wp:paragraph -->
 
+<!-- wp:block {"ref":197} /-->
 
-
-<p>//java对象中oop的偏移量而<br>typedef juint narrowOop;<br>// 如果压缩klass指针，则使用窄klass<br>typedef juint narrowKlass;<br>typedef void* OopOrNarrowOopStar;<br>//对象头标记<br>typedef class markOopDesc* markOop;</p>
-
-
-
-<p>ifndef CHECK_UNHANDLED_OOPS</p>
-
-
-
-<p>//对象头（包含markOop），包含Kclass<br>typedef class oopDesc* oop;<br>//Java类实例对象（包含oop）<br>typedef class instanceOopDesc* instanceOop;<br>//Java数组（包含oop）<br>typedef class arrayOopDesc* arrayOop;<br>//Java对象数组（包含arrayOop）<br>typedef class objArrayOopDesc* objArrayOop;<br>//Java基本类型数组（包含arrayOop）<br>typedef class typeArrayOopDesc* typeArrayOop;</p>
-
-
-
+<!-- wp:paragraph -->
 <p>else</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>上面列出的是整个oops模块的组成结构，其中包含多个子模块。每个子模块对应一个类型，每一个类型的OOP都代表一个在JVM内部使用的特定对象的类型。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>从上面的代码中可以看到，有一个变量oop的类型是oopDesc，oops类的共同基类型为oopDesc。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>在Java程序运行过程中，每个创建一个新的对象，在JVM内部就会相应的创建一个对应类型的oop对象，也可以理解为hotspot直接copy一份java的东西给了c++。在HotSpot中，根据JVM内部使用的对象业务类型，具有多种oopDesc的子类。除了oopDesc类型外，oop体系中还有很多instanceOopDesc、arrayoopDesc等类型的实例，他们都是oopDesc的子类。</p>
+<!-- /wp:paragraph -->
 
+<!-- wp:image {"id":190,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-16.png" alt="" class="wp-image-190"/></figure>
+<!-- /wp:image -->
 
-
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="677" height="286" src="http://chendongfang.com/wp-content/uploads/2022/12/image-16.png" alt="" class="wp-image-190" srcset="http://chendongfang.com/wp-content/uploads/2022/12/image-16.png 677w, http://chendongfang.com/wp-content/uploads/2022/12/image-16-300x127.png 300w" sizes="(max-width: 677px) 100vw, 677px" /></figure>
-
-
-
+<!-- wp:paragraph -->
 <p>这些oops在JVM内部中有着不同的用途，例如，instanceOopDesc表示类实例，arrayOopDesc表示数组。也就是说，当我们使用new创建一个Java对象实例的时候，JVM会创建一个instanceOopDesc对象来表示这个Java对象。同理，当我们使用new创建一个Java数组实例的时候，JVM会创建一个arrayOopDesc对象来表示这个数组对象。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>在HotSpot中，oopDesc类定义在oop。hpp中，instanceOopDesc定义在instanceOop.hpp中，arrayoopDesc定义在arrayOop.hpp中。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>简单的看一下相关的定义</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>class oopDesc {<br>friend class VMStructs;<br>private:<br>volatile markOop _mark;<br>union _metadata {<br>wideKlassOop _klass;<br>narrowOop _compressed_klass;<br>} _metadata;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>private:<br>// field addresses in oop<br>void* field_base(int offset) const;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:code -->
 <pre class="wp-block-code"><code>  jbyte*    byte_field_addr(int offset)   const;
   jchar*    char_field_addr(int offset)   const;
   jboolean* bool_field_addr(int offset)   const;
@@ -509,215 +324,215 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   jfloat*   float_field_addr(int offset)  const;
   jdouble*  double_field_addr(int offset) const;
   address*  address_field_addr(int offset) const;</code></pre>
+<!-- /wp:code -->
 
-
-
+<!-- wp:paragraph -->
 <p>}</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>class instanceOopDesc : public oopDesc {<br>}</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>class arrayOopDesc : public oopDesc {<br>}</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>从上面的源码可以看出来，instanceOopDesc实际上就是继承了oopDesc，并没有增加其他的数据结构，也就是说instanceOopDesc中主要包含了一下几部分数据：markOop _mark和union _metadata以及一下不同类型的field。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>HotSpot虚拟机中，对象在内存中存储的布局可以分为三块区域：对象头、实例数据和对齐填充。在虚拟机内部，一个Java对象对应一个instanceOopDesc的对象。其中对象头包含了两部分内容： _mark和 _metadata,而实例数据则保存在oopDesc中定义的各种field中</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>_mark<br>对象头中有和锁相关的运行时数据，这些运行时数据是synchronized以及其他类型的锁实现的重要基础，而关于锁标记，GC分代等信息均保存在这里。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>_metadata<br>这是一个共同体，其中_klass是普通指针，_compressed_klass是压缩类指针。在深入介绍之前，就要来到oop-Klass中另外一个主角klass了</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>klass模型</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>Java类在虚拟机中的表示<br>hotspot/src/share/vm/oops/oopsHierarchy.hpp</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>// klass层次结构与oop层次结构是分开的。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>//继承自 Metadata， 维护着类继承结构的类信息，对应一个ClassLoaderData<br>class Klass;<br>//继承自Klass，维护着对应的Java类相关信息（注解，字段，接口，虚表，版本，线程等信息），以及类所处的状 态<br>class InstanceKlass;<br>//继承自InstanceKlass，用于java.lang.Class实例，与反射相关，除了类的普通字段之外，它们还包含类的静态字段<br>class InstanceMirrorKlass;<br>//继承自InstanceKlass，它是为了遍历这个类装入器指向的类装入器的依赖关系。<br>class InstanceClassLoaderKlass;<br>//继承自InstanceKlass，与java/lang/ref/Reference相关<br>class InstanceRefKlass;<br>//继承自Klass，数组相关<br>class ArrayKlass;<br>//继承自ArrayKlass，对象数组<br>class ObjArrayKlass;<br>//继承自ArrayKlass，基本类型数组<br>class TypeArrayKlass;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>和oopDesc是其他oop类型的父类一样，klass类是其他klass类型的父亲。</p>
+<!-- /wp:paragraph -->
 
+<!-- wp:image {"id":189,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-15.png" alt="" class="wp-image-189"/></figure>
+<!-- /wp:image -->
 
-
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="664" height="401" src="http://chendongfang.com/wp-content/uploads/2022/12/image-15.png" alt="" class="wp-image-189" srcset="http://chendongfang.com/wp-content/uploads/2022/12/image-15.png 664w, http://chendongfang.com/wp-content/uploads/2022/12/image-15-300x181.png 300w" sizes="(max-width: 664px) 100vw, 664px" /></figure>
-
-
-
+<!-- wp:paragraph -->
 <p>Klass向JVM提供了两个功能</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>实现语言层面的Java类（在Klass基类中已经实现）</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>实现Java对象的分发功能（由Klass的子类提供虚拟数实现）</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>在hotsprot的设计之初，HotSpot JVM的设计者不想让每个对象中都含有一个虚函数表。<br>于是把对象一拆为二，分为klass和oop。其中oop的主要职能在于表示对象的实例数据，所以其中不含有任何虚函数。而klass为了实现虚函数的多态，所以提供了虚函数表。所以，关于Java的多态，其实也有虚函数的影子在。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>_metadata是一个共同体，其中_klass是普通指针，_compressed_klass是压缩类指针。这两个指针都指向instanceKlass对象，他用来描述对象的具体类型。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>instanceKlass<br>JVM在运行时，需要一种用来标识Java内部类型的机制。在HotSpot中的解决方案是：为每个已加载的Java类创建一个instanceKlass对象，用来在JVM层表示Java类。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>instanceKlass的内部结构</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>//类拥有的方法列表<br>objArrayOop _methods;<br>//描述方法顺序<br>typeArrayOop _method_ordering;<br>//实现的接口<br>objArrayOop _local_interfaces;<br>//继承的接口<br>objArrayOop _transitive_interfaces;<br>//域<br>typeArrayOop _fields;<br>//常量<br>constantPoolOop _constants;<br>//类加载器<br>oop _class_loader;<br>//protected域<br>oop _protection_domain;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>可以看到，一个类该具有的东西，这里面基本上都包含了。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>还有一点需要简单的介绍一下</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>在JVM中，对象在内存中的基本存在的形式就是oop。那么，对象所属的类，在JVM中也是一种对象，因此他们实际上也会被组织成一种oop，即klassOop。同样的，对于klassOop，也有对应的一个klass来描述，他就是klassKlass，也是klass的一个子类。klassKlass作为oop的klass链的端点。关于对象和数组的klass链大致如下图：</p>
+<!-- /wp:paragraph -->
 
+<!-- wp:image {"id":188,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-14.png" alt="" class="wp-image-188"/></figure>
+<!-- /wp:image -->
 
-
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="581" height="301" src="http://chendongfang.com/wp-content/uploads/2022/12/image-14.png" alt="" class="wp-image-188" srcset="http://chendongfang.com/wp-content/uploads/2022/12/image-14.png 581w, http://chendongfang.com/wp-content/uploads/2022/12/image-14-300x155.png 300w" sizes="(max-width: 581px) 100vw, 581px" /></figure>
-
-
-
+<!-- wp:paragraph -->
 <p>在这种设计下，JVM对内存的分配和回收，都可以采用统一的方式来管理。oop-klass-klassKlass关系如图：<br></p>
+<!-- /wp:paragraph -->
 
+<!-- wp:image {"id":187,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-13.png" alt="" class="wp-image-187"/></figure>
+<!-- /wp:image -->
 
-
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="656" height="460" src="http://chendongfang.com/wp-content/uploads/2022/12/image-13.png" alt="" class="wp-image-187" srcset="http://chendongfang.com/wp-content/uploads/2022/12/image-13.png 656w, http://chendongfang.com/wp-content/uploads/2022/12/image-13-300x210.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></figure>
-
-
-
+<!-- wp:paragraph -->
 <p>内存存储</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>关于一个Java对象，他的存储是怎样的，一般很多人都会回答：对象存储在堆上。稍微好一点的人会回答：对象存储在堆上，对象的引用存储在栈上。我们再来一个更牛逼的回答</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>对象的实例（instantOopDesc）保存在堆上，对象的元数据（instantKlass）保存在方法区，对象的引用保存在栈上。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>其实如果细追究的话，上面这句话优点故意卖弄的意思，因为我们都知道，方法区用于存储虚拟机加载的类信息、常量、静态变量、即使编译器后的代码等数据。所谓加载的类信息，其实不就是给每个人被加载的类都创建一个instantKlass对象。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>可以参考下面这段代码</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>class Model<br>{<br>public static int a = 1;<br>public int b;</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:code -->
 <pre class="wp-block-code"><code>public Model(int b) {
     this.b = b;
 }</code></pre>
+<!-- /wp:code -->
 
-
-
+<!-- wp:paragraph -->
 <p>}</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>public static void main(String[] args) {<br>int c = 10;<br>Model modelA = new Model(2);<br>Model modelB = new Model(3);<br>}</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>存储结构如下：</p>
+<!-- /wp:paragraph -->
 
+<!-- wp:image {"id":186,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-12.png" alt="" class="wp-image-186"/></figure>
+<!-- /wp:image -->
 
-
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="640" height="287" src="http://chendongfang.com/wp-content/uploads/2022/12/image-12.png" alt="" class="wp-image-186" srcset="http://chendongfang.com/wp-content/uploads/2022/12/image-12.png 640w, http://chendongfang.com/wp-content/uploads/2022/12/image-12-300x135.png 300w" sizes="(max-width: 640px) 100vw, 640px" /></figure>
-
-
-
+<!-- wp:paragraph -->
 <p>从上图可以看到，在方法区的instantKlass中有一个int a=1的数据存储。在堆内存中的两个对象的oop中，分别维护着int b=3.int b=2的实例数据。和oopDesc一样，instantKlass也维护着一些fields，用来保存类中定义的类数据，比如int a=1。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>总结</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:paragraph -->
 <p>每一个Java类，在被JVM加载的时候，JVM会给这个类创建一个instanceKlass，保存在方法区，用来在JVM层表示该Java类。当我们在Java代码中，使用new创建一个对象的时候，JVM会创建一个instanceOopDesc对象，这个对象中包含了两部分信息，对象头以及元数据。对象头中有一些运行时的数据，其中就包括和多线程相关的锁的信息。元数据其实就是维护的是指针，指向的是对象所属的类的instanceKlass。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:heading {"level":1} -->
 <h1>3.&nbsp;<strong>小结</strong><strong></strong></h1>
+<!-- /wp:heading -->
 
-
-
+<!-- wp:paragraph -->
 <p>本文介绍了函数式编程，面向过程，面向对象变成思想，并且通过虚拟机中实现来解释说明关键字，函数，对象的实现。</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:heading {"level":1} -->
 <h1>4.&nbsp;<strong>参考</strong><strong></strong></h1>
+<!-- /wp:heading -->
 
-
-
+<!-- wp:paragraph -->
 <p>面向过程</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:embed {"url":"https://blog.csdn.net/weixin_44769592/article/details/93393970"} -->
 <figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
 https://blog.csdn.net/weixin_44769592/article/details/93393970
 </div></figure>
+<!-- /wp:embed -->
 
-
-
+<!-- wp:paragraph -->
 <p>面向对象</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:embed {"url":"https://baike.baidu.com/item/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2262089?fr=aladdin"} -->
 <figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
 https://baike.baidu.com/item/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2262089?fr=aladdin
 </div></figure>
+<!-- /wp:embed -->
 
-
-
+<!-- wp:paragraph -->
 <p>oop实现</p>
+<!-- /wp:paragraph -->
 
-
-
+<!-- wp:embed {"url":"https://www.cnblogs.com/Mateo-dengmin/p/15837645.html"} -->
 <figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
 https://www.cnblogs.com/Mateo-dengmin/p/15837645.html
 </div></figure>
-	
+<!-- /wp:embed -->
 
 </body>
 </html>
