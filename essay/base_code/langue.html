@@ -1,0 +1,1131 @@
+
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title>大数据-陈东方</title>
+    <link id="favicon" href="http://www.chendongfang.cn/img/favicon.jpg" rel="icon"/>
+</head>
+<body>
+    <style>
+    li{
+    list-style: none;
+    }
+    </style>
+<!-- wp:heading {"level":1} -->
+<h1></h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading -->
+<h2>1.&nbsp;<strong>编程语言介绍</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>自从1946年世界上第一台电子计算机问世，人类和机器的交流方式和语言就成为了软件工程师和计算机从业者的主要研究方向，更有效更简便的编程语言成为了软件工程师的新宠儿，伴随着计算机的飞速发展，计算机的硬件升级速度也越来越快，对编程语言的要求也日益严格。在过去的几十年，编程语言有了长足的发展，至今已经有四代语言问世。大量的编程语言为了满足不同领域的编程要求和软件功能，经历 了被修改，被取代，被发展等过程，最终发展成了现在编程语言的多样化。尽管人们多次试图寻找一个能够适应所有编程环境的通用语言，但 是却没有一次成功。程序设计语言正在与现代科技日益飞跃，人类的智慧在日益彰显。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>1.1.1&nbsp;</strong><strong>机器语言</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>计算机的硬件作为一种电路元件，它的输出和输入只能是有电或者没电，也就是所说的高电平和低电平，所以计算机传递的数据是由“0” 和“1”组成的二进制数，所以说二进制的语言是计算机语言的本质。计算机发明之初，人们为了去控制计算机完成自己的任务或者项目，只能去编写“0”、“ 1”这样的二进制数字串去控制电脑，其实就是控制计算机硬件的高低电平或通路开路，这种语言就是机器语言。直观上看，机器语言十分晦涩难懂，其中的含义往往要通过查表或者手册才能理解， 使用的时候非常痛苦，尤其当你需要修改已经完成的程序时，这种看起来无序的机器语言会让你无从下手，也很难找到程序的错误。而且，不同计算机的运行环境不同，指令方式操作方式也不尽相同，所以当你在这种机器语言就有了特定性，只能在特定的计算机上执行，而一旦换了机器就需要重新编程，这极大的降低了程序的使用和推广效率。但由于机器语言具有特定性，完美适配特定型号的计算机，故而运行效率远远高过其他语言。机器语言，也就是第一代编程语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>1.1.2&nbsp;</strong><strong>汇编语言</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>不难看出机器语言作为一种编程语言， 灵活性较差可阅读性也很差，为了减轻机器语言带给软件工程师的不适应，人们对机器语言进行了升级和改进：用一些容易理解和记忆的字母，单词来代替一个特定的指令。通过这种方法，人们很容易去阅读 已经完成的程序或者理解程序正在执行的功能，对现有程序的bug修复以及运营维护都变得更加简单方便，这种语言就是我们所说的汇编语言， 即第二代计算机语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>比起机器语言，汇编语言具有更高的机器相关性，更加便于记忆和书写，但又同时保留了机器语言高速度和高效率的特点。汇编语言仍是面向机器的语言，很难从其代码上理解程序设计意图，设计出来的程序不易被移植，故不像其他大多数的高级计算机语言一样被广泛应用。所以在高级语言高度发展的今天，它通常被用在底层，通常是程序优化或硬件操作的场合。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>高级语言</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在编程语言经历了机器语言，汇编语言等更新之后，人们发现了限制程序推广的关键因素——程序的可移植性。需要设计一个能够不依赖于计算机硬件，能够在不同机器上运行的程序。这样可以免去很多编程的重复过程，提高效率，同时这种语言又要接近于数学语言或人的自然语言。在计算机还很稀缺的50年代，诞生了第一个高级编程语言。当时计算机的造价不菲，但是每天的计算量又有限，如何有效的利用计算机有限的计算能力成为了当时人们面对的问题。同时，因为资源的稀缺， 计算机的运行效率也成为了那个年代工程师追寻的目标。为了更高效的使用计算机，人们设计出了高级编程语言，来满足人们对于高效简洁的编程语言的追求。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>编译型语言和解释型语言的区别？</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>计算机是不能理解高级语言的，更不能直接执行高级语言，它只能直接理解机器语言，所以使用任何高级语言编写的程序若想被计算机运行，都必须将其转换成计算机语言，也就是机器码。而这种转换的方式有两种：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>编译</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>解释</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>由此高级语言也分为编译型语言和解释型语言。主要区别在于，前者源程序编译后即可在该平台运行，后者是在运行期间才编译。所以前者运行速度快，后者跨平台性好。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>1.1.3&nbsp;</strong><strong>编译型语言</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>​ 使用专门的编译器，针对特定的平台，将高级语言源代码一次性的编译成可被该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>特点</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>​ 在编译型语言写的程序执行之前，需要一个专门的编译过程，把源代码编译成机器语言的文件，如exe格式的文件，以后要再运行时，直接使用编译结果即可，如直接运行exe文件。因为只需编译一次，以后运行时不需要编译，所以编译型语言执行效率高。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>总结</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1.一次性的编译成平台相关的机器语言文件，运行时脱离开发环境，运行效率高；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2.与特定平台相关，一般无法移植到其他平台；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>3.现有的C、C++ 等都属于编译型语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>1.1.4&nbsp;</strong><strong>解释型语言</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>使用专门的解释器对源程序逐行解释成特定平台的机器码并立即执行。是代码在执行时才被解释器一行行动态翻译和执行，而不是在执行之前就完成翻译。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>特点</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>解释型语言不需要事先编译，其直接将源代码解释成机器码并立即执行，所以只要某一平台提供了相应的解释器即可运行该程序。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>总结</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1.解释型语言每次运行都需要将源代码解释称机器码并执行，效率较低；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2.只要平台提供相应的解释器，就可以运行源代码，所以可以方便源程序移植；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>3.Python等属于解释型语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>编译型与解释型，两者各有利弊</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>前者由于程序执行速度快，同等条件下对系统要求较低，因此像开发操作系统、大型应用程序、数据库系统等时都采用它，像C/C++、Pascal/Object Pascal（Delphi）等都是编译语言，而一些网页脚本、服务器脚本及辅助开发接口这样的对速度要求不高、对不同系统平台间的兼容性有一定要求的程序则通常使用解释性语言，如Java、JavaScript、VBScript、Perl、Python、Ruby、MATLAB 等等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>2.&nbsp;<strong>语言</strong><strong>系列</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.1&nbsp;</strong><strong>第一个计算机语言：Fortran</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Fortran I诞生于1957年，由IBM设计，是世界上第一个真正的计算机语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Fortran I运行于IBM 704计算机上。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Fortran I支持：变量（变量名最多6个字符）、If和do语句、格式化IO。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>不支持：数据类型声明、单独编译子程序</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Fortran II 发布于1958年，主要对Fortran I的编译器做了优化，并支持了单独编译的子程序。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Fortran IV发布于1962年，并在1966年被标准化为Fortran 66，这也是第一个Fortran的标准化版本。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1978年的Fortran 77是非重要的标准化版本，这时的Fortran语言已经大量的引进了其他计算机语言的特点，例如字符串处理、逻辑判断、带else子句的if语句等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Fortran的最新标准化版本是Fortran 2008。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Fortran的设计思想基于冯诺依曼体系结构是命令式语言的鼻祖。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.2&nbsp;</strong><strong>源于数学的计算机语言：Lisp</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>人工智能语言IPL（Information Processing Language）诞生于1956年。IPL相当于一种假想的计算机的机器语言，这种计算机是以列表处理为基础，这有别于冯诺依曼体系结构。IPL的关键是证明了：基于列表处理的计算机的可行性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1958年夏，约翰.麦卡锡在IBM研究代数表达式的微分运算时，产生了一系列对语言需求，包括：用数学函数控制流程的方法（即，递归和条件表达式）；列表的自动分配；废弃列表的隐士回收。这些语言需求，显然IPL不能满足，所以需要设计新的语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1958年秋，麦卡锡在MIT成立了人工智能小组，开始着手设计这种新的列表处理语言。这最终导致1960年，Lisp的诞生。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1960年的Lisp并没有来得及设计自己的语法，就被麦卡锡的学生实现了，因为没有语法，麦卡锡的学生就以列表格式的语法分析树（即，S（Symbolic）表达式）作为临时语法。 但没有想到的是随着Lisp语言广泛流传，这种语法被程序员迅速介绍，并发现了其独特的魅力。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>麦卡锡希望Lisp的语法是数学表达式的元语言，命名为M（Mate）表达式，类似于后面的ML语言的语法。但是这种想法遭到了当时Lisp程序员的反对，最后麦卡锡开了MIT，从此Lisp的语法凝固在S表达式上。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Lisp建立在列表和lambda演算和基础上，是函数式编程的鼻祖。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.3&nbsp;</strong><strong>通用科学计算语言：Algol</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Algol 58年诞生于1958年，由苏黎世会议制定。是第一个设具体机器无关的计算机语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>随着Fortran的诞生，其他一些语言也在开发中，这些语言的语法格式各不相同，而且和Fortran一样，都与运行它们的具体计算机关联（比如标示符长度、代码行数的限制等）。用这些语言写的代码很难交流。于是Algol 58在Fortran I的基础做了扩展，并兼容了当时其他语言的一些特性，成为了程序设计思想的集成。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Algol 60，发表于1960年，在Algol 58的基础上做了重大改进：移入块结构、 支持两种子程序参数传递（按值传递和按名传递）、允许递归、支持本地数组（在栈上分配数组）。Algol 60是命令式语言的一个里程碑。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Algol 在设计之初，就定下：语法应当尽可能接近数学记法，的目标。这就使得Algol 60语法格式几乎影响到后来所有的计算机语言，并且Algol 60是很多文献表达算法的唯一正式方式。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Algol 60是后来所有计算机语言语法的鼻祖，但Cobol除外。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.4&nbsp;</strong><strong>通用商务语言：COBOL</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>COBOL语言于1960年发布。注意真对商务应用。语言的设计理念是：“数学程序应该用数学记法来写，数据处理程序应该用英语语句来写”。商务应用显然属于后者，所以COBOL语言看起了就像是全大写的英语。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>COBOL创造了一些新概念：宏（DEFINE）和数据结构（记录）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>COBOL在商务领域被广泛的使用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>COBOL对后来的语言几乎没有影响，但PL/I除外。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.5&nbsp;</strong><strong>跨领域语言：PL/I</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>之前的所有语言都是领域特定语言，例如：人工智能领域的Lisp、科学计算领域的Algol 60，商务应用领域的COMBOL等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>PL/I诞生于1964年，是跨科学计算和商务应用领域的计算机语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>PL/I是Algol 60、Fortran IV、COBOL的结合体。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.6&nbsp;</strong><strong>面向对象的起源：SIMULA 67</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>1964年，在挪威计算机中心诞生了SIMULA I，然后不断的做改进最终于1967年，产生了SIMULA 67。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>SIMULA 67是对Algol 60的扩展，是第一个定义类结构的语言，这也被认为是面向对象的起源。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>将命令式编程中的数据和数据的有关函数集成在一起，就形成了面向对象编程中的对象，而对象的类型就是类。将命令式编程中主程序调用子程序的从属关系，变为面向对象编程中对象之间互相发送消息的平等关系。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.7&nbsp;</strong><strong>正交设计：Algol 68</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Algol 68，发表于1968年，第一个引入正交化设计的概念，以及用户自定义数据类型。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.8&nbsp;</strong><strong>初学者的语言：BASIC</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>BASIC语言诞生于1971年，设计的主要目的是：使得计算机语言可以被非理工科生使用（当时理工科学生使用的Fortran和Algol 60很难被文科生掌握）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这样的设计目的使得BASIC非常适合于初学者。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>BASIC来自于Fortran IV，语法受到Algol 60影响。是BASIC是第一个被广泛使用的分时处理语言。&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.9&nbsp;</strong><strong>学院派语言：Pascal</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Pascal语言诞生于1971年，来自于Algol 68。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Pascal重大影响来自于程序设计教学。它的出现取代了Fortran作为程序设计入门语言的地位。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Pascal在工业界也有广泛的使用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.10&nbsp;</strong><strong>系统语言：C</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>贝尔实验室的UNIX操作系统，最初版本使用汇编语言写成，并1970年，在UNIX上实现的第一个高级语言叫做B语言，B的目的是：用于开发UNIX系统程序，以及新版本的UNIX操作系统。B以BCPL语言为基础。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>BCPL，诞生于1967剑桥大写，它的祖先是1962年诞生诞生于同一所大学的CPL语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>B和汇编一样数据类型就是机器字，这极大的限制了B程序在不同位数的机器之间的迁移。B的这种不可一致性导致了C的产生。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>C语言就是B的改进版本，同样以BCPL基础，诞生引入了Algol 68的特点，使得C语言称为了一个可移植系统程序语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>C语言语法中对操作符的大量灵活的使用，极大的印象了后来的一批程序语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.11&nbsp;</strong><strong>逻辑语言：Prolog</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Prolog诞生于1972年，是逻辑式编程的鼻祖。所谓逻辑式编程，就是以形式逻辑的方式将计算过程传递给计算机。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.12&nbsp;</strong><strong>极简主义：Scheme</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Scheme作为一种Lisp方言，同样诞生在MIT，时间是1975年。Scheme第一个引入词法作用域，延续体，闭包等概念。并将数据和函数等同对待。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Scheme的简约优美使它博得了计算机语言皇后的桂冠，并与另一个以优雅著称的Pascal一起成为教学语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Scheme是函数式语言主要用于数学算法教学，Pascal是命令式语言主要用于程序设计教学。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.13&nbsp;</strong><strong>Algol式语法的函数式语言：ML</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ML诞生于1979年，ML开创了以Algol作语法的函数式语言的先河。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.14&nbsp;</strong><strong>强类型惰性纯函数式语言：Haskell</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Haskell是1990年标准化Miranda语言的结果。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Miranda诞生于1986年，部分基于ML语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Haskell最大的特点是惰性求值。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.15&nbsp;</strong><strong>支持面向对象的函数式语言：OCaml</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Caml诞生于1996年，基于ML和Haskell。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>OCaml是Caml的面向对象版本，发布于2006年。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>F#是基于OCaml的.NET平台版本，发布于2010年。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.16&nbsp;</strong><strong>嵌入式语言：Ada</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Ada语言诞生于1980年，是嵌入式系统应用语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ada 83是1983年的标准化版本。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1995年的，Ada 95标准语言在ARM中定义。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ada的最新版本是Ada 2005。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ada广泛的用于商务、国防航空和交通运输等领域。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.17&nbsp;</strong><strong>纯面向对象语言：Smalltalk</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Smalltalk语言诞生于1980年，是第一个完全支持面向对象编程的语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Smalltalk源于SIMUAL 67，完善并定义了消息发送，和对象的继承关系。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在Smalltalk中，所有数据都是对象：消息的发送者，消息的接受者，消息，消息的结果…。对象的类型是类。类中可以定义方法，属性等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.18&nbsp;</strong><strong>命令式面向对象语言：C++</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>C++诞生于1983年，是在C的基础上，以SIMUAL 67的方式对命令式编程的面向对象扩展。C++的成功在于完全兼容C的情况下支持了面向对象，从而使面向对象编程成为了命令式编程的一个子类，传统的命令式编程被叫做面向过程编程。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>因为对C的完全兼容，ASNI在1989年的标准化版本C 89，合并的两种语言，叫做C/C++。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>C/C++的最重要版本是1999年的C 99。几乎吸收了当时被认为比较有效的计算机语言特性：面向过程编程、面向对象编程、泛型编程、自定义操作符重载等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>C/C++的最新是2011年发布的C 11。引入的lambda表达式，垃圾回收等机制。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>由于C/C++吸收了太多的语言特性，使得C/C++成为世界上最难精通的语言，没有之一。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>C/C++是目前使用人数最多的语言，和它一直竞争的是Java（具体可查看马海祥博客《<a href="http://www.mahaixiang.cn/bcyy/308.html">关于C语言、C++、Java和Python这4种程序开发语言的评价</a>》的相关介绍）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>&nbsp;1、C++在C语言基础上引入了面向对象的机制，同时也兼容C语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2、C++有三大特性：封装、继承和多态；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>3、C++生成的代码运行效率比较高，仅比汇编语言慢10%～20%；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>4、C++更加安全，增加了const常量、引用、四类cast转换（static_cast、dynamic_cast、const_cast、reinterpret_cast）、智能指针、try-catch等；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>5、C++可复用性高，C++引入了模板的概念，后面在此基础上，实现了方便开发的标准模板库STL（Standard Template Library）；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>6、同时，C++是不断在发展的语言。C++后续版本更是发展了不少新特性，如C++11中引入了nullptr、auto变量、Lambda匿名函数、右值引用、智能指针。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.19&nbsp;</strong><strong>原型面向对象语言：Self</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Self诞生于1986年。Self源自于Smalltalk。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Self对面向对象做了深入与研究，提出了“万物皆对象”的思想。它删除了面向对象概念中的类的概念认为类也是一种对象；消息仍然作为最基本操作；把对象的属性理解为获取或更改属性这两种方法，从而把属性的概念简化为方法；取消了变量和赋值，替代它们的是通过消息来读槽和写槽。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在Self中对象创建对象的方式是自我拷贝，所以叫做原型。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Self是原型面向对象语言的鼻祖，就像SIMUAL 67是类面向对象语的鼻祖。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.20&nbsp;</strong><strong>另一</strong><strong>个对C进行面向对象扩展的语言：Objective-C</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Objective-C诞生于1983年，后来被苹果公司选中，和C++相似，也是对C的面向对象扩展。所不同的是C++以SIMUAL 67的面向对象为基础，Objective-C以Smalltalk的面向对象基础。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Object-C一直伴随着苹果公司的操作系统一起发展，这两年随着iOS的开发被广泛使用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>21、对Pascal进行面向对象扩展的语言：Delphi</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Delphi诞生于1995年，是对Pascal的面向对象扩展，借鉴了C/C++的经验，但没有像C/C++后来那样的疯狂变化。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.21&nbsp;</strong><strong>脚本语言：Perl</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Perl发布于1987年。Perl起源于操作系统的控制台（shell）的命令。用户将完成某个工作的所有命令保存在一个sh文件里，这样只要执行这个文件就可完成对应功能，省去每次都要输入所有命令的麻烦。sh文件就叫做脚本。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>脚本只是一些命令行，可是发展到Perl时已经是一个相当成熟的语言了。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.22&nbsp;</strong><strong>关联列表函数式面向对象脚本语言：Lua</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Lua诞生于1993年，设计目的是嵌入引用程序，成为其脚本。Lua以其小巧性著称。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Lua基于Self和Scheme，它是第一个以关联列表最为主要数据的函数式语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.23&nbsp;</strong><strong>虚拟机面向对象语言：Java</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>诞生于1995年的Java 1.0，来自于Sun公司，是第一个在虚拟机上运行的语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>再这之前计算机语言要么：由解释器解释执行源代码（大多数命令式语言），叫做动态语言；要么：将源代码编译连接成实际的计算机指令后再由计算机执行（大多数命令式语言），叫做静态语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Java运行于JM（Java虚拟机）上，JM和解释器的区别是：JM会将Java源代码编译成字节码，然后然后再由JM解释执行。由于编译和执行过程是交错的，所以从外部来看就像是JM直接执行Java源代码一样。当然也可以，事先将Java源文件编译好，这样JM就可以直接执行了。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Java 1.0是C++的简化版本，保留了具有数据类型和类等一小半功能，删除了结构体，泛型编程等一多半的功能（具体可查看马海祥博客《<a href="http://www.mahaixiang.cn/bcyy/925.html">你知道Java内部的这些事儿吗</a>》的相关介绍）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Java 5.5 支持了泛型编程编程。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>最新版本是2014发布的Java 8.0，支持了lambda表达式。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Java是面向对象编程使用人数最多的语言。（C/C++的大部分人之使用C部分，即面向过程变成）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Java的强有力竞争对手是C#。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Java最早是由SUN公司（已被Oracle收购）的詹姆斯·高斯林（高司令，人称Java之父）在上个世纪90年代初开发的一种编程语言，最初被命名为Oak，目标是针对小型家电设备的嵌入式应用，结果市场没啥反响。谁料到互联网的崛起，让Oak重新焕发了生机，于是SUN公司改造了Oak，在1995年以Java的名称正式发布，原因是Oak已经被人注册了，因此SUN注册了Java这个商标。随着互联网的高速发展，Java逐渐成为最重要的网络编程语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Java介于编译型语言和解释型语言之间。编译型语言如C、C++，代码是直接编译成机器码执行，但是不同的平台（x86、ARM等）CPU的指令集不同，因此，需要编译出每一种平台的对应机器码。解释型语言如Python、Ruby没有这个问题，可以由解释器直接加载源码然后运行，代价是运行效率太低。而Java是将代码编译成一种“字节码”，它类似于抽象的CPU指令，然后，针对不同平台编写虚拟机，不同平台的虚拟机负责加载字节码并执行，这样就实现了“一次编写，到处运行”的效果。当然，这是针对Java开发者而言。对于虚拟机，需要为每个平台分别开发。为了保证不同平台、不同公司开发的虚拟机都能正确执行Java字节码，SUN公司制定了一系列的Java虚拟机规范。从实践的角度看，JVM的兼容性做得非常好，低版本的Java字节码完全可以正常运行在高版本的JVM上。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.24&nbsp;</strong><strong>面向对象解释式脚本语言：Python</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Python诞生于1989年，作者为了打发圣诞节的无趣，决心开发一个新的脚本解释程序，做为 ABC语言的一种继承。ABC是作者开发的教学语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Python和Perl用于相同领域，是面向过程+面向对象语言（具体可查看马海祥博客《<a href="http://www.mahaixiang.cn/bcyy/351.html">Python语言代码的性能优化方法大全</a>》的相关介绍）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Python 是目前最流行的语言之一，从云计算、大数据到人工智能，Python 无处不在，Python 人才需求量也在逐年攀升，Python 为何能发展如此的迅猛，究竟有什么特点呢？</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Python 语言主要有以下特点：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>简单：Python 是一种代表简单主义思想的语言。阅读一个良好的 Python 程序就感觉像是在读英语一样，尽管这个英语的要求非常严格。Python 的这种伪代码本质是其优点之一，使用户能够专注于解决问题而不是去搞明白语言本身。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>易学：Python 有极其简单的语法，非常容易上手。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>免费、开源：Python 是 FLOSS（自由/开源软件）之一。简单来说，用户可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS 是基于一个团体分享知识的概念，这也是为什么 Python 如此优秀的原因之一：它由一群希望看到 Python 更加优秀的人创造，并被他们不断改进。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>高层语言：使用 Python 语言编写程序时，不用考虑如何管理程序使用的内存等底层细节。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>可移植性强：由于它的开源本质，Python 已经被移植在许多平台上。如果 Python 程序没有使用依赖于系统的特性，那么程序不用修改就可以在下述任意平台上面运行。这些平台包括 Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、AS/400、BeOS、OS/390、z/OS、Palm OS、QNX、VMS、Psion、Acom RISC OS、VxWorks、PlayStation、Sharp Zaurus、Windows CE、Pocket PC 和 Symbian。最后，如果你的时间不是很紧张，并且又想快速的python提高，最重要的是不怕吃苦，建议你可以架尉♥信（同音）：276 3177 065 ，那个真的很不错，很多人进步都很快，需要你不怕吃苦哦！大家可以去添加上看一下~</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>解释型语言：编译型语言（如 C 或 C++）源程序从源文件（即 C 或 C++ 语言）转换到二进制代码（即 0 和 1）的过程通过编译器和不同的标记、选项完成，当运行程序的时候，连接器把程序从硬盘复制到内存中并且运行。而 Python 程序不需要编译成二进制代码，直接从源代码运行程序。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在计算机内部，Python 解释器把源代码转换成字节码的中间形式，然后再把它翻译成计算机使用的机器语言并运行。因此，用户不再需要操心如何编译程序、如何确保指定了正确的模块或包文件等细节，所有这一切使得使用 Python 更加简单。同时，由于只需要把 Python 程序拷贝到另外一台计算机上即可工作，这也使得 Python 程序更加易于移植。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>面向对象：Python 既支持面向过程的编程也支持面向对象的编程。在面向过程的语言中，程序是由过程或仅仅是可重用代码的函数构建起来的。在面向对象的语言中，程序是由数据和功能组合而成的对象构建起来的。与其他语言（如 C++ 和 Java）相比，Python 以一种非常强大又简单的方式实现面向对象编程。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>可扩展性强：如果希望把一段关键代码运行得更快或希望某些算法不公开，可以使用 C 或 C++ 语言编写这部分程序，然后在 Python 程序中调用它们。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>可嵌入性强：可以把 Python 嵌入 C/C++ 程序，从而向用户提供脚本功能。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>丰富的扩展库：Python 扩展库很庞大，可以帮助处理包括正则表达式、文档生成、单元测试、线程、数据库、网页浏览器、CGI、FTP、电子邮件、XML、XML-RPC、HTML、WAV 文件、密码系统、GUI（图形用户界面）、Tk 以及其他与系统有关的操作。只要安装了 Python，所有这些功能都是可用的，这被称作 Python 的“功能齐全”理念。除了扩展库以外，还有许多其他高质量的库，如 wxPython、Twisted 和 Python 图像库等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.25&nbsp;</strong><strong>纯面向对象解释式脚本语言：Ruby</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Ruby诞生于1996年，作者基于对Perl和Python的不满而设计，的纯面向对象脚本语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ruby基本等于Smalltalk + Lisp。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.26&nbsp;</strong><strong>Web服务器脚本语言：PHP</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>PHP诞生于1994年，是Web服务器脚本语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>PHP和JavaScript的语发相似，都是嵌入在HTML中，只不过一个在服务器端，一个在浏览器端。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.27&nbsp;</strong><strong>浏览器脚本语言：JavaScript</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>1995年，网景公司发行的 Netscape Navigator 2.0，它的脚步语言就是JavaScript。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>JavaScript和Java没有任何关系，它的前身是ScriptEase。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ScriptEase的诞生于1992年原名C-minus-minus，是一个足够强大可以替代宏操作（macro）的脚本语言，同时保持与 C足够的相似性，以便开发人员能很快学会。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ScriptEase基于C和Self语言，支持面向过程和原型面向对象编程。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>JavaScript后来由引入了Lua语言，支持以关联列表作为数据格式的函数式编程，这种关联列表这就是著名的JSON。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>最后JavaScript是一个：表面叫Java脚本，但是和Java没有任何关系；表面上是一个像C语言一样的面向过程语言，但实际上是一个原型面向对象语言；表面上你创建了一个对象，但其实只是一个关联列表；表面上你在定义变量和赋值，其实只是&lt;键，值&gt;对；表面上你声明函数，其实只是&lt;键，lambda表达式&gt;对。表面上是一个命令式编程语言，但本质上是一个以关联列表为数据格式的函数式编程语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式和声明式（如函数式编程）风格。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>JavaScript脚本语言具有以下特点：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1、脚本语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>JavaScript是一种解释型的脚本语言，C、C++等语言先编译后执行，而JavaScript是在程序的运行过程中逐行进行解释。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2、基于对象。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>JavaScript是一种基于对象的脚本语言，它不仅可以创建对象，也能使用现有的对象。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>3、简单。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>JavaScript语言中采用的是弱类型的变量类型，对使用的数据类型未做出严格的要求，是基于Java基本语句和控制的脚本语言，其设计简单紧凑。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>4、动态性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>JavaScript是一种采用事件驱动的脚本语言，它不需要经过Web服务器就可以对用户的输入做出响应。在访问一个网页时，鼠标在网页中进行鼠标点击或上下移、窗口移动等操作JavaScript都可直接对这些事件给出相应的响应。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>5、跨平台性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>JavaScript脚本语言不依赖于操作系统，仅需要浏览器的支持。因此一个JavaScript脚本在编写后可以带到任意机器上使用，前提上机器上的浏览器支持JavaScript脚本语言，目前JavaScript已被大多数的浏览器所支持。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.28&nbsp;</strong><strong>.NET平台主语言：C#</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>C#于2000年和.NET开发平台一起由微软发布。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>C#是.NET开发平台的主语言。.NET开发平台包括，运行IL语言的虚拟机CLR，基于IL语言的公共类库，用于编译产生IL语言程序的高级语言，以及支持这些高级语言开发的编译的基础开发环境。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>由于CLR和IL公共类库作为Window操作系统的一部分捆绑发布，所以IL语言程序可以再Window操作系统上直接执行，就行机器指令一样。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>CLR运行IL和JM运行Java一样，只不过CLR将IL编译成机器指令，然后在由计算机直接执行，而JM是将Java编译成字节码，然后由解释器解释执行。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>.NET开发平台支持多种语言，其中C#是主语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>C# 1.0 基于Java和C++，以Java为基础将更多的C++加入进来，并且吸收了一些Delphi和Visual Basic的特性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>C# 2.0 引入泛型编程。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>C# 4.0支持了lambda表达式，Linq等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>最新版本是2014发布的C#5.0。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>.NET 4.0引入了动态类型，使得.NET平台可以嵌入动态语言，比如：Lisp、Python、 Ruby等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.29&nbsp;</strong><strong>不再基础的BASIC：Visual Basic .NET</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Quick BASIC由美国微软公司开发，1987年推出，它是BASIC的继承者。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Quick BASIC是DOS下的开发语言，后来随着Window系统的推出加入了图像化设计所以新的版本改名为：Visual Basic。Visual Basic是第一个支持可视化界面设计的语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1998年发布的Visual Basic 6.0 是一个应用非常广泛的版本。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2001年，Visual Basic迁移到了.NET平台上，改名Visual Basic .NET。Visual Basic .NET对BASIC语言特性进行了重大改进。从此Visual Basic .NET伴随.NET开发平台一起发展。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>补充，R语言现在是最流行的统计计算语言，是S4语言的免费版本，S语言由贝尔实验室创造。R语言、3M数学计算语言（Matlab、Mathematica、Maple）、汇编语言都未列入名录。。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.30&nbsp;</strong><strong>CSP模型并发语言：Golang</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>从C语言中继承了很多理念，包括表达式语法、控制结构、基础数据类型、调用参数传值、指针（弱化指针）等，也保留了和C语言一样的编译执行方式。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>函数可以返回多个值</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>引入包的概念，用于组织程序结构，Go语言的一个文件都要归属于一个包，而不能单独存在。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>垃圾回收机制，内存自动回收，不需要开发人员管理。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>天然并发</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>从语言层面支持并发，实现简单</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>goroutine，轻量级线程，可实现大并发处理，高效利用多核</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>基于CPS并发模型实现</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>吸收了管道通信机制，形成Go语言特有的channel，通过管道channel，可以实现不同的goroute之间的相互通信</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>新的创新，比如切片slice，延时执行defer等</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.31&nbsp;</strong><strong>Actor模型并发语言：Erlang语言</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>并发性</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>分布式</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>健壮性</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>软实时</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>热更新</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>递增式代码加载</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>动态类型</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>解释型</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>函数式</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Erlang是函数式编程语言，函数式是一种编程模型，将<a href="https://www.hqchip.com/app/873">计算机</a>中的运算看做是数学中的函数计算，可以避免状态以及变量的概念。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>对象是面向对象的第一型，函数式编程语言也是一样，函数是函数式编程的第一型。函数是Erlang编程语言的基本单位，在Erlang里，函数是第一型，函数几乎会被用作一切，包括最简单的计算。所有的概念都是由函数表达，所有额操作也都是由函数操作。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>并发性</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在上一篇blog中已经说过Erlang编程语言的并发性了，Erlang编程语言可以支持超大量级的并发性，并且不需要依赖操作系统和第三方外部库。Erlang的并发性主要依赖Erlang虚拟机，以及轻量级的Erlang进程。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1.32&nbsp;</strong><strong>多范式的编程语言</strong><strong>：Scala语言</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>什么是Scala</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>scala(Scalable Language)是一种多范式的编程语言，其设计的初衷是要集成面向对象编程和函数式编程的各种特性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Scala运行于Java平台(java虚拟机上)，并兼容现有的Java程序。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>面向对象(将对象当作参数传来传去) + 面向函数(方法，可以将函数当作参数传来传去)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>为什么要学Scala</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>优雅：这是框架设计师第一要考虑的</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>速度快</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Spark就是使用Scala编写的，因此为了更好的学习Spark，需要掌握Scala这门语言</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>=Spark的兴起，带动Scala语言的发展！=</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Scala发展历史</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>联邦理工学院的马丁·奥德斯基（Martin Odersky）于2001年开始设计Scala。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>马丁·奥德斯基是编译器及编程的狂热爱好者，长时间的编程之后，希望发明一种语言，能够让写程序这样的基础工作变得高效，简单。所以当接触到JAVA语言后，对JAVA这门便携式，运行在网络，且存在垃圾回收的语言产生了极大的兴趣，所以决定将函数式编程语言的特点融合到JAVA中，由此发明了两种语言（Pizza &amp; Scala）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Pizza和Scala极大地推动了Java编程语言的发展。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>jdk5.0 的泛型，for循环增强，自动类型转换等，都是从Pizza 引入的新特性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>jdk8.0 的类型推断，Lambda表达式就是从Scala引入的特性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Jdk5.0和Jdk8.0的编辑器就是马丁·奥德斯基写的，因此马丁·奥德斯基一个人的战斗力抵得上一个Java开发团队。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>&nbsp;Scala语言特点</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Scala是一门以Java虚拟机（JVM）为运行环境并将面向对象和函数式编程的最佳特性结合在一起的静态类型编程语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1）Scala是一门多范式的编程语言，Scala支持面向对象和函数式编程。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2）Scala源代码（.scala）会被编译成Java字节码（.class），然后运行于JVM之上，并可以调用现有的Java类库，实现两种语言的无缝对接。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>3）Scala单作为一门语言来看，非常的简洁高效。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>4）Scala在设计时，马丁·奥德斯基是参考了Java的设计思想，可以说Scala是源于Java，同时马丁·奥德斯基也加入了自己的思想，将函数式编程语言的特点融合到JAVA中, 因此，对于学习过Java的同学，只要在学习Scala的过程中，搞清楚Scala和Java相同点和不同点，就可以快速的掌握Scala这门语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Scala是一门可扩展的语言（scalable），该语言只定义了最少的部分，其它部分使用类（class）和方法（method）实现，这样可以根据计算机语言和软件的发展不断扩展和改进。例如算术运算中的加法运算符号+并不是Scala的保留字（reserved word），而是一种方法（method）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Scala是一种形式纯净的面向对象（object-oriented）语言：所有的数值（value）都是对象（object），所有的运算（operation）都是方法调用（method call）。面向对象编程的产生其实很简单：除了最微不足道的程序，所有程序都需要某种结构。最直观的方法是将数据和运算封装起来（container)，然后还可以整体作为数值列入其它的封装。这样的封装就是对象。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>同时Scala也是一门充分发展的函数式（functional）语言。函数式语言有两个主要的理念。其一个是函数（function）是第一级别数值（first-class value），即函数是和整数、字符串等的位阶一样的数值，可以作为其它函数的参数、返回值，可以作为变量存储等。其二是运算将输入数值映射到输出数值，而不是对数据进行原地改动，或者说不产生边际作用（side effect）。（虽然Scala具有很好的函数式语言特性，它并不排斥命令式编程。）</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>3.&nbsp;<strong>小结</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>语言发展日新月异。高级语言发展方向从编程能力，开始走向面向特定领域的适用性的方向发展</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>4.&nbsp;<strong>参考</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>编程语言</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/dilai2927/article/details/101197839?spm=1001.2101.3001.6661.1\u0026utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-101197839-blog-80233237.pc_relevant_3mothn_strategy_recovery\u0026depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-101197839-blog-80233237.pc_relevant_3mothn_strategy_recovery\u0026utm_relevant_index=1"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/dilai2927/article/details/101197839?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-101197839-blog-80233237.pc_relevant_3mothn_strategy_recovery&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-101197839-blog-80233237.pc_relevant_3mothn_strategy_recovery&amp;utm_relevant_index=1
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>C++语音介绍</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/qq_46111138/article/details/125172697"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/qq_46111138/article/details/125172697
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>Java语言介绍</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/cyt0906/article/details/111985219"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/cyt0906/article/details/111985219
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>Golang语言介绍</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/zero_Dreamer/article/details/120308559"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/zero_Dreamer/article/details/120308559
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>Python语言介绍</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/zihong521/article/details/122306535"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/zihong521/article/details/122306535
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>Scala语言介绍</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/trecn001/article/details/113880550"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/trecn001/article/details/113880550
+</div></figure>
+<!-- /wp:embed -->
+</body>
+</html>
