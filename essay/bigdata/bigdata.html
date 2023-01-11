@@ -1,0 +1,2665 @@
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title>大数据-陈东方</title>
+    <link id="favicon" href="http://www.chendongfang.cn/img/favicon.jpg" rel="icon"/>
+</head>
+<body>
+    <style>
+    li{
+    list-style: none;
+    }
+    </style>
+<!-- wp:heading {"level":1} -->
+<h1></h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading -->
+<h2>1.&nbsp;<strong>历史</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>1.1起源</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>大数据的名字来源于托夫勒写的《第三次浪潮》。虽然大数据是近些年来开始受到人们的关注，但早在1980年，著名的未来学家托夫勒就在他的著作《第三次浪潮》中称赞大数据是第三次浪潮中最华彩的乐章。《自然》杂志于2008年9月推出了名为大数据的封面专栏。2009年以来，“大数据”成为互联网科技行业的一个热词。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>“大数据”作为一种概念和思潮由计算领域发端，之后逐渐延伸到科学和商业领域。大多数学者认为，“大数据”这一概念最早公开出现于1998年，美国高性能计算公司SGI的首席科学家约翰·马西（John Mashey）在一个国际会议报告中指出：随着数据量的快速增长，必将出现数据难理解、难获取、难处理和难组织等四个难题，并用“Big Data（大数据）”来描述这一挑战，在计算领域引发思考。2007年，数据库领域的先驱人物吉姆·格雷(Jim Gray)指出大数据将成为人类触摸、理解和逼近现实复杂系统的有效途径，并认为在实验观测、理论推导和计算仿真等三种科学研究范式后，将迎来第四范式——“数据探索”，后来同行学者将其总结为“数据密集型科学发现”，开启了从科研视角审视大数据的热潮。2012年，牛津大学教授维克托·迈尔-舍恩伯格（Viktor Mayer-Schnberger）在其畅销著作《大数据时代（Big Data: A Revolution That Will Transform How We Live,Work,and Think）》中指出，数据分析将从“随机采样”、“精确求解”和“强调因果”的传统模式演变为大数据时代的“全体数据”、“近似求解”和“只看关联不问因果”的新模式，从而引发商业应用领域对大数据方法的广泛思考与探讨。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>大数据概念最早的提出者现已不可考，但早在1980年，未来学家托夫勒在其所著的《<a href="https://www.zhihu.com/search?q=%E7%AC%AC%E4%B8%89%E6%AC%A1%E6%B5%AA%E6%BD%AE&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={:,:83929449}">第三次浪潮</a>》中就提到“大数据”一词。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2001年麦塔集团分析员<a href="https://www.zhihu.com/search?q=%E9%81%93%E6%A0%BC%C2%B7%E8%90%8A%E5%B0%BC&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={:,:83929449}">道格·萊尼</a>指出数据增长的挑战和机遇有三个方向：量（Volume，数据大小）、速（Velocity，资料输入输出的速度）与多变（Variety，多样性），现在这被认为是大数据的三个特性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2011年麦肯锡正式定义了大数据的概念。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2012年《纽约时报》的一篇专栏中写到，“大数据”时代已经降临，在商业、经济及其他领域中，决策将日益基于数据和分析而作出，而并非基于经验和直觉。大数据开始跟时代挂钩，在当时人们并不以为然，甚至许多人认为这不过是商学院或咨询公司哗众取宠罢了。现在“<a href="https://www.zhihu.com/search?q=%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%97%B6%E4%BB%A3&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={:,:83929449}">大数据时代</a>”已经变成了人尽皆知的口头禅。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2012年<a href="https://www.zhihu.com/search?q=%E7%BB%B4%E5%85%8B%E6%89%98%C2%B7%E8%BF%88%E5%B0%94%C2%B7%E8%88%8D%E6%81%A9%E4%BC%AF&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={:,:83929449}">维克托·迈尔·舍恩伯</a>的《大数据时代》开始在国内风靡，推动了国内大数据的发展，许多人大数据的启蒙也是来源于这本书。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2010后云计算的成熟让大数据不再是纸上谈兵，大数据技术有了真正实现的可能性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>1.2实践</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Google 在 2003~2006 年间发表的三篇论文为今天 Hadoop 大数据生态的发展奠定了技术基础，工程师利用市场上相对廉价的通用计算设备（x86架构，Linux 系统服务器）而非昂贵的定制版服务器(大型机)，搭建低成本、易扩展、高可用的分布式集群，支撑了 Google 的多项重要服务，更成为后来分布式系统的黄金设计指南。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>其次，要了解大数据技术，就要知道大数据技术的发展过程。大数据技术的出现起源于Google，Google由于搜索业务量剧增，而对存储、计算、在线服务三个需求的探索，从而在2003、2004、2006分别提出了对应的解决方案，即大数据的开端-三驾马车。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><br>三驾马车中，GFS主要解决数据的存储问题，作为一个上千节点的分布式文件系统，Google可以把所有需要的数据很容易的存储下来。MapReduce主要是为了解决数据的计算问题，通过Map和Reduce两个函数，对海量数据计算进行一次抽象，让处理的数据的技术人员不需要掌握分布式系统的开发技术就可以完成海量数据计算。Bigtable主要解决的是数据的高性能随机读写问题，用以满足业务场景下的在线服务需求，它直接使用了GFS作为底层存储，做了集群的分片调度，再利用MemTable+SSTable的底层存储格式，解决大集群、机械硬盘下的高性能随机读写问题。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>1.3事件</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>1.3.1.1&nbsp;<strong>Hadoop相关</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>1. Hadoop</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Apache的Hadoop项目已几乎与大数据划上了等号。它不断壮大起来，已成为一个完整的生态系统，众多开源工具面向高度扩展的分布式计算。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://hadoop.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2. Ambari</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>作为Hadoop生态系统的一部分，这个Apache项目提供了基于Web的直观界面，可用于配置、管理和监控Hadoop集群。有些开发人员想把Ambari的功能整合到自己的应用程序当中，Ambari也为他们提供了充分利用REST（代表性状态传输协议）的API。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://ambari.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>3. Avro</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这个Apache项目提供了数据序列化系统，拥有丰富的数据结构和紧凑格式。模式用JSON来定义，它很容易与动态语言整合起来。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://avro.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>4. Cascading</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Cascading是一款基于Hadoop的应用程序开发平台。提供商业支持和培训服务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.cascading.org/projects/cascading/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>5. Chukwa</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Chukwa基于Hadoop，可以收集来自大型分布式系统的数据，用于监控。它还含有用于分析和显示数据的工具。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://chukwa.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>6. Flume</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Flume可以从其他应用程序收集日志数据，然后将这些数据送入到Hadoop。官方网站声称：“它功能强大、具有容错性，还拥有可以调整优化的可靠性机制和许多故障切换及恢复机制。”</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：https://cwiki.apache.org/confluence/display/FLUME/Home</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>7. HBase</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>HBase是为有数十亿行和数百万列的超大表设计的，这是一种分布式数据库，可以对大数据进行随机性的实时读取/写入访问。它有点类似谷歌的Bigtable，不过基于Hadoop和Hadoop分布式文件系统（HDFS）而建。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://hbase.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>8. Hadoop分布式文件系统（HDFS）</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>HDFS是面向Hadoop的文件系统，不过它也可以用作一种独立的分布式文件系统。它基于Java，具有容错性、高度扩展性和高度配置性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>9. Hive</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Apache Hive是面向Hadoop生态系统的数据仓库。它让用户可以使用HiveQL查询和管理大数据，这是一种类似SQL的语言。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://hive.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>10. Hivemall</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Hivemall结合了面向Hive的多种机器学习算法。它包括诸多高度扩展性算法，可用于数据分类、递归、推荐、k最近邻、异常检测和特征哈希。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：https://github.com/myui/hivemall</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>11. Mahout</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>据官方网站声称，Mahout项目的目的是“为迅速构建可扩展、高性能的机器学习应用程序打造一个环境。”它包括用于在Hadoop MapReduce上进行数据挖掘的众多算法，还包括一些面向Scala和Spark环境的新颖算法。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://mahout.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>12. MapReduce</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>作为Hadoop一个不可或缺的部分，MapReduce这种编程模型为处理大型分布式数据集提供了一种方法。它最初是由谷歌开发的，但现在也被本文介绍的另外几个大数据工具所使用，包括CouchDB、MongoDB和Riak。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>13. Oozie</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这种工作流程调度工具是为了管理Hadoop任务而专门设计的。它能够按照时间或按照数据可用情况触发任务，并与MapReduce、Pig、Hive、Sqoop及其他许多相关工具整合起来。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://oozie.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>14. Pig</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Apache Pig是一种面向分布式大数据分析的平台。它依赖一种名为Pig Latin的编程语言，拥有简化的并行编程、优化和可扩展性等优点。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://pig.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>15. Sqoop</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>企业经常需要在关系数据库与Hadoop之间传输数据，而Sqoop就是能完成这项任务的一款工具。它可以将数据导入到Hive或HBase，并从Hadoop导出到关系数据库管理系统（RDBMS）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://sqoop.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>16. Spark</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>作为MapReduce之外的一种选择，Spark是一种数据处理引擎。它声称，用在内存中时，其速度比MapReduce最多快100倍；用在磁盘上时，其速度比MapReduce最多快10倍。它可以与Hadoop和Apache Mesos一起使用，也可以独立使用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://spark.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>17. Tez</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tez建立在Apache Hadoop YARN的基础上，这是“一种应用程序框架，允许为任务构建一种复杂的有向无环图，以便处理数据。”它让Hive和Pig可以简化复杂的任务，而这些任务原本需要多个步骤才能完成。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://tez.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>18. Zookeeper</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这种大数据管理工具自称是“一项集中式服务，可用于维护配置信息、命名、提供分布式同步以及提供群组服务。”它让Hadoop集群里面的节点可以彼此协调。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux、Windows（只适合开发环境）和OS X（只适合开发环境）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://zookeeper.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>1.3.1.2&nbsp;<strong>大数据分析平台和工具</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>19. Disco</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Disco最初由诺基亚开发，这是一种分布式计算框架，与Hadoop一样，它也基于MapReduce。它包括一种分布式文件系统以及支持数十亿个键和值的数据库。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://discoproject.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>20. HPCC</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>作为Hadoop之外的一种选择，HPCC这种大数据平台承诺速度非常快，扩展性超强。除了免费社区版外，HPCC Systems还提供收费的企业版、收费模块、培训、咨询及其他服务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://hpccsystems.com</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>21. Lumify</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Lumify归Altamira科技公司（以国家安全技术而闻名）所有，这是一种开源大数据整合、分析和可视化平台。你只要在Try.Lumify.io试一下演示版，就能看看它的实际效果。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.jboss.org/infinispan.html</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>22. Pandas</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Pandas项目包括基于Python编程语言的数据结构和数据分析工具。它让企业组织可以将Python用作R之外的一种选择，用于大数据分析项目。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://pandas.pydata.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>23. Storm</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Storm现在是一个Apache项目，它提供了实时处理大数据的功能（不像Hadoop只提供批任务处理）。其用户包括推特、美国天气频道、WebMD、阿里巴巴、Yelp、雅虎日本、Spotify、Group、Flipboard及其他许多公司。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：https://storm.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>1.3.1.3&nbsp;<strong>数据库/数据仓库</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>24. Blazegraph</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Blazegraph之前名为“Bigdata”，这是一种高度扩展、高性能的数据库。它既有使用开源许可证的版本，也有使用商业许可证的版本。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.systap.com/bigdata</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>25. Cassandra</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这种NoSQL数据库最初由Facebook开发，现已被1500多家企业组织使用，包括苹果、欧洲原子核研究组织（CERN）、康卡斯特、电子港湾、GitHub、GoDaddy、Hulu、Instagram、Intuit、Netfilx、Reddit及其他机构。它能支持超大规模集群；比如说，苹果部署的Cassandra系统就包括75000多个节点，拥有的数据量超过10 PB。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://cassandra.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>26. CouchDB</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>CouchDB号称是“一款完全拥抱互联网的数据库”，它将数据存储在JSON文档中，这种文档可以通过Web浏览器来查询，并且用JavaScript来处理。它易于使用，在分布式上网络上具有高可用性和高扩展性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux、OS X和安卓。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://couchdb.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>27. FlockDB</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>由推特开发的FlockDB是一种非常快、扩展性非常好的图形数据库，擅长存储社交网络数据。虽然它仍可用于下载，但是这个项目的开源版已有一段时间没有更新了。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：https://github.com/twitter/flockdb</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>28. Hibari</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这个基于Erlang的项目自称是“一种分布式有序键值存储系统，保证拥有很强的一致性”。它最初是由Gemini Mobile Technologies开发的，现在已被欧洲和亚洲的几家电信运营商所使用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://hibari.github.io/hibari-doc/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>29. Hypertable</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Hypertable是一种与Hadoop兼容的大数据数据库，承诺性能超高，其用户包括电子港湾、百度、高朋、Yelp及另外许多互联网公司。提供商业支持服务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://hypertable.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>30. Impala</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Cloudera声称，基于SQL的Impala数据库是“面向Apache Hadoop的领先的开源分析数据库”。它可以作为一款独立产品来下载，又是Cloudera的商业大数据产品的一部分。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.cloudera.com/content/cloudera/en/products-and-services/cdh/impala.html</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>31. InfoBright社区版</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>InfoBright为数据分析而设计，这是一种面向列的数据库，具有很高的压缩比。InfoBright.com提供基于同一代码的收费产品，提供支持服务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows和Linux。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.infobright.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>32. MongoDB</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>mongoDB的下载量已超过1000万人次，这是一种极其受欢迎的NoSQL数据库。MongoDB.com上提供了企业版、支持、培训及相关产品和服务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux、OS X和Solaris。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.mongodb.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>33. Neo4j</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Neo4j自称是“速度最快、扩展性最佳的原生图形数据库”，它承诺具有大规模扩展性、快速的密码查询性能和经过改进的开发效率。用户包括电子港湾、必能宝（Pitney Bowes）、沃尔玛、德国汉莎航空公司和CrunchBase。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows和Linux。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://neo4j.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>34. OrientDB</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这款多模型数据库结合了图形数据库的一些功能和文档数据库的一些功能。提供收费支持、培训和咨询等服务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.orientdb.org/index.htm</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>35. Pivotal Greenplum Database</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Pivotal声称，Greenplum是“同类中最佳的企业级分析数据库”，能够非常快速地对庞大的海量数据进行功能强大的分析。它是Pivotal大数据库套件的一部分。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://pivotal.io/big-data/pivotal-greenplum-database</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>36. Riak</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Riak“功能完备”，有两个版本：KV是分布式NoSQL数据库，S2提供了面向云环境的对象存储。它既有开源版，也有商业版，还有支持Spark、Redis和Solr的附件。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://basho.com/riak-0-10-is-full-of-great-stuff/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>37. Redis</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Redis现在由Pivotal赞助，这是一种键值缓存和存储系统。提供收费支持。要注意：虽然该项目并不正式支持Windows，不过微软在GitHub上有一个Windows派生版。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://redis.io<strong></strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>1.3.1.4&nbsp;<strong>商业智能</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>38. Talend Open Studio</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Talend的下载量已超过200万人次，其开源软件提供了数据整合功能。该公司还开发收费的大数据、云、数据整合、应用程序整合和主数据管理等工具。其用户包括美国国际集团（AIG）、康卡斯特、电子港湾、通用电气、三星、Ticketmaster和韦里逊等企业组织。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.talend.com/index.php</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>39. Jaspersoft</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Jaspersoft提供了灵活、可嵌入的商业智能工具，用户包括众多企业组织：高朋、冠群科技、美国农业部、爱立信、时代华纳有线电视、奥林匹克钢铁、内斯拉斯加大学和通用动力公司。除了开源社区版外，它还提供收费的报表版、亚马逊网络服务（AWS）版、专业版和企业版。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.jaspersoft.com</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>40. Pentaho</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Pentaho归日立数据系统公司所有，它提供了一系列数据整合和业务分析工具。官方网站上提供了三个社区版；访问Pentaho.com，即可了解收费支持版方面的信息。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://community.pentaho.com</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>41. SpagoBI</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Spago被市场分析师们称为“开源领袖”，它提供商业智能、中间件和质量保证软件，另外还提供Java EE应用程序开发框架。该软件百分之分免费、开源，不过也提供收费的支持、咨询、培训及其他服务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.spagoworld.org/xwiki/bin/view/SpagoWorld/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>42. KNIME</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>KNIME的全称是“康斯坦茨信息挖掘工具”（Konstanz Information Miner），这是一种开源分析和报表平台。提供了几个商业和开源扩展件，以增强其功能。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.knime.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>43. BIRT</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>BIRT的全称是“商业智能和报表工具”。它提供的一种平台可用于制作可以嵌入到应用程序和网站中的可视化元素及报表。它是Eclipse社区的一部分，得到了Actuate、IBM和Innovent Solutions的支持。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.eclipse.org/birt/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>1.3.1.5&nbsp;<strong>数据挖掘</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>44.DataMelt</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>作为jHepWork的后续者，DataMelt可以处理数学运算、数据挖掘、统计分析和数据可视化等任务。它支持Java及相关的编程语言，包括Jython、Groovy、JRuby和Beanshell。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://jwork.org/dmelt/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>45. KEEL</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>KEEL的全称是“基于进化学习的知识提取”，这是一种基于Java的机器学习工具，为一系列大数据任务提供了算法。它还有助于评估算法在处理递归、分类、集群、模式挖掘及类似任务时的效果。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://keel.es</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>46. Orange</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Orange认为数据挖掘应该是“硕果累累、妙趣横生”，无论你是有多年的丰富经验，还是刚开始接触这个领域。它提供了可视化编程和Python脚本工具，可用于数据可视化和分析。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://orange.biolab.si</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>47. RapidMiner</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>RapidMiner声称拥有250000多个用户，包括贝宝、德勤、电子港湾、思科和大众。它提供一系列广泛的开源版和收费版，不过要注意：免费的开源版只支持CSV格式或Excel格式的数据。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：https://rapidminer.com</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>48. Rattle</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Rattle的全称是“易学易用的R分析工具”。它为R编程语言提供了一种图形化界面，简化了这些过程：构建数据的统计或可视化摘要、构建模型以及执行数据转换。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://rattle.togaware.com</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>49. SPMF</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>SPMF现在包括93种算法，可用于顺序模式挖掘、关联规则挖掘、项集挖掘、顺序规则挖掘和集群。它可以独立使用，也可以整合到其他基于Java的程序中。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.philippe-fournier-viger.com/spmf/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>50. Weka</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>怀卡托知识分析环境（Weka）是一组基于Java的机器学习算法，面向数据挖掘。它可以执行数据预处理、分类、递归、集群、关联规则和可视化。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.cs.waikato.ac.nz/~ml/weka/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>1.3.1.6&nbsp;<strong>查询引擎</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>51. Drill</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这个Apache项目让用户可以使用基于SQL的查询，查询Hadoop、NoSQL数据库和云存储服务。它可用于数据挖掘和即席查询，它支持一系列广泛的数据库，包括HBase、MongoDB、MapR-DB、HDFS、MapR-FS、亚马逊S3、Azure Blob Storage、谷歌云存储和Swift。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://drill.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>1.3.1.7&nbsp;<strong>编程语言</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>52. R</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>R类似S语言和环境，旨在处理统计计算和图形。它包括一套整合的大数据工具，可用于数据处理、计算和可视化。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.r-project.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>53. ECL</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>企业控制语言（ECL）是开发人员用来在HPCC平台上构建大数据应用程序的语言。HPCC Systems官方网站上有集成开发环境（IDE）、教程以及处理该语言的众多相关工具。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Linux。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://hpccsystems.com/download/docs/ecl-language-reference</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>1.3.1.8&nbsp;<strong>大数据搜索</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>54. Lucene</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>基于Java的Lucene可以非常迅速地执行全文搜索。据官方网站声称，它在现代硬件上每小时能够检索超过150GB的数据，它含有强大而高效的搜索算法。开发工作得到了Apache软件基金会的赞助。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://lucene.apache.org/core/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>55. Solr</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Solr基于Apache Lucene，是一种高度可靠、高度扩展的企业搜索平台。知名用户包括eHarmony、西尔斯、StubHub、Zappos、百思买、AT&amp;T、Instagram、Netflix、彭博社和Travelocity。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://lucene.apache.org/solr/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>1.3.1.9&nbsp;<strong>内存中技术</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>56. Ignite</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这个Apache项目自称是“一种高性能、整合式、分布式的内存中平台，可用于对大规模数据集执行实时计算和处理，速度比传统的基于磁盘的技术或闪存技术高出好几个数量级。”该平台包括数据网格、计算网格、服务网格、流媒体、Hadoop加速、高级集群、文件系统、消息传递、事件和数据结构等功能。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：https://ignite.incubator.apache.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>57. Terracotta</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Terracotta声称其BigMemory技术是“世界上数一数二的内存中数据管理平台”，声称拥有210万开发人员，250家企业组织部署了其软件。该公司还提供商业版软件，另外提供支持、咨询和培训等服务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.terracotta.org</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>58. Pivotal GemFire/Geode</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>今年早些时候，Pivotal宣布它将开放其大数据套件关键组件的源代码，其中包括GemFire内存中NoSQL数据库。它已向Apache软件基金会递交了一项提案，以便在“Geode”的名下管理GemFire数据库的核心引擎。还提供该软件的商业版。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows和Linux。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://pivotal.io/big-data/pivotal-gemfire</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>59. GridGain</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>由Apache Ignite驱动的GridGrain提供内存中数据结构，用于迅速处理大数据，还提供基于同一技术的Hadoop加速器。它既有收费的企业版，也有免费的社区版，后者包括免费的基本支持。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：Windows、Linux和OS X。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相关链接：http://www.gridgain.com</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>60. Infinispan</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>作为一个红帽JBoss项目，基于Java的Infinispan是一种分布式内存中数据网格。它可以用作缓存、用作高性能NoSQL数据库，或者为诸多框架添加集群功能。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持的操作系统：与操作系统无关。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>2.&nbsp;<strong>数据理论</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.1文件系统</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>文件系统的基本概述</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>文件系统定义：文件系统是一种存储和组织计算机数据的方法，它使得对其访问和查找变得容易。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>文件名：在文件系统中，文件名是用于定位存储位置。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="https://so.csdn.net/so/search?q=%E5%85%83%E6%95%B0%E6%8D%AE&amp;spm=1001.2101.3001.7020">元数据</a>（Metadata）：保存文件属性的数据，如文件名，文件长度，文件所属用户组，文件存储位置等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据块（Block）：存储文件的最小单元。对存储介质划分了固定的区域，使用时按这些区域分配使用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.2副本机制</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>数据副本机制</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据副本机制</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据副本默认是3份。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>⼀个数据存储到HDFS后，数据⾃动复制两份，共三份（三分相同的数据-数据冗余）</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据副本存放机制</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>第⼀个副本在客户端所在的节点（客户端也是集群内的节点），若客户端在集群外，那么根据⼀定的</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.3 预计算-Cube引擎</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Kylin OLAP引擎基础框架，包括元数据（Metadata）引擎，查询引擎，Cube构建引擎及存储引擎等，同时包括REST服务器以响应客户端请求。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>元数据引擎：包括项目、Hive表、数据模型、Cube等元数据的管理；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>存储引擎：构建的Cube数据最终以HFile的格式存储到HBase；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>查询引擎：基于Calcite的SQL解析和HBase的Coprocessor并发查询能力；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Cube构建引擎：使用MapReduce实现对各个维度组合数据的预聚合计算；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>REST服务器：响应客户端的查询请求；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>基于JDBC和ODBC实现和BI工具的无缝整合。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>2.4 物化索引特征的OLAP引擎-（doris，clickhouse ）</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Apache Doris具备以下几个特点：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>良好的架构设计，支持高并发低延时的查询服务，支持高吞吐量的交互式分析。多FE均可对外提供服务，并发增加时，线性扩充FE和BE即可支持高并发的查询请求。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持批量数据load和流式数据load，支持数据更新。支持Update/Delete语法，unique/aggregate数据模型，支持动态更新数据，实时更新聚合指标。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>提供了高可用，容错处理，高扩展的企业级特性。FE Leader错误异常，FE Follower秒级切换为新Leader继续对外提供服务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持聚合表和物化视图。多种数据模型，支持aggregate, replace等多种数据模型，支持创建rollup表，支持创建物化视图。rollup表和物化视图支持动态更新，无需用户手动处理。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>MySQL协议兼容，支持直接使用MySQL客户端连接，非常易用的数据应用对接。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Doris 由 Frontend（以下简称FE）和 Backend（以下简称BE）组成，其中FE负责接受用户请求、编译、优化、分发执行计划、元数据管理、BE节点的管理等功能，BE负责执行由FE下发的执行计划，存储和管理用户数据</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Doris列存储，可以动态增加字段。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持离线/实时大宽表的导入(自定义flink/kafka数据源，事务性比较弱，端到端的一致性保证，比较困难。)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持表join，方式是通过分区分桶表，再依赖单机性能和向量化计算。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>支持预计算和物化视图。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>扩容相对方便。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>并发能力上比clickhouse要强。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>百度的孵化产品，目前属于比较新的产品，社区不是很活跃。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ClickHouse是一个用于联机分析(OLAP)的列式数据库管理系统(DBMS)。由号称“俄罗斯 Google”的Yandex开发而来，在2016年开源，在计算引擎里算是一个后起之秀，在内存数据库领域号称是最快的。由于它有几倍于GreenPlum等引擎的性能优势，所以不少人都选择将其安装云服务器中使用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ClickHouse是一个列导向数据库，是原生的向量化执行引擎。它在大数据领域没有走Hadoop生态，而是采用Local attached storage作为存储，这样整个IO可能就没有Hadoop那一套的局限。它的系统在生产环境中可以应用到比较大的规模，因为它的线性扩展能力和可靠性保障能够原生支持shard+replication这种解决方案。它还提供了一些SQL直接接口，有比较丰富的原生client。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>以下是ClickHouse作为分析型数据库的特点：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>一. 速度快</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ClickHouse性能超过了市面上大部分的列式存储数据库，相比传统的数据ClickHouse要快100-1000倍，ClickHouse还是有非常大的优势。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>100Million 数据集:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ClickHouse比Vertica约快5倍，比Hive快279倍，比MySQL快801倍。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1Billion 数据集:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ClickHouse比Vertica约快5倍，MySQL和Hive已经无法完成任务了。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>二. 功能多</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ClickHouse支持数据统计分析各种场景：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1.支持类SQL查询；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2.支持繁多库函数（例如IP转化，URL分析等，预估计算/HyperLoglog等）；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>3.支持数组(Array)和嵌套数据结构(Nested Data Structure)；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>4.支持数据库异地复制部署。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>3.&nbsp;<strong>分布式理论</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>3.1&nbsp;</strong><strong>cap理论</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>1.2. CAP定理</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1.2.1. CAP描述</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>C(consistency):数据一致性，表示服务节点宕机则立刻取消该服务，即所有请求都必须得到该服务的正确响应，对调用者而言数据具有强一致性(原子性)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A(availability):服务可用性，表示允许服务节点宕机恢复，宕机时保留服务可用性，所有请求在一定时间内可能无法得到正确响应，但可以终止请求。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>P(partition-toleranc):分区容错性，表示在网络分区 ( 部分服务失败导致完整系统被割断；丢包 ) 的情况下仍能对外提供服务（分布式系统必须满足）</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>3.2&nbsp;</strong><strong>协议</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>分布式理论时间工具。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>3.2.1&nbsp;<strong>Paxos</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>引用自简书：理解分布式一致性:Paxos协议之Multi-Paxos</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Paxos协议在节点宕机恢复、消息无序或丢失、网络分化的场景下能保证决议的一致性，是被讨论最广泛的一致性协议。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2.1.1. Basic Paxos</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Paxos中的节点存在5中角色：client, acceptor, proposer, learner, 和 leader，实际实现中，一个服务可以扮演多个角色。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Client：是请求的发起端，Client发送请求给分布式系统并等待回复；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Acceptor：是消息请求的存储器，请求消息发送给Acceptor后，只有大多数Acceptor确认接收此消息时该消息才会被存储。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Proposer：可看做Client的代理，将请求发送给Acceptor并等待Acceptor确认，当发生消息冲突时会尝试解决。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Leaner：learner依附于acceptor，备份已经接受的请求消息，用于习得已确定的决议。如果部分acceptor因宕机等原因未知晓已确定决议，宕机恢复后可经learner采用pull的方式从其他acceptor已确认的消息习得。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Leader： Paxos需要一个Leader来确保分布式系统可以按步骤进行下去。这里的Leader其实就是一个Proposer, Paxos协议会确保只有一个Proposer会被当做Leader。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Basic Paxos可分为以下两个阶段：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Prepare阶段：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>一个Proposer会创建一个Prepare消息，每个Prepare消息都有唯一的提议id=n； n必须比该Proposer之前用过的所有编号都大，一般来说我们可以以数字递增的方式来实现这个编号， Proposer把[n,v]发送给Acceptor（v表示提议的值）</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Acceptor回应提议ID为n的proposer自己曾接受过ID最大的提议，同时保证(promise)不再接受ID小于n的提议</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Accept阶段：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Proposer收到多个Acceptors返回过来的消息之后，会从中选择编号最大的一个消息所对应的值z，并把他作为Accept请求的值 （n,z） 发给Acceptor。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>当Acceptor接收到了Proposer的确认消息请求（n,z），如果该Acceptor在Prepare阶段的时候没有promise只接收&gt;n的消息，那么该（n,z）消息就必须被Acceptor确认(即记录曾接受的ID最大的提议，因proposer需要问询该信息以决定提议值)。 当（n,z）消息被Acceptor确认时，Acceptor会发送一个Accepted（n,z）消息给Proposer 和所有的Learner。当然在大部分情况下Proposer和Learner这两个角色可以合并。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>3.2.2&nbsp;<strong>Multi Paxos</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>如果Leader足够稳定的话，Phase 1 里面的Prepare完全可以省略掉，从而使用同一个Leader去发送Accept消息。当然我们还要对请求消息做一些改造，这里我们在请求里面加入了轮数I，每过一轮，I+1 。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>下图我们展示一个基本的Multi-Paxos一次执行交互流程，系统有1个Client，1个Proposer， 3个Acceptor， 1个Learner。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>上面我们讲到在Multi-Paxos中，如果Leader足够稳定的话，在接下来的执行中，phase 1 的请求其实是可以被省略的，那么接下来我们看一下被省略的整个流程。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这里round number需要+1,表示已经进入下一轮了。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在Basic-Paxos中我们区分了很多角色，有Clients，Proposers, Acceptors and Learners。实际上Proposers, Acceptors and Learners可以合并成一个，我们把它统称为Server。下面是合并之后的序列图。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>同样的，当Leader很稳定的时候，我们可以在接下来的执行中忽略Phase 1. 如下图所示：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2.2.常见一致性协议Raft和Zab</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>3.2.3&nbsp;<strong>Raft</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Raft论文翻译地址</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Paxos偏向于理论，在生产环境中基于Paxos实现一个正确的分布式系统非常难，Raft的更利于理解、更易于实行。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>(1)为达到更容易理解和实行的目的，Raft将问题分解和具体化：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Raft结构相关重点：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>唯一Leader统一处理变更操作请求，简化了实现方法。，</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>一致性模块相互通信保证节点间操作日志副本(log replication)一致(保证指令追加的顺序和内容一致)，节点运行相同状态机(state machine)运行相同顺序和内容的指令得到一致结果。，</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>以(leader任期)term作为逻辑时钟(logical clock)保证时序，log中index保存追加位置；log条目会记录两者，一致性则体现在log中的term和index都相同，</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>保证日志一致性相关重点：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>所有服务维护nextIndex(指令id)保证指令完整一致，leader追加指令时nextIndex初始化为log的index+1，follower同步log会从和leader最初不一致的地方追加覆盖，实现日志同步及恢复</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>leader必须存储了所有已提交的指令日志；只有 leader 当前任期(term)内的日志条目才通过计算副本数目达到半数的方式来提交，之前的所有日志条目会随当前term提交而被间接地提交</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>leader选举相关重点：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>随机设置candidate选举超时时间，使各candidate任期号很快就各不相同，防止多个follow同时成为candidate且同时超时后再将term+1还以相同term选举导致的分票无法选出leader</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>(2)Candidate：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>follower选举时将自己视为candidate并将自己之前的term+1参与选举，同时向其他candidate发送自己当前的任期号。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>其他candidate若发现接收的term不小于自己的term时则放弃选举变回follower；若小于则保持candidate等待超时或选举成功，超时则再将term+1重新发起选举。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>(3)Raft的具体过程如下：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Client发起请求，每一条请求包含操作指令</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>请求交由Leader处理，Leader将操作指令(entry)追加(append)至操作日志(使用index记录日志追加位置)，紧接着对Follower发AppendEntries请求，尝试让操作日志副本在Follower落地</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>如果Follower多数派(quorum)同意AppendEntries请求，Leader进行commit操作、把指令交由本机的状态机处理(如果我们能按顺序将指令作用于状态机，它就可以产生相同的状态和相同的输出)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>状态机处理前要保证follower已经同步了交给状态机处理的指令日志条目，状态机处理完成(即对follower执行相同顺序的相同指令)后将结果返回给Client</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>一致性算法的工作就是保证复制日志的一致性。 每台服务器上的一致性模块接收来自客户端的命令，并将它们添加到其日志中。 它与其他服务器上的一致性模块通信，以确保每个日志最终以相同的顺序包含相同的命令，即使有一些服务器失败。 一旦命令被正确复制，每个服务器上的状态机按日志顺序处理它们，并将输出返回给客户端。 这样就形成了高可用的复制状态机。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>(4)raft遵循几条性质：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>每次任期内只能有一个Leader</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>leader只追加日志条目，不能重写或者删除日志条目</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>如果两个日志条目的index和term都相同，则在两个日志中的当前追加条目及它们之前的日志条目也完全相同</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>如果一条日志被commited过，那么大于该日志条目index的日志都应该包含这个点(可以理解为高水位)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>如果一个server将某个特定index的日志条目交由状态机处理了，那么对于其他server，交由状态及处理的log中相同index的日志条目应该相同</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>(5)nextIndex：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>宕机、网络分化等情况可引起Leader重新选举(每次选举产生新Leader的同时，产生新的term)、Leader/Follower间状态不一致。Raft中Leader为自己和所有Follower各维护一个nextIndex值，其表示Leader紧接下来要处理的指令id以及将要发给Follower的指令id， leader 将所有 nextIndex 的值都初始化为自己最后一个日志条目的 index 加1，LnextIndex不等于FnextIndex时代表Leader操作日志和Follower操作日志存在不一致，这时将从Follower操作日志中最初不一致的地方开始，由Leader操作日志覆盖Follower，直到LnextIndex、FnextIndex相等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>3.2.4&nbsp;<strong>Zab</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>(1)Zab协议描述：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Zab：Zookeeper Atomic Broadcast（Zookeeper 原子广播协议），是Zookeeper内部用到的一致性协议。相比Paxos，Zab最大的特点是保证强一致性(strong consistency，或叫线性一致性linearizable consistency)。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>(2)Zab协议重点：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Zab结构重点：Zab就是崩溃恢复和消息广播两种模式循环切换的过程</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>消息广播：类似于2PC，加入了队列实现异步解耦防止同步阻塞，提高性能</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>崩溃恢复：一旦 Leader 服务器出现崩溃或者由于网络原因导致 Leader 服务器失去了与过半 Follower 的联系，那么就会进入崩溃恢复模式 。崩溃恢复包括Leader选举和数据恢复。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>leader中不能包含未提交的Proposal，且leader中包含最大的zxid的事务</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Zab为每一个事务配置了一个唯一的64位zxid，高32位代表Leader唯一epoch(年代)，低32位随新事务出现而递增</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>保证数据一致性相关重点</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>同步：Leader维护了一个保持同步Follower的列表，故障恢复即 Follower 将所有尚未同步的已提交事务 都从 Leader 服务器上同步过来并且应用到内存数据中以后，Leader 才会把该 Follower 加入到同步Follower 列表中</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>抛弃：flowers只听从epoch(zxid高32位)大的Leader的指令，每重新选举都会将epoch+1。如果flower中有上一个Leader未提交的Proposal则当前Leader会发出让其回滚的指令</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Leader选举相关重点</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>leader中不能包含未提交的Proposal，且leader中包含最大的zxid(即epoch大且事务id大)的事务</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>(3)Zab协议过程：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>当整个集群启动过程中，或者当 Leader 服务器出现网络中弄断、崩溃退出或重启等异常时，Zab协议就会 进入崩溃恢复模式，选举产生新的Leader。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>当选举产生了新的 Leader，同时集群中有过半的机器与该 Leader 服务器完成了状态同步（即数据同步）之后，Zab协议就会退出崩溃恢复模式，进入消息广播模式。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这时，如果有一台遵守Zab协议的服务器加入集群，因为此时集群中已经存在一个Leader服务器在广播消息，那么该新加入的服务器自动进入恢复模式：找到Leader服务器，并且完成数据同步。同步完成后，作为新的Follower一起参与到消息广播流程中。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2.2.3. Zab和Raft的对比总结</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>相同点：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>唯一Leader：Zab 协议和我们之前看的 Raft 协议实际上是有相似之处的，比如都有唯一一个 Leader负责发送请求到follower，用来保证一致性（Paxos 并没有使用唯一 Leader 机制保证一致性）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>半数成功机制：采取过半即成功的机制保证服务可用（实际上 Paxos 和 Raft 都是这么做的）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>逻辑时钟都包含Leader信息：Zab的逻辑时钟是epoch(Leader世代)+事务id组成的zxid；Raft的逻辑时钟就是term(Leader任期)，但由于两者实现一致性的方式不同，Raft通过nextindex标记指令序号。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>不同点</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>一致性实现方式不同：Zab为广播数据，Raft为发送指令、保存指令日志、状态机执行指令</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>（Zab为每个事务分配一个全局递增编号zxid，Raft为每个指令分配一个初始化为lnextIndex=index+1）</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>同步机制不同：Zab的Follower通过Learner实现同步，Raft通过状态机执行指令实现同步。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据发送路径不同：Zab数据发往每个Follower的FIFO队列实现异步解耦广播，Raft指令发往每个Follower的同步模块实现解耦并保证各Follower接收的指令顺序和内容相同(各同步模块相互通信)。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Leader选举细节不同：Zab是Leader必须包含全部提交的Proposal且zxid最大，若zxid相同则选择Zookeeper集群中myid最大的为Leader；Raft的Leader必须包含全部已经提交的指令且term最大，采取随机超时选举时间保证term值不同则确保选出Leader。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>4.&nbsp;<strong>计算理论</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>4.1&nbsp;</strong><strong>离线计算</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>MapReduce是Googleᨀ出的一种并行计算框架：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>　　Map：<br>　　　　映射，对一些独立元素组成的列表的每一个元素进行指定的操作。每个元素都是被独立操作的，而原始列表没有被更改。Map操作是可以高度并行的，这对高性能应用以及并行计算领域的需求非常有用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>　　Reduce：<br>　　　　化简，对一个列表的元素进行适当的合并，虽然它不如Map那么并行，但是因为化简总是有一个简单的答案，大规模的运算相对独立，所以化简函数在高度并行环境下也很有用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>　　适合：<br>　　　　大规模数据集的离线批处理计算；任务分而治之，子任务相对独立。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>　　不适合：<br>　　　　实时的交互式计算，要求快速响应和低延迟，比如BI；流式计算、实时分析，比如广告点击计算；子任务之间相互依赖的迭代计算。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>4.2&nbsp;</strong><strong>实时计算</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>实时计算一般都是针对海量数据进行的，并且要求为秒级。由于大数据兴起之初，Hadoop并没有给出实时计算解决方案，随后Storm，SparkStreaming，Flink等实时计算框架应运而生，而Kafka，ES的兴起使得实时计算领域的技术越来越完善，而随着物联网，机器学习等技术的推广，实时流式计算将在这些领域得到充分的应用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>实时计算的三个特征：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>无限数据：无限数据指的是一种不断增长的，基本上无限的数据集。这些通常被称为“流数据”，而与之相对的是有限的数据集。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>无界数据处理：一种持续的数据处理模式,能够通过处理引擎重复的去处理上面的无限数据，是能够突破有限数据处理引擎的瓶颈的。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>低延迟：延迟是多少并没有明确的定义。但我们都知道数据的价值将随着时间的流逝降低，时效性将是需要持续解决的问题。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据同步：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在上面这张架构图中，数据从Web平台中产生，通过数据同步系统导入到大数据平台，由于数据源不同，这里的数据同步系统实际上是多个相关系统的组合。数据库同步通常用 Sqoop，日志同步可以选择 Flume等，不同的数据源产生的数据质量可能差别很大，数据库中的格式化数据直接导入大数据系统即可，而日志和爬虫产生的数据就需要进行大量的清洗、转化处理才能有效使用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据存储：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>该层对原始数据、清洗关联后的明细数据进行存储，基于统一的实时数据模型分层理念，将不同应用场景的数据分别存储在 Kafka、HDFS、Kudu、 Clickhouse、Hbase等存储中。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据计算：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>计算层主要使用 Flink、Spark、Presto 以及 ClickHouse 自带的计算能力等四种计算引擎，Flink 计算引擎主要用于实时数据同步、 流式 ETL、关键系统秒级实时指标计算场景，Spark SQL 主要用于复杂多维分析的准实时指标计算需求场景，Presto 和 ClickHouse 主要满足多维自助分析、对查询响应时间要求不太高的场景。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>实时应用：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>以统一查询服务对各个业务线数据场景进行支持，业务主要包括实时大屏、实时数据产品、实时 OLAP、实时特征等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>当然一个好的大数据平台不能缺少元数据管理及数据治理：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1. 元数据及指标管理：主要对实时的Kafka表、Kudu表、Clickhouse表、Hive表等进行统一管理，以数仓模型中表的命名方式规范表的命名，明确每张表的字段含义、使用方，指标管理则是尽量通过指标管理系统将所有的实时指标统一管理起来，明确计算口径，提供给不同的业务方使用；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2. 数据质量及血缘分析：数据质量分为平台监控和数据监控两个部分，血缘分析则主要是对实时数据依赖关系、实时任务的依赖关系进行分析。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>以上架构只是大数据平台通用的数据模型，如果要具体的建设，需要考虑以下情况，业务需求需要实时还是准实时即可，数据时效性是秒级还是分钟级等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在调度开销方面，准实时数据是批处理过程，因此仍然需要调度系统支持，调度频率较高，而实时数据却没有调度开销；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在业务灵活性方面，因为准实时数据是基于 ETL 或 OLAP 引擎实现，灵活性优于基于流计算的方式；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在对数据晚到的容忍度方面，因为准实时数据可以基于一个周期内的数据进行全量计算，因此对于数据晚到的容忍度也是比较高的，而实时数据使用的是增量计算，对于数据晚到的容忍度更低一些；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在适用场景方面，准实时数据主要用于有实时性要求但不太高、涉及多表关联和业务变更频繁的场景，如交易类型的实时分析，实时数据则更适用于实时性要求高、数据量大的场景，如实时特征、流量类型实时分析等场景。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在某些场景中，数据的价值随着时间的推移而逐渐减少。所以在传统大数据离线数仓的基础上，逐渐对数据的实时性提出了更高的要求。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>于是随之诞生了大数据实时数仓，并且衍生出了两种技术架构Lambda和Kappa。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1. Lambda架构</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>先来看下Lambda架构图：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":176,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-11.png" alt="" class="wp-image-176"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Lambda架构图</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据从底层的数据源开始，经过Kafka、Flume等数据组件进行收集，然后分成两条线进行计算：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>一条线是进入流式计算平台（例如 Storm、Flink或者SparkStreaming），去计算实时的一些指标；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>另一条线进入批量数据处理离线计算平台（例如Mapreduce、Hive，Spark SQL），去计算T+1的相关业务指标，这些指标需要隔日才能看见。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>为什么Lambda架构要分成两条线计算？</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>假如整个系统只有一个批处理层，会导致用户必须等待很久才能获取计算结果，一般有几个小时的延迟。电商数据分析部门只能查看前一天的统计分析结果，无法获取当前的结果，这对于实时决策来说有一个巨大的时间鸿沟，很可能导致管理者错过最佳决策时机。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Lambda架构属于较早的一种架构方式，早期的流处理不如现在这样成熟，在准确性、扩展性和容错性上，流处理层无法直接取代批处理层，只能给用户提供一个近似结果，还不能为用户提供一个一致准确的结果。因此Lambda架构中，出现了批处理和流处理并存的现象。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在 Lambda 架构中，每层都有自己所肩负的任务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1. 批处理层存储管理主数据集（不可变的数据集）和预先批处理计算好的视图：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>批处理层使用可处理大量数据的分布式处理系统预先计算结果。它通过处理所有的已有历史数据来实现数据的准确性。这意味着它是基于完整的数据集来重新计算的，能够修复任何错误，然后更新现有的数据视图。输出通常存储在只读数据库中，更新则完全取代现有的预先计算好的视图。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2. 流处理层会实时处理新来的大数据：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>流处理层通过提供最新数据的实时视图来最小化延迟。流处理层所生成的数据视图可能不如批处理层最终生成的视图那样准确或完整，但它们几乎在收到数据后立即可用。而当同样的数据在批处理层处理完成后，在速度层的数据就可以被替代掉了。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>那Lambda架构有没有缺点呢？</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Lambda架构经历多年的发展，其优点是稳定，对于实时计算部分的计算成本可控，批量处理可以用晚上的时间来整体批量计算，这样把实时计算和离线计算高峰分开，这种架构支撑了数据行业的早期发展，但是它也有一些致命缺点，并在大数据3.0时代越来越不适应数据分析业务的需求。缺点如下：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>使用两套大数据处理引擎：维护两个复杂的分布式系统，成本非常高。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>批量计算在计算窗口内无法完成：在IOT时代，数据量级越来越大，经常发现夜间只有4、5个小时的时间窗口，已经无法完成白天20多个小时累计的数据，保证早上上班前准时出数据已成为每个大数据团队头疼的问题。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据源变化都要重新开发，开发周期长：每次数据源的格式变化，业务的逻辑变化都需要针对ETL和Streaming做开发修改，整体开发周期很长，业务反应不够迅速。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>导致 Lambda 架构的缺点根本原因是要同时维护两套系统架构：批处理层和速度层。我们已经知道，在架构中加入批处理层是因为从批处理层得到的结果具有高准确性，而加入速度层是因为它在处理大规模数据时具有低延时性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>那我们能不能改进其中某一层的架构，让它具有另外一层架构的特性呢？</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>例如，改进批处理层的系统让它具有更低的延时性，又或者是改进速度层的系统，让它产生的数据视图更具准确性和更加接近历史数据呢？</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>另外一种在大规模数据处理中常用的架构——Kappa 架构，便是在这样的思考下诞生的。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>2. Kappa架构</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Kafka的创始人Jay Kreps认为在很多场景下，维护一套Lambda架构的大数据处理平台耗时耗力，于是提出在某些场景下，没有必要维护一个批处理层，直接使用一个流处理层即可满足需求，即下图所示的Kappa架构：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":174,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-10.png" alt="" class="wp-image-174"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Kappa架构</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这种架构只关注流式计算，数据以流的方式被采集过来，实时计算引擎将计算结果放入数据服务层以供查询。可以认为Kappa架构是Lambda架构的一个简化版本，只是去除掉了Lambda架构中的离线批处理部分；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Kappa架构的兴起主要有两个原因：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Kafka不仅起到消息队列的作用，也可以保存更长时间的历史数据，以替代Lambda架构中批处理层数据仓库部分。流处理引擎以一个更早的时间作为起点开始消费，起到了批处理的作用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Flink流处理引擎解决了事件乱序下计算结果的准确性问题。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Kappa架构相对更简单，实时性更好，所需的计算资源远小于Lambda架构，随着实时处理的需求在不断增长，更多的企业开始使用Kappa架构。但这不意味着kappa架构能够取代Lambda架构。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Lambda和kappa架构都有各自的适用领域；例如流处理与批处理分析流程比较统一，且允许一定的容错，用Kappa比较合适，少量关键指标（例如交易金额、业绩统计等）使用Lambda架构进行批量计算，增加一次校对过程。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>还有一些比较复杂的场景，批处理与流处理产生不同的结果（使用不同的机器学习模型，专家系统，或者实时计算难以处理的复杂计算），可能更适合Lambda架构。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>四、实时数仓解决方案</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>实时数仓分层架构为了避免面向需求响应的烟囱式构建，实时数仓也引入了类似于离线数仓的分层理念，主要是为了提高模型的复用率，同时也要考虑易用性、一致性以及计算成本。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>当然实时数仓的分层架构在设计上并不会像离线数仓那么复杂，避免数据在流转过程中造成的不必要的延时响应；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>实时数仓分层架构图：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":172,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-9.png" alt="" class="wp-image-172"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>实时数仓分层架构</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ODS层：以Kafka为支撑，将所有需要实时处理的相关数据放到Kafka队列中来实现贴源数据层；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>DWD层：实时计算订阅业务数据消息队列，然后通过数据清洗、多数据源join、流式数据与离线维度信息等的组合，将一些相同粒度的业务系统、维表中的维度属性全部关联到一起，增加数据易用性和复用性，得到最终的实时明细数据；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>DIM层：存放用于关联查询的维度信息，可以根据数据现状来选择存储介质，例如使用HBase或者Mysql</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>DWS层：轻度汇总层是为了便于面向AdHoc查询或者Olap分析构建的轻度汇总结果集合，适合数据维度、指标信息比较多的情况，为了方便根据自定义条件的快速筛选和指标聚合，推荐使用MPP类型数据库进行存储，此层可视场景情况决定是否构建；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>APP层：面向实时数据场景需求构建的高度汇总层，可以根据不同的数据应用场景决定使用存储介质或者引擎；例如面向业务历史明细、BI支持等Olap分析场景，可以使用Druid、Greenplum，面向实时监控大屏、高并发汇总指标等需求，可以使用KV模式的HBase；数据量较小的时候，也可以使用Mysql来进行存储。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这里要注意下，其实APP层已经脱离了数仓，这里虽然作为了数仓的独立分层，但是实际APP层的数据已经分布存储在各种介质中用于使用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>基于Flink 构建的实时数仓</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>随着业务场景的丰富，更多的实时需求不断涌现，在追求实时任务高吞吐低延迟的同时，对计算过程中间状态管理，灵活时间窗口支持，以及 exactly once 语义保障的诉求也越来越多。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>为什么选择Flink实时计算平台？之所以选择用Flink替代原有Storm、SparkStreaming是基于以下原因考虑的，这也是实时数仓关注的核心问题：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>高吞吐、低延时；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>端到端的 Exactly-once，保证了数据的准确性；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>可容错的状态管理，实时数仓里面会进行很多的聚合计算，这些都需要对于状态进行访问和管理；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>丰富的API，对Streaming/Table/SQL支持良好，支持UDF、流式join、时间窗口等高级用法；</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>完善的生态体系，实时数仓的构建会涉及多种存储，Flink在这方面的支持也比较完善。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>基于Flink的实时数仓数据流转过程:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":171,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-8.png" alt="" class="wp-image-171"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>实时数仓数据流转过程</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据在实时数仓中的流转过程，实际和离线数仓非常相似，只是由Flink替代Hive作为了计算引擎，把存储由HDFS更换成了Kafka，但是模型的构建思路与流转过程并没有发生变化。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>4.3&nbsp;</strong><strong>实现框架</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>4.3.1&nbsp;<strong>MapReduce&nbsp;</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>MapReduce是Googleᨀ出的一种并行计算框架：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>　　Map：<br>　　　　映射，对一些独立元素组成的列表的每一个元素进行指定的操作。每个元素都是被独立操作的，而原始列表没有被更改。Map操作是可以高度并行的，这对高性能应用以及并行计算领域的需求非常有用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>　　Reduce：<br>　　　　化简，对一个列表的元素进行适当的合并，虽然它不如Map那么并行，但是因为化简总是有一个简单的答案，大规模的运算相对独立，所以化简函数在高度并行环境下也很有用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>　　适合：<br>　　　　大规模数据集的离线批处理计算；任务分而治之，子任务相对独立。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>　　不适合：<br>　　　　实时的交互式计算，要求快速响应和低延迟，比如BI；流式计算、实时分析，比如广告点击计算；子任务之间相互依赖的迭代计算。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><strong>4.3.2 </strong><strong>Topology</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Topology由一个或多个Spout/Bolt组件构成。运行中的Topology由一个或多个Supervisor节点中的 Worker构成</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>默认情况下一个Supervisor节点运行4个Worker，由defaults.yaml/storm.yaml中的属性决定：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>supervisor.slots.ports：6700 6701 6702 6703</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在代码中可以使用new Config().setNumWorkers(3)，最大数量不能超过配置的supervisor.slots.port数量。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Worker为特定拓扑的一个或多个组件Spout/Bolt产生一个或多个Executor。默认情况下一个Worker运行一个Executor。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Executor为特定拓扑的一个或多个组件Spout/Bolt实例运行一个或多个Task。默认情况下一个Executor运行一个Task.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>一般情况下，executor的数量尽量不要大于task</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><strong>4.3.3 RDD</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Spark 的数据模型是弹性分布式数据集 RDD（Resilient Distributed Datasets），相对于 MapReduce 的文件模型，RDD 是一个更抽象的模型，只存在于内存中，RDD 靠血缘（lineage） 等方式来保证可恢复性。Spark 用 RDD 上的变换（算子）来描述数据处理。每个算子（如 map，filter，join）生成一个新的 RDD。所有的算子组成一个有向无环图（DAG）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>4.4&nbsp;</strong><strong>实现工具</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>4.4.1&nbsp;<strong>Spark Streaming</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Spark Streaming是在 Spark Core API基础上扩展出来的，以微批模式实现的近实时计算框架，它认为流是批的特例，将输入数据切分成一个个小的切片，利用Spark引擎作为一个个小的batch数据来处理，最终输出切片流，以此实现近似实时计算。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":169,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-7.png" alt="" class="wp-image-169"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":4} -->
+<h4>4.4.2&nbsp;<strong>Flink</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Flink是事件驱动的实时计算框架，它认为批是流的特例，数据流分为有限流（Bounded）和无限流（Unbounded），离线计算是对有限数据流的批处理，实时计算是对无限数据流的连续处理。有限流是有明确的开始和结束时间，无限流有明确的开始时间但没有结束时间。Flink是基于事件驱动，内部是对消息逐条emit。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":167,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-6.png" alt="" class="wp-image-167"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":4} -->
+<h4>4.4.3&nbsp;<strong>Storm</strong><strong></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Storm也是一个事件驱动的实时流计算框架，完全由开发者自己定义消息被处理的拓扑结构（Topology），它的结构和Mapreduce任务类似，通过自定定义Spout（数据输入处理模块）和Bolt（输出处理模块）逻辑，以及自定义Bolt之间的拓扑依赖关系，完成整个实时事件流的处理逻辑搭建。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Trident是在Storm核心API基础上更高层次的抽象，以微批的方式处理实时流，增加了窗口操作、聚合操作等，并且支持Exactly once。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>5.&nbsp;<strong>数据治理</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>5.1&nbsp;</strong><strong>数据治理</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>主数据管理</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>即数据本身的管理，对于数据本身，基于数据仓库，我们做了数据的分层、数据域的划分、基于维度建模的架构、命名规范、对需要共享的数据建立统一视图和集中管理等，这些都是属于这个主数据管理的范围。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>元数据管理</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>元数据，即数据的数据。包含两个个方面，技术元数据、业务元数据。用于打通了源数据、数据仓库、数据应用，记录了数据从产生到消费的全过程。元数据主要记录数据仓库中模型的定义、各层级间的映射关系、监控数据仓库的数据状态及 ETL 的任务运行状态。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在数据仓库系统中，元数据可以帮助数据仓库管理员和开发人员非常方便地找到他们所关心的数据，用于指导其进行数据管理和开发工作，提高工作效率。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Apache Atlas 是托管于 Apache 旗下的一款元数据管理和治理的产品，目前在大数据领域应用颇为广泛，可以很好的帮助企业管理数据资产，并对这些资产进行分类和治理，为数据分析，数据治理提供高质量的元数据信息。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>随着企业业务量的逐渐膨胀，数据日益增多，不同业务线的数据可能在多种类型的数据库中存储，最终汇集到企业的数据仓库中进行整合分析，这个时候如果想要追踪数据来源，理清数据之间的关系将会是一件异常头疼的事情，倘若某个环节出了问题，追溯的成本将是巨大的，于是 Atlas 在这种背景下应运而生了，通过它，我们可以非常方便的管理元数据，并且可以追溯表级别，列级别之间的关系（血缘关系），为企业的数据资产提供强有力的支撑和保障。Atlas 支持从 HBase 、Hive、Sqoop、Storm、Kafka 中提取和管理元数据，同时也可以通过 Rest Api 的方式自行定义元数据模型，生成元数据。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>本文我们着重介绍一下 Atlas 的相关概念，帮助大家更好的理解 Atlas，同时详细讲解如何通过 Rest Api 的方式自定义数据模型，生成血缘关系，以便开发自己的个性化需求</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>5.2&nbsp;</strong><strong>数据安全</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>简单介绍一下业界流行的大数据权限管理框架Apache Sentry和Ranger。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Apache Sentry Sentry是由Cloudera公司内部开发而来的，初衷是为了让用户能够细粒度的控制Hadoop系统中的数据（这里主要指HDFS，Hive的数据）。所以Sentry对HDFS，Hive以及同样由Cloudera开发的Impala有着很好的支持性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Apache Ranger Ranger则是由于另一家公司Hortonworks所主导。它同样是做细粒度的权限控制。但相比较于Sentry而言，它能支持更丰富的组件，包括于 HDFS, Hive, HBase, Yarn, Storm, Knox, Kafka, Solr and NiFi。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这两个框架在权限管理时都有运用到基于角色的访问控制原理（role-based access control，RBAC）。换句话说，当新来一个用户时，我们赋予它的是一个身份角色，然后这个用户的执行权限操作完全由统一的角色本身所允许的一些权限。基于角色的访问控制，能够大大减轻系统对于大数据量用户的直接ACL控制。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>下面就简单介绍一下两种权限授权管理框架：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Sentry</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Sentry的架构模型</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>5.3&nbsp;</strong><strong>数据质量</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>数据质量管理，包含五个部分，数据的唯一性、完整性、准确性、一致性、有效性。数据质量管理，就是通过特定的规则对数据的五个方面进行测试，检查，监控和告警。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":165,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-5.png" alt="" class="wp-image-165"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>数据质量</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>唯一性：不存在无意义的重复数据</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>完整性：数据完整且连续</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>一致性：数据在多数据源中意义一致</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>有效性：这里主要指数据在分析的时间点是有效，而非过期或失效数据</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>准确性：数据合理、准确，并符合数据类型的标准</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>提到格里芬—Griffin，大家想到更多的是篮球明星或者战队名，但在<a href="https://cloud.tencent.com/solution/bigdata?from=10680">大数据</a>领域Apache Griffin（以下简称Griffin）可是数据质量领域响当当的一哥。先说一句：Griffin是大数据质量监控领域唯一的Apache项目，懂了吧。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在不重视数据质量的大数据发展时期，Griffin并不能引起重视，但是随着数据治理在很多企业的全面开展与落地，数据质量的问题开始引起重视。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>还是那句话，商用版的解决方案暂时不在本文的讨论范围内，目前大数据流动公众号对于数据治理工具的研究还是在开源方向，希望通过开源+二次开发结合的方式找到适合自己公司的数据治理工具箱。在未来有靠谱的商用方案，我们也会保持关注~</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>正文共： 12094字</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>预计阅读时间： 31分钟</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>本文将从数据质量，Griffin简介，Griffin架构，Griffin快速入门，Griffin批数据实战，Griffin流数据实战整合六个部分进行介绍，目的是带大家快速的入门数据质量管理工具的使用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>本文档版权属于公众号：大数据流动 所有。未经授权，请勿转载与商用！</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>考虑到抄袭问题，Griffin后续的高阶技术文章可能会付费，也希望大家能尽早加入数据治理、Griffin等相关技术群，我会将最新的文章与资料实时同步。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":164,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-4.png" alt="" class="wp-image-164"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>一、数据质量</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据质量管理（Data Quality Management），是指对数据从计划、获取、存储、共享、维护、应用、消亡生命周期的每个阶段里可能引发的各类数据质量问题，进行识别、度量、监控、预警等一系列管理活动，并通过改善和提高组织的管理水平使得数据质量获得进一步提高。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据质量管理不是一时的数据治理手段，而是循环的管理过程。其终极目标是通过可靠的数据，提升数据在使用中的价值，并最终为企业赢得经济效益。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>为什么会有数据质量管理呢？</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>大数据时代数据的核心不是“大”，而在于“有价值”，而有价值的关键在于“质量”。但现实是，数据往往存在很多问题：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据无法匹配</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据不可识别</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>时效性不强</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据不一致</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>。。。。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>那么，解决数据质量要达到什么目标呢？</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>总结来说就是可信和可用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>可信就是让数据具有实用性，准确性，及时性，完整性，有效性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>可用就是规范性和可读性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据质量可能不是数据治理的最核心部分，但可能会成为数据治理落地的做大障碍。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>提高数据质量有多种方式，比如建立统一的数据标准、提高人员的意识与能力等等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>而一个提高数据质量的高生产力方式就是使用数据质量管理工具。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据质量管理工具成熟的并不多，所以本文就不做无用的对比了，我们直接进入正题：Apache Griffin。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>二、Griffin简介</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Griffin是一个开源的大数据数据质量解决方案，由eBay开源，它支持批处理和流模式两种数据质量检测方式，是一个基于Hadoop和Spark建立的数据质量服务平台 (DQSP)。它提供了一个全面的框架来处理不同的任务，例如定义数据质量模型、执行数据质量测量、自动化数据分析和验证，以及跨多个数据系统的统一数据质量可视化。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Griffin于2016年12月进入Apache孵化器，Apache软件基金会2018年12月12日正式宣布Apache Griffin毕业成为Apache顶级项目。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Griffin官网地址：https://griffin.apache.org/</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Github地址：https://github.com/apache/griffin</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在eBay的数据质量管理实践中，需要花费很长时间去修复数据质量的问题，不管是批处理还是流处理，解决数据质量问题的时间都是巨大的，由此一个统一的数据质量系统就应运而生了。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在官网的定义中，Apache Griffin也早就更新为了批和流（Batch and Streaming）数据质量解决方案。Apache Griffin已经在朝着数据质量的统一管理平台而努力了。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":163,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-3.png" alt="" class="wp-image-163"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Griffin主要有如下的功能特点：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>度量：精确度、完整性、及时性、唯一性、有效性、一致性。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>异常监测：利用预先设定的规则，检测出不符合预期的数据，提供不符合规则数据的下载。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>异常告警：通过邮件或门户报告数据质量问题。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>可视化监测：利用控制面板来展现数据质量的状态。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>实时性：可以实时进行数据质量检测，能够及时发现问题。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>可扩展性：可用于多个数据系统仓库的数据校验。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>可伸缩性：工作在大数据量的环境中，目前运行的数据量约1.2PB(eBay环境)。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>自助服务：Griffin提供了一个简洁易用的用户界面，可以管理数据资产和数据质量规则；同时用户可以通过控制面板查看数据质量结果和自定义显示内容。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Apache Giffin目前的数据源包括HIVE, CUSTOM, AVRO, KAFKA。<a href="https://cloud.tencent.com/product/cdb?from=10680">Mysql</a>和其他关系型数据库的扩展根据需要进行扩展。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>当然Giffin也不是万能的，目前Griffin还是有很多的问题的，选择也要慎重：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Griffin的社区并不太活跃，可以共同讨论的人不多。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>目前最新版本还是0.6，可能会有一些问题。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>网上技术文档很少，当然这方面大数据流动也会不断的输出新的技术文档帮助大家。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>三、Griffin架构</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>数据质量模块是大数据平台中必不可少的一个功能组件，以下Griffin作为一个开源的大数据数据质量解决方案，它支持批处理和流模式两种数据质量检测方式，可以从不同维度（比如离线任务执行完毕后检查源端和目标端的数据数量是否一致、源表的数据空值数量等）度量数据资产，从而提升数据的准确度、可信度。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在Griffin的架构中，主要分为Define、Measure和Analyze三个部分，如下图所示：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":162,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-2.png" alt="" class="wp-image-162"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>各部分的职责如下：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Define：主要负责定义数据质量统计的维度，比如数据质量统计的时间跨度、统计的目标（源端和目标端的数据数量是否一致，数据源里某一字段的非空的数量、不重复值的数量、最大值、最小值、top5的值数量等）</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Measure：主要负责执行统计任务，生成统计结果</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Analyze：主要负责保存与展示统计结果</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>听起来有些晦涩，我们来看一下一个完整的Griffin任务的执行流程。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":161,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image-1.png" alt="" class="wp-image-161"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>注册数据，把想要检测数据质量的数据源注册到griffin。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>配置度量模型，可以从数据质量维度来定义模型，如：精确度、完整性、及时性、唯一性等。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>配置定时任务提交spark集群，定时检查数据。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>在门户界面上查看指标，分析数据质量校验结果。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Griffin 系统主要分为：数据收集处理层（Data Collection&amp;Processing Layer）、后端服务层（Backend Service Layer）和用户界面（User Interface）</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":160,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://chendongfang.com/wp-content/uploads/2022/12/image.png" alt="" class="wp-image-160"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>数据处理和存储层：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>对于批量分析，数据质量模型将根据 hadoop 中的数据源计算 Spark 集群中的数据质量指标。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>对于近实时分析，使用来自消息传递系统的数据，然后数据质量模型将基于 Spark 集群计算实时数据质量指标。对于<a href="https://cloud.tencent.com/product/cdcs?from=10680">数据存储</a>，可以在后端使用Elasticsearch来满足前端请求。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Apache Griffin 服务：</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>项目有提供Restful 服务来完成 Apache Griffin 的所有功能，例如探索数据集、创建数据质量度量、发布指标、检索指标、添加订阅等。因此，开发人员可以基于这些 Web 开发自己的用户界面服务。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>这种灵活性也让Griffin 得到了越来越多的应用。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>5.4&nbsp;</strong><strong>数据生命周期管理</strong><strong></strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Apache Falcon是一个开源的hadoop数据生命周期管理框架, 它提供了数据源 (Feed) 的管理服务,如生命周期管理,备份,存档到云等,通过Web UI可以很容易地配置这些预定义的策略, 能够大大简化hadoop集群的数据流管理.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>6.&nbsp;<strong>小结</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>本文大数据的发展历史，google三大论文，以及大数据相关的开源的组件，大数据的数据理论，计算理论，最后介绍数据治理。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>7.&nbsp;<strong>参考文献</strong><strong></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>[1]大数据介绍</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/nysyxxg/article/details/47402793?spm=1001.2101.3001.6661.1\u0026utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-47402793-blog-53063971.pc_relevant_landingrelevant\u0026depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-47402793-blog-53063971.pc_relevant_landingrelevant\u0026utm_relevant_index=1"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/nysyxxg/article/details/47402793?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-47402793-blog-53063971.pc_relevant_landingrelevant&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-47402793-blog-53063971.pc_relevant_landingrelevant&amp;utm_relevant_index=1
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>[2] Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung. 2003. The Google file system. In Proceedings of the nineteenth ACM symposium on Operating systems principles (SOSP '03). ACM, New York, NY, USA, 29-43. DOI: https://doi.org/10.1145/945445.945450</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>[3] Jeffrey Dean and Sanjay Ghemawat. 2004. MapReduce: simplified data processing on large clusters. In Proceedings of the 6th conference on Symposium on Operating Systems Design &amp; Implementation - Volume 6 (OSDI'04), Vol. 6. USENIX Association, Berkeley, CA, USA, 10-10.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>[4] Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber. 2006. Bigtable: a distributed storage system for structured data. In Proceedings of the 7th USENIX Symposium on Operating Systems Design and Implementation - Volume 7 (OSDI '06), Vol. 7. USENIX Association, Berkeley, CA, USA, 15-15.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>[5] 58HBase平台实践和应用-OLAP篇</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.51cto.com/u_15259710/3172335"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.51cto.com/u_15259710/3172335
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>[6] doris特点</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://www.zhihu.com/question/507018275/answer/2646312701"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://www.zhihu.com/question/507018275/answer/2646312701
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>[7] 分布式理论</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/qq_38815481/article/details/106003996"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/qq_38815481/article/details/106003996
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>[8] zab理论</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/qq_38815481/article/details/106003996"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/qq_38815481/article/details/106003996
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>[9] 计算理论</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/qq_38815481/article/details/106003996"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/qq_38815481/article/details/106003996
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p><br>[10] storm</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://www.cnblogs.com/streaming-stack/p/16390457.html"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://www.cnblogs.com/streaming-stack/p/16390457.html
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>[11] Topology</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/weixin_44911248/article/details/125852219"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/weixin_44911248/article/details/125852219
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>[12] 数据治理</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:embed {"url":"https://blog.csdn.net/m0_37719874/article/details/124245209"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://blog.csdn.net/m0_37719874/article/details/124245209
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:paragraph -->
+<p>[13] 数据生命周期管理</p>
+<!-- /wp:paragraph -->
+</body>
+</html>
+<!-- wp:embed {"url":"https://www.codenong.com/js71032cd5e9f0/"} -->
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://www.codenong.com/js71032cd5e9f0/
+</div></figure>
+<!-- /wp:embed -->
