@@ -25,6 +25,62 @@
 	text-justify:inter-ideograph;
 	font-size:10.5pt;
 	font-family:"Calibri",sans-serif;}
+h1
+	{margin-top:17.0pt;
+	margin-right:0cm;
+	margin-bottom:16.5pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:240%;
+	page-break-after:avoid;
+	font-size:22.0pt;
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;}
+h2
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:18.0pt;
+	font-family:宋体;
+	font-weight:bold;}
+h3
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:13.5pt;
+	font-family:宋体;
+	font-weight:bold;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
 .MsoChpDefault
 	{font-size:10.0pt;}
  /* Page Definitions */
@@ -49,9 +105,1174 @@ text-justify-trim:punctuation'>
 
 <div class=WordSection1 style='layout-grid:15.6pt'>
 
+<h1 align=center style='text-align:center'><a name="_Toc125969054"><span
+lang=EN-US>Flink</span></a></h1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:宋体'>目录</span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc125969054">Flink<span
+style='color:windowtext;text-decoration:none'>................................................................................................................................. </span><span style='color:windowtext;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc125969055">1.<span
+style='color:windowtext;text-decoration:none'>     </span>Flink<span
+lang=EN-US style='font-family:宋体'><span lang=EN-US>发展概要</span></span><span
+style='color:windowtext;text-decoration:none'>.................................................................................................... </span><span style='color:windowtext;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc125969056">1.1 <span
+lang=EN-US style='font-family:宋体'><span lang=EN-US>历史起源</span></span><span
+style='color:windowtext;text-decoration:none'>..................................................................................................... </span><span style='color:windowtext;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc125969057">1.2 <span
+lang=EN-US style='font-family:宋体'><span lang=EN-US>业界动态</span></span><span
+style='color:windowtext;text-decoration:none'>..................................................................................................... </span><span style='color:windowtext;text-decoration:none'>4</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc125969058">2.<span
+style='color:windowtext;text-decoration:none'>     </span><span lang=EN-US
+style='font-family:宋体'><span lang=EN-US>基本思想</span></span><span
+style='color:windowtext;text-decoration:none'>............................................................................................................ </span><span style='color:windowtext;text-decoration:none'>5</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc125969059">2.1 <span
+lang=EN-US style='font-family:宋体'><span lang=EN-US>无界、有界与流处理、批处理</span></span><span
+style='color:windowtext;text-decoration:none'>...................................................................... </span><span style='color:windowtext;text-decoration:none'>5</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc125969060">2.2 <span
+lang=EN-US style='font-family:宋体'><span lang=EN-US>有界流</span></span><span
+style='color:windowtext;text-decoration:none'>......................................................................................................... </span><span style='color:windowtext;text-decoration:none'>5</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc125969061">2.3 <span
+lang=EN-US style='font-family:宋体'><span lang=EN-US>无界流</span></span><span
+style='color:windowtext;text-decoration:none'>......................................................................................................... </span><span style='color:windowtext;text-decoration:none'>6</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc125969062">3.<span
+style='color:windowtext;text-decoration:none'>     </span><span lang=EN-US
+style='font-family:宋体'><span lang=EN-US>基本原理</span></span><span
+style='color:windowtext;text-decoration:none'>............................................................................................................ </span><span style='color:windowtext;text-decoration:none'>6</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc125969063">4.<span
+style='color:windowtext;text-decoration:none'>     </span><span lang=EN-US
+style='font-family:宋体'><span lang=EN-US>基本结构</span></span><span
+style='color:windowtext;text-decoration:none'>............................................................................................................ </span><span style='color:windowtext;text-decoration:none'>7</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc125969064">4.1 Flink<span
+lang=EN-US style='font-family:宋体'><span lang=EN-US>的执行图</span></span><span
+style='color:windowtext;text-decoration:none'>............................................................................................... </span><span style='color:windowtext;text-decoration:none'>7</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc125969065">4.2 Flink<span
+lang=EN-US style='font-family:宋体'><span lang=EN-US>编程模式</span></span><span
+style='color:windowtext;text-decoration:none'>............................................................................................... </span><span style='color:windowtext;text-decoration:none'>7</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc125969066">5.<span
+style='color:windowtext;text-decoration:none'>     </span><span lang=EN-US
+style='font-family:宋体'><span lang=EN-US>基本状态</span></span><span
+style='color:windowtext;text-decoration:none'>.......................................................................................................... </span><span style='color:windowtext;text-decoration:none'>12</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc125969067">6.<span
+style='color:windowtext;text-decoration:none'>     </span><span lang=EN-US
+style='font-family:宋体'><span lang=EN-US>小结</span></span><span style='color:
+windowtext;text-decoration:none'>................................................................................................................. </span><span style='color:windowtext;text-decoration:none'>18</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc125969068">7.<span
+style='color:windowtext;text-decoration:none'>     </span><span lang=EN-US
+style='font-family:宋体'><span lang=EN-US>参考文献</span></span><span
+style='color:windowtext;text-decoration:none'>.......................................................................................................... </span><span style='color:windowtext;text-decoration:none'>18</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969055"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>1.<span style='font:7.0pt "Times New Roman"'>
+</span></span><span lang=EN-US style='font-family:"Calibri",sans-serif'>Flink</span></a>发展概要</h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969056"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>1.1 </span>历史起源</a></h3>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>起源于</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'><a
+href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/663582?fromModule=lemma_inlink"
+target="https://baike.baidu.com/item/%E6%9F%8F%E6%9E%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6/_blank"><span
+lang=EN-US style='font-family:宋体;color:windowtext;text-decoration:none'><span
+lang=EN-US>计算机科学</span></span></a></span><span style='font-size:14.0pt;
+line-height:150%;font-family:宋体'>与技术实力很强的德国柏林工业大学。柏林工业大学德国综合排名第</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>8</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>位的大学，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2022</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'><a
+href="https://baike.baidu.com/item/QS%E4%B8%96%E7%95%8C%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D/3292552?fromModule=lemma_inlink"
+target="https://baike.baidu.com/item/%E6%9F%8F%E6%9E%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6/_blank"><span
+style='color:windowtext;text-decoration:none'>QS</span><span lang=EN-US
+style='font-family:宋体;color:windowtext;text-decoration:none'><span lang=EN-US>世界大学排名</span></span></a>158</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>名。该校的</span><span
+lang=EN-US><a
+href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/663582?fromModule=lemma_inlink"
+target="https://baike.baidu.com/item/%E6%9F%8F%E6%9E%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6/_blank"><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:宋体;color:windowtext;
+text-decoration:none'><span lang=EN-US>计算机科学与技术</span></span></a></span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>德国第</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>1</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>位，该校的计算机科学与信息系统的世界大学排名</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>73</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>位。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2003</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Google</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>发布</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Google File System</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>论文《</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>The Google File System </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>》。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2004</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>发，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Google</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>发布大型集群中简化数据处理</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>MapReduce</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>论文《</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'><a
+href="https://so.csdn.net/so/search?q=MapReduce&amp;spm=1001.2101.3001.7020"
+target="https://blog.csdn.net/u011510825/article/details/_blank"><span
+style='color:windowtext;text-decoration:none'>MapReduce</span></a>: Simplified
+Data Processing on Large Clusters</span><span style='font-size:14.0pt;
+line-height:150%;font-family:宋体'>》。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2006</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>NDFS</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Nutch Distributed File
+System</span><span style='font-size:14.0pt;line-height:150%;font-family:宋体'>）从</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>apache Nutch </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>项目中分离出来，命名为</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Hadoop</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2006</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年发表结构化数据的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'><a
+href="https://so.csdn.net/so/search?q=%E5%88%86%E5%B8%83%E5%BC%8F&amp;spm=1001.2101.3001.7020"
+target="https://blog.csdn.net/u011510825/article/details/_blank"><span
+lang=EN-US style='font-family:宋体;color:windowtext;text-decoration:none'><span
+lang=EN-US>分布式</span></span></a></span><span style='font-size:14.0pt;
+line-height:150%;font-family:宋体'>存储系统</span><span lang=EN-US style='font-size:
+14.0pt;line-height:150%'>Bigtable</span><span style='font-size:14.0pt;
+line-height:150%;font-family:宋体'>论文《</span><span lang=EN-US style='font-size:
+14.0pt;line-height:150%'>Bigtable: A Distributed Storage System for Structured
+Data</span><span style='font-size:14.0pt;line-height:150%;font-family:宋体'>》。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2008</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>VolkerMarkl</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>提出了</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>平流层</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的构想。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2009</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Spark</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>诞生于伯克利大学</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>AMPLab</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，属于伯克利大学的研究性项目。</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2010 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年，通过</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>BSD </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>许可协议正式对外开源发布。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2010</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>12</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Nathan</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>首先提出将</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>流（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Stream</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>作为一个分布式的抽象概念，然后又提出了</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“spouts”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>和</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“bolts”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的想法。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2014</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>9</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>17</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>日，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Storm</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>正式毕业，升级为顶级项目</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> 2014 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Stratosphere </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>项目开发并贡献了一个平台，该平台于</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> 2014 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年成为</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Apache </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>项目，名为</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'><a
+href="http://flink.apache.org/"><span style='color:windowtext;text-decoration:
+none'>Apache Flink</span></a></span><span style='font-size:14.0pt;line-height:
+150%;font-family:宋体'>。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>创始团队中的许多成员离开大学并创办了一个公司来实现</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Flink </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的商业化，他们为这个公司取名为</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;data Artisans</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2014 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> 12 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Apache </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>软件基金会发布了第一个</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Release</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>版本</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink0.8.0,</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>一跃成为</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Apache </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>软件基金会的顶级项目。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2015</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>google</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>在论文《</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>The Dataflow Model: A
+Practical Approach to Balancing Correctness, Latency, and Cost in
+Massive-Scale, Unbounded, Out-of-Order Data Processing</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>》提出</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Dataflow</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>模型。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2016 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> 2 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月份，谷歌及其合作伙伴向</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Apache </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>捐赠了一大批代码，创立了孵化中的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Beam </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>项目（</span><span
+style='font-size:14.0pt;line-height:150%'> </span><span style='font-size:14.0pt;
+line-height:150%;font-family:宋体'>最初叫</span><span lang=EN-US style='font-size:
+14.0pt;line-height:150%'> Apache Dataflow</span><span style='font-size:14.0pt;
+line-height:150%;font-family:宋体'>）。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Apache Beam</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>是</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Apache </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>软件基金会于</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2017</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>1 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> 10 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>日对外宣布的开源平台。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2019 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> 1 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> 8 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>日</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>, </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>在微软宣布</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> GitHub </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>免费开放私有代码库的同一天，阿里巴巴确认收购</span><span
+style='font-size:14.0pt;line-height:150%'> </span><span style='font-size:14.0pt;
+line-height:150%;font-family:宋体'>德国初创企业</span><span lang=EN-US
+style='font-size:14.0pt;line-height:150%'> Data Artisan</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>阿里巴巴内部</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Flink </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>版本</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Blink </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>将于</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> 2019 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> 1 </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月正式开源！</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2014</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>4</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，贡献给</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Apache</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>软件基金会，更名为</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Apache Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2014</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>8</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>第一个版本</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>0.6</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>正式发布，与此同时</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Fink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的几位核心开发者创办了</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Data Artisans</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>公司；</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2014</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>12</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>项目完成孵化，成为</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Apache</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>顶级项目</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2015</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>4</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>发布了里程碑式的重要版本</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>0.9.0;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2019</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>1</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，长期对</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>投入研发的阿里巴巴，以</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>9000</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>万欧元的价格收购了</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Data Artisans</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>公司</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2019</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>8</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，阿里巴巴将内部版本</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Blink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>开源，合并入</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink1.9.0</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>版本；</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2020</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>5</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Apache Flink 1.10.0</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>发布；</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2020</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>7</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Apache Flink 1.11.0</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>发布；</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2020</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>12</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Apache Flink 1.12.0</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>发布</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2021</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>4</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Apache Flink 1.13.0</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>发布；</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2021</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>年</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>9</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>月，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Apache Flink 1.14.0</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>发布；</span></p>
+
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969057"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>1.2 </span>业界动态</a></h3>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>随着实时计算需求的迫切性，各种迭代计算的性能以及对流式计算和</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>SQL</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的支持，以</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Spark Streming</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>为例也支持流式计算，而且能解决</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>99%</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的流式计算要求，但是</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Spark Streaming</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>设计理念里面认为流是批的极限，即微批（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>micro-batch</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）就是流式，所以有个致命的缺点就是攒批；因为这个缺点的存在，剩下的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>1%</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的流式运算并不太适合</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Spark</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，而</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>就很好的规避了这个缺点，认为批是流的特例，把数据计算归为有界和无界的，有界的数据就是批处理，无界的数据就是流式，而且以流批一体为终极计算目标，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>就被归在第四类内，从这里开始时就正式揭开</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的面纱！</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>量子计算机可以识别大数据集中的模式</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>预计量子计算将能够搜索非常大的、未排序的数据集，以非常快的速度发现模式或异常。量子计算机可以同时访问数据库中的所有条目，从而在几秒钟内识别出这些相似点。虽然这在理论上是可能的，但它只发生在一个并行的计算机上，并且只能以一个接一个的方式查看每个记录，所以它花费了大量的时间，并且取决于数据集的大小，它可能永远不会成为现实。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>量子计算机可以帮助整合不同数据集的数据。此外，由于可被用于整合不同的数据集，量子计算机有望获得巨大突破。虽然这在没有人类介入的情况下可能是困难的，但是人类的参与将帮助计算机学会如何在未来整合数据。因此，如果有不同独特模式的原始数据源，并有研究团队想要比较它们，那么在数据被比较值钱，计算机就必须理解模式之间的关系。为了实现这个目标，需要在分析自然语言的语义方面取得突破，而这正是</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>AI</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>面临的最大挑战之一。然而，人类可以提供输入，然后对未来系统进行训练。</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&lt;/p&gt;&lt;p&gt;</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>最终，量子计算机将允许快速分析和整合庞大的数据集，这些数据集将改进和改变我们的机器学习和</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>AI</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>能力。</span></p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969058"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>2.<span style='font:7.0pt "Times New Roman"'>
+</span></span>基本思想</a></h2>
+
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969059"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>2.1 </span>无界、有界与流处理、批处理</a></h3>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>在描述无限和有限数据集时，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>DataFlow</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>使用无界和有界这样的描述，而不是流处理数据和批处理数据，这是因为流处理和批处理意味着使用特定的执行引擎。实际上，无界数据集可以通过批处理系统反复调度来处理，而设计良好的流处理系统也可以完美地处理有界数据集。从这个角度来看，区分流处理和批处理的实际意义不大，这也为后来</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>流批一体架构提供了理论基础。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>DataStream API</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>和</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>DataSet API</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>主要面向具有开发经验的用户，用户可以使用</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>DataStream API</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>处理无界流数据，使用</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>DataSet API</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>处理批量数据。</span></p>
+
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969060"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>2.2 </span>有界流</a></h3>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有定义流的开始，也有定义流的结束。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有界流可以在摄取所有数据后再进行计算。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有界流所有数据可以被排序，所以并不需要有序摄取。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有界流处理通常被称为批处理。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有界流，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>则由一些专为固定大小数据集特殊设计的算法和数据结构进行内部处理，产生了出色的性能。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969061"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>2.3 </span>无界流</a></h3>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有定义流的开始，但没有定义流的结束。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>它们会无休止地产生数据。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>无界流的数据必须持续处理，即数据被摄取后需要立刻处理。我们不能等到所有数据都到达再处理，因为输入是无限的，在任何时候输入都不会完成。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>处理无界数据通常要求以特定顺序摄取事件，例如事件发生的顺序，以便能够推断结果的完整性。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>擅长精确的时间控制和状态化，使得</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Flink </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的运行时</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>(runtime)</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>能够运行任何处理无界流的应用。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969062"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>3.<span style='font:7.0pt "Times New Roman"'>
+</span></span>基本原理</a></h2>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>JobManager </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>主要负责调度</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Job </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>并协调</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Task </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>做</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> checkpoint</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，职责上很像</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Storm </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Nimbus</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>。从</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Client </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>处接收到</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Job </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>和</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> JAR </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>包</span><span
+style='font-size:14.0pt;line-height:150%'> </span><span style='font-size:14.0pt;
+line-height:150%;font-family:宋体'>等资源后，会生成优化后的执行计划，并以</span><span lang=EN-US
+style='font-size:14.0pt;line-height:150%'> Task </span><span style='font-size:
+14.0pt;line-height:150%;font-family:宋体'>的单元调度到各个</span><span lang=EN-US
+style='font-size:14.0pt;line-height:150%'> TaskManager </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>去执行。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>TaskManager </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>在启动的时候就设置好了槽位数（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Slot</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>），每个</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> slot </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>能启动一个</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> Task</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Task </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>为线程。从</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'> JobManager </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>处接收需要</span><span
+style='font-size:14.0pt;line-height:150%'> </span><span style='font-size:14.0pt;
+line-height:150%;font-family:宋体'>部署的</span><span lang=EN-US style='font-size:
+14.0pt;line-height:150%'> Task</span><span style='font-size:14.0pt;line-height:
+150%;font-family:宋体'>，部署启动后，与自己的上游建立</span><span lang=EN-US style='font-size:
+14.0pt;line-height:150%'> Netty </span><span style='font-size:14.0pt;
+line-height:150%;font-family:宋体'>连接，接收数据并处理。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969063"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>4.<span style='font:7.0pt "Times New Roman"'>
+</span></span>基本结构</a></h2>
+
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969064"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>4.1 </span><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>Flink</span></a>的执行图</h3>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>会根据代码执行流程生成</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>DAG</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>数据流图，生成顺序为：</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>streamGraph</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>jobGraph</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>executionGraph</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、物理执行图</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>1</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>streamGraph</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>：程序原始执行流程图，也就是算子的依赖关系，在</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>client</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>上生成</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>jobGraph</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>：对程序执行流程图进行一定程度的优化，如将</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>one to one</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>operator</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>生成</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>operator chain</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，在</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>client</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>上生成</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>3</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>executionGraph</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>：对程序中设置的并行度和提交的资源进行并行规划，在</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>jobManager</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>上生成</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>4</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、物理执行图：将</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>executionGraph</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的并行计划落实到</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>taskManager</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>上，将</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>subTask</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>落实到具体的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>taskSlot</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>上。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969065"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>4.2 </span><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>Flink</span></a>编程模式</h3>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;&nbsp;Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>程序的基本构建块是流（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>streams&nbsp;</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）和转换（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>transformations</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）。从概念上讲，流（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>streams&nbsp;</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）是数据记录的流（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'><a
+href="https://so.csdn.net/so/search?q=flow&amp;spm=1001.2101.3001.7020"
+target="https://blog.csdn.net/L_15156024189/article/details/_blank"><span
+style='color:windowtext;text-decoration:none'>flow</span></a></span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>(</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>可能是永无休止的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>)</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，而转换（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>transformations</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）是将一个或多个流作为输入，并产生一个或多个输出流的操作。</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+lang=EN-US style='font-size:14.0pt;color:black'>&nbsp; </span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>当执行时，</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>Flink</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>程序被映射为流动的数据流（</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>streaming dataflows</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>），包括流和转换操作符。每个数据流（</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>dataflow</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）从一个或多个源（</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>sources&nbsp;</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）开始，以一个或多个接收（</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>sinks</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）结束。数据流（</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>dataflow</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）类似于任意有向无环图（</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>DAGs</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）。尽管通过迭代构造允许特殊形式的环（</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>cycles&nbsp;</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>），但为了简单起见，我们在大多数情况下将忽略这一点，也就是仍然看成有向无环图（笔者注）。下面看个例子：下面看个例子：</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+lang=EN-US style='font-size:14.0pt;color:black'><img border=0 width=713
+height=539 id="图片 5" src="flink.files/image001.gif" alt="IMG_256"></span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+style='font-size:14.0pt;font-family:宋体;color:black'>图的上半部分是程序，主要包含了三个部分：</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>source</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>、</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>transfomation</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>和</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>sink</span><span style='font-size:14.0pt;
+font-family:宋体;color:black'>。图的下半部分是程序对应的数据流（</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>dataflow</span><span style='font-size:
+14.0pt;font-family:宋体;color:black'>）。</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+style='font-size:14.0pt;font-family:宋体;color:black'>笔者注：本文将</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>DataStream</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>和</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>Dataflow</span><span style='font-size:
+14.0pt;font-family:宋体;color:black'>都翻译为数据流，</span><span style='font-size:14.0pt;
+color:black'> </span><span style='font-size:14.0pt;font-family:宋体;color:black'>从图中能看出它俩的本质区别，</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>DataStream</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>是真实数据记录的抽象，而</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>Dataflow</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>是程序对应的一个有向无环图。如无特殊标注，数据流指的都是</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>DataStream</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>。</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+lang=EN-US style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><a name=t2></a><span
+lang=EN-US style='font-size:14.0pt;color:black'>Parallel Dataflows</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>（并行数据流）</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+lang=EN-US style='font-size:14.0pt;color:black'>&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp;Flink</span><span style='font-size:14.0pt;font-family:宋体;
+color:black'>中的程序本质上是并行（</span><span lang=EN-US style='font-size:14.0pt;
+color:black'>parallel&nbsp;</span><span style='font-size:14.0pt;font-family:
+宋体;color:black'>）和分布式的（</span><span lang=EN-US style='font-size:14.0pt;
+color:black'>distributed</span><span style='font-size:14.0pt;font-family:宋体;
+color:black'>）。在程序执行期间，一个流（</span><span lang=EN-US style='font-size:14.0pt;
+color:black'>stream</span><span style='font-size:14.0pt;font-family:宋体;
+color:black'>）有一个或多个流分区（</span><span lang=EN-US style='font-size:14.0pt;
+color:black'>stream partitions</span><span style='font-size:14.0pt;font-family:
+宋体;color:black'>），每个操作（</span><span lang=EN-US style='font-size:14.0pt;
+color:black'>operator&nbsp;</span><span style='font-size:14.0pt;font-family:
+宋体;color:black'>）有一个或多个操作子任务（</span><span lang=EN-US style='font-size:14.0pt;
+color:black'>operator subtasks</span><span style='font-size:14.0pt;font-family:
+宋体;color:black'>）。操作子任务相互独立，在不同的线程或者可能在不同的机器或容器上执行。</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+lang=EN-US style='font-size:14.0pt;color:black'>&nbsp; &nbsp; &nbsp; &nbsp; </span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>一个操作的并行度（</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>parallelism&nbsp;</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）指的是操作子任务的数量。流的并行度是产生该流的操作符的并行度。同一个程序的不同操作可能具有不同的并行度。如图：</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+lang=EN-US style='font-size:14.0pt;color:black'><img border=0 width=760
+height=475 id="图片 6" src="flink.files/image002.gif" alt="IMG_257"></span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+style='font-size:14.0pt;font-family:宋体;color:black'>图的上半部分是简化的</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>Dataflow</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>，下半部分是从并行度角度分析的</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>Dataflow</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>。每个黄色实心圆表示一个操作子任务，灰色箭头表示流。看到，在</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>sink</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>之前并行度都是</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>2</span><span style='font-size:
+14.0pt;font-family:宋体;color:black'>，</span><span lang=EN-US style='font-size:
+14.0pt;color:black'>sink</span><span style='font-size:14.0pt;font-family:宋体;
+color:black'>的并行度是</span><span lang=EN-US style='font-size:14.0pt;color:black'>1</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>。</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+lang=EN-US style='font-size:14.0pt;color:black'>&nbsp; &nbsp; &nbsp; &nbsp; </span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>流可以以一对一模式（</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>one-to-one&nbsp;pattern</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>，也可以叫</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>forwarding&nbsp;pattern</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）或重分布模式（</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>redistributing&nbsp;pattern</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）在两个操作符之间传输数据。</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+style='font-size:14.0pt;font-family:宋体;color:black'>（</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>1</span><span style='font-size:14.0pt;
+font-family:宋体;color:black'>）</span><span lang=EN-US style='font-size:14.0pt;
+color:black'>One-to-one&nbsp;streams</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+lang=EN-US style='font-size:14.0pt;color:black'>&nbsp; &nbsp; &nbsp; &nbsp; </span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>比如图中</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>Source</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>和</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>map()</span><span style='font-size:14.0pt;
+font-family:宋体;color:black'>之间的流就是一个</span><span lang=EN-US style='font-size:
+14.0pt;color:black'>One-to-one&nbsp;stream</span><span style='font-size:14.0pt;
+font-family:宋体;color:black'>。它保持元素的分区（</span><span lang=EN-US style='font-size:
+14.0pt;color:black'>partitioning&nbsp;</span><span style='font-size:14.0pt;
+font-family:宋体;color:black'>）和顺序（</span><span lang=EN-US style='font-size:14.0pt;
+color:black'>ordering&nbsp;</span><span style='font-size:14.0pt;font-family:
+宋体;color:black'>）。这意味着</span><span lang=EN-US style='font-size:14.0pt;
+color:black'>map()</span><span style='font-size:14.0pt;font-family:宋体;
+color:black'>操作符的子任务</span><span lang=EN-US style='font-size:14.0pt;color:black'>[1]</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>（也就是图中的</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>map()[1]</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）将看到与源操作符的子任务</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>[1]</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>（也即是图中的</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>Source[1]</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）同样的元素，同样的顺序。</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+style='font-size:14.0pt;font-family:宋体;color:black'>（</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>2</span><span style='font-size:14.0pt;
+font-family:宋体;color:black'>）</span><span lang=EN-US style='font-size:14.0pt;
+color:black'>Redistributing&nbsp;streams</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+lang=EN-US style='font-size:14.0pt;color:black'>&nbsp; &nbsp; &nbsp; &nbsp; </span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>比如图中的</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>&nbsp;map()</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>和</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>keyBy/window</span><span style='font-size:
+14.0pt;font-family:宋体;color:black'>之间的流是一个</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>redistributing&nbsp;stream</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>。它更改了流的分区。根据所选择的转换，每个操作子任务（比如</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>map</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）将数据发送到不同的目标子任务（比如</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>keyBy</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>）。</span></p>
+
+<p style='margin-bottom:9.6pt;line-height:14.4pt;background:white'><span
+style='font-size:14.0pt;font-family:宋体;color:black'>原文中认为</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>keyBy/window</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>和</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>Sink</span><span style='font-size:14.0pt;
+font-family:宋体;color:black'>之间也是一个</span><span lang=EN-US style='font-size:
+14.0pt;color:black'>Redistributing&nbsp;stream</span><span style='font-size:
+14.0pt;font-family:宋体;color:black'>。但笔者认为，它应该归属于</span><span lang=EN-US
+style='font-size:14.0pt;color:black'>One-to-one&nbsp;stream</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>，理由是它也是</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>one-to-one</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>，并没有发生</span><span
+lang=EN-US style='font-size:14.0pt;color:black'>Redistributing</span><span
+style='font-size:14.0pt;font-family:宋体;color:black'>。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969066"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>5.<span style='font:7.0pt "Times New Roman"'>
+</span></span>基本状态</a></h2>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>处理机制的核心，就是</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有状态的流式计算</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>。之前已经多次提到了</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>状态</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>state</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>），不论是简单聚合、窗口聚合，还是处理函数的应用，都会有状态的身影出现。有状态流处理，状态就如同事务处理时数据库中保存的信息一样，是用来辅助进行任务计算的数据。而在</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>这样的分布式系统中，不仅需要定义出状态在任务并行时的处理方式，还需要考虑如何持久化保存、以便发生故障时正确地恢复。这就需要一套完整的管理机制来处理所有的状态。在流处理中，数据是连续不断到来和处理的。每个任务进行计算处理时，可以基于当前数据直接转换得到输出结果；也可以依赖一些其他数据。这些由一个任务维护，并且用来计算输出结果的所有数据，就叫作这个任务的状态。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>1</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、有状态算子</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>在</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>中，算子任务可以分为无状态和有状态两种情况。无状态的算子任务只需要观察每个独立事件，根据当前输入的数据直接转换输出结果，如下图所示。例如，可以将一个字符串类型的数据拆分开作为元组输出；也可以对数据做一些计算，比如每个代表数量的字段加</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>1</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>。我们之前讲到的基本转换算子，如</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>map</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>filter</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>flatMap</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，计算时不依赖其他数据，就都属于无状态的算子。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'><img border=0 width=466
+height=99 id="图片 1" src="flink.files/image003.gif" alt="IMG_256"></span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>而有状态的算子任务，则除当前数据之外，还需要一些其他数据来得到计算结果。这里的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>其他数据</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，就是所谓的状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>state</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>），最常见的就是之前到达的数据，或者由之前数据计算出的某个结果。比如，做求和（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>sum</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）计算时，需要保存之前所有数据的和，这就是状态；窗口算子中会保存已经到达的所有数据，这些也都是它的状态。另外，如果希望检索到某种</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>事件模式</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>event pattern</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>），比如</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>先有下单行为，后有支付行为</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，那么也应该把之前的行为保存下来，这同样属于状态。容易发现，之前讲过的聚合算子、窗口算子都属于有状态的算子。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'><img border=0 width=472
+height=225 id="图片 2" src="flink.files/image004.gif" alt="IMG_257"></span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>如上图所示为有状态算子的一般处理流程，具体步骤如下。（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>1</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）算子任务接收到上游发来的数据；（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）获取当前状态；（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>3</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）根据业务逻辑进行计算，更新状态；（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>4</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）得到计算结果，输出发送到下游任务。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、状态的管理</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>在传统的事务型处理架构中，这种额外的状态数据是保存在数据库中的。而对于实时流处理来说，这样做需要频繁读写外部数据库，如果数据规模非常大肯定就达不到性能要求了。所以</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的解决方案是，将状态直接保存在内存中来保证性能，并通过分布式扩展来提高吞吐量。在</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>中，每一个算子任务都可以设置并行度，从而可以在不同的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>slot</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>上并行运行多个实例，我们把它们叫作</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>并行子任务</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>。而状态既然在内存中，那么就可以认为是子任务实例上的一个本地变量，能够被任务的业务逻辑访问和修改。这样看来状态的管理似乎非常简单，我们直接把它作为一个对象交给</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>JVM</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>就可以了。然而大数据的场景下，我们必须使用分布式架构来做扩展，在低延迟、高吞吐的基础上还要保证容错性，一系列复杂的问题就会随之而来了。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>状态的访问权限。我们知道</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>上的聚合和窗口操作，一般都是基于</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>KeyedStream</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的，数据会按照</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>key</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的哈希值进行分区，聚合处理的结果也应该是只对当前</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>key</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有效。然而同一个分区（也就是</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>slot</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）上执行的任务实例，可能会包含多个</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>key</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的数据，它们同时访问和更改本地变量，就会导致计算结果错误。所以这时状态并不是单纯的本地变量。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>容错性，也就是故障后的恢复。状态只保存在内存中显然是不够稳定的，我们需要将它持久化保存，做一个备份；在发生故障后可以从这个备份中恢复状态。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>我们还应该考虑到分布式应用的横向扩展性。比如处理的数据量增大时，我们应该相应地对计算资源扩容，调大并行度。这时就涉及到了状态的重组调整。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>可见状态的管理并不是一件轻松的事。好在</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>作为有状态的大数据流式处理框架，已经帮我们搞定了这一切。</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有一套完整的状态管理机制，将底层一些核心功能全部封装起来，包括状态的高效存储和访问、持久化保存和故障恢复，以及资源扩展时的调整。这样，我们只需要调用相应的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>API</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>就可以很方便地使用状态，或对应用的容错机制进行配置，从而将更多的精力放在业务逻辑的开发上。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>3</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、状态的分类</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>1. </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>托管状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Managed State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）和原始状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Raw State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的状态有两种：托管状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Managed State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）和原始状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Raw State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）。托管状态就是由</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>统一管理的，状态的存储访问、故障恢复和重组等一系列问题都由</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>实现，我们只要调接口就可以；而原始状态则是自定义的，相当于就是开辟了一块内存，需要我们自己管理，实现状态的序列化和故障恢复。具体来讲，托管状态是由</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的运行时（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Runtime</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）来托管的；在配置容错机制后，状态会自动持久化保存，并在发生故障时自动恢复。当应用发生横向扩展时，状态也会自动地重组分配到所有的子任务实例上。对于具体的状态内容，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>也提供了值状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>ValueState</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）、列表状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>ListState</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）、映射状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>MapState</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）、聚合状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>AggregateState</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）等多种结构，内部支持各种数据类型。聚合、窗口等算子中内置的状态，就都是托管状态；我们也可以在富函数类（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>RichFunction</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）中通过上下文来自定义状态，这些也都是托管状态。而对比之下，原始状态就全部需要自定义了。</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>不会对状态进行任何自动操作，也不知道状态的具体数据类型，只会把它当作最原始的字节（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Byte</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）数组来存储。我们需要花费大量的精力来处理状态的管理和维护。所以只有在遇到托管状态无法实现的特殊需求时，我们才会考虑使用原始状态；一般情况下不推荐使用。绝大多数应用场景，我们都可以用</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>提供的算子或者自定义托管状态来实现需求。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2. </span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>算子状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Operator State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）和按键分区状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Keyed State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>接下来我们的重点就是托管状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Managed State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）。我们知道在</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>中，一个算子任务会按照并行度分为多个并行子任务执行，而不同的子任务会占据不同的任务槽（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>task slot</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）。由于不同的</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>slot</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>在计算资源上是物理隔离的，所以</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>能管理的状态在并行任务间是无法共享的，每个状态只能针对当前子任务的实例有效。而很多有状态的操作（比如聚合、窗口）都是要先做</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>keyBy</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>进行按键分区的。按键分区之后，任务所进行的所有计算都应该只针对当前</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>key</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有效，所以状态也应该按照</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>key</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>彼此隔离。在这种情况下，状态的访问方式又会有所不同。基于这样的想法，我们又可以将托管状态分为两类：算子状态和按键分区状态。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>1</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）算子状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Operator State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）状态作用范围限定为当前的算子任务实例，也就是只对当前并行子任务实例有效。这就意味着对于一个并行子任务，占据了一个</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>分区</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，它所处理的所有数据都会访问到相同的状态，状态对于同一任务而言是共享的，</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;<img border=0
+width=462 height=256 id="图片 3" src="flink.files/image005.gif" alt="IMG_258"></span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>算子状态可以用在所有算子上，使用的时候其实就跟一个本地变量没什么区别</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>——</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>因为本地变量的作用域也是当前任务实例。在使用时，我们还需进一步实现</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>CheckpointedFunction</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>接口。</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>2</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）按键分区状态（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Keyed State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）状态是根据输入流中定义的键（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>key</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）来维护和访问的，所以只能定义在按键分区流（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>KeyedStream</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）中，也就</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>keyBy</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>之后才可以使用，</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;<img border=0
+width=481 height=340 id="图片 4" src="flink.files/image006.gif" alt="IMG_259"></span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>按键分区状态应用非常广泛。之前讲到的聚合算子必须在</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>keyBy</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>之后才能使用，就是因为聚合的结果是以</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Keyed State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>的形式保存的。另外，也可以通过富函数类（</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Rich Function</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>）来自定义</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Keyed State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，所以只要提供了富函数类接口的算子，也都可以使用</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Keyed State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>。所以即使是</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>map</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>、</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>filter</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>这样无状态的基本转换算子，我们也可以通过富函数类给它们</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>追加</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”Keyed State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，或者实现</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>CheckpointedFunction</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>接口来定义</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Operator State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>；从这个角度讲，</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Flink</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>中所有的算子都可以是有状态的，不愧是</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>“</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>有状态的流处理</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>”</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>。无论是</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Keyed State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>还是</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>Operator State</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>，它们都是在本地实例上维护的，也就是说每个并行子任务维护着对应的状态，算子的子任务之间状态不共享。</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969067"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>6.<span style='font:7.0pt "Times New Roman"'>
+</span></span>小结</a></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc125969068"><span
+lang=EN-US style='font-family:"Calibri",sans-serif'>7.<span style='font:7.0pt "Times New Roman"'>
+</span></span>参考文献</a></h2>
+
 <p class=MsoNormal style='margin-left:0cm;text-indent:28.0pt;line-height:150%'><span
 lang=EN-US style='font-size:14.0pt;line-height:150%'>[1]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=EN-US style='font-size:14.0pt;line-height:150%'>&nbsp;</span></p>
+</span></span><span style='font-size:14.0pt;line-height:150%;font-family:宋体'>百度百科</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>,https://baike.baidu.com/item/%E6%9F%8F%E6%9E%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6/2567790?fr=aladdin</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>[2]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:14.0pt;line-height:150%'>stratosphere</span><span
+style='font-size:14.0pt;line-height:150%;font-family:宋体'>研究项目刊物</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>http://stratosphere.eu/project/publications/</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:28.0pt;line-height:150%'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%'>[3]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:14.0pt;line-height:150%'>https://blog.csdn.net/wellto/article/details/75281488</span></p>
 
 </div>
 
