@@ -1,0 +1,1731 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Spring Cloud Gateway-陈东方</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:黑体;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:微软雅黑;
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"Open Sans";
+	panose-1:2 11 6 6 3 5 4 2 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@黑体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@微软雅黑";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{margin-top:17.0pt;
+	margin-right:0cm;
+	margin-bottom:16.5pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:240%;
+	page-break-after:avoid;
+	font-size:22.0pt;
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;}
+h2
+	{margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:172%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h3
+	{margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:172%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+code
+	{font-family:"Courier New";}
+pre
+	{mso-style-link:"HTML 预设格式 字符";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:宋体;}
+span.HTML
+	{mso-style-name:"HTML 预设格式 字符";
+	mso-style-link:"HTML 预设格式";
+	font-family:宋体;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN link=blue vlink="#954F72" style='word-wrap:break-word;
+text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<h1 align=center style='text-align:center'><a name="_Toc1589"><span lang=EN-US
+style='font-family:"Arial",sans-serif'>Spring Cloud Gateway</span></a></h1>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:宋体'>目录</span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc1589"><span style='font-family:
+"Arial",sans-serif;color:windowtext;text-decoration:none'>Spring Cloud Gateway</span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc15152"><span style='font-family:
+"Arial",sans-serif;color:windowtext;text-decoration:none'>1. </span><span
+lang=EN-US style='font-family:宋体;color:windowtext;text-decoration:none'><span
+lang=EN-US>介绍</span></span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc9945"><span style='font-family:
+"Arial",sans-serif;color:windowtext;text-decoration:none'>2. </span><span
+lang=EN-US style='font-family:宋体;color:windowtext;text-decoration:none'><span
+lang=EN-US>工作原理</span></span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc25343"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>2.1. </span><span lang=EN-US
+style='font-family:宋体;color:windowtext;text-decoration:none'><span lang=EN-US>工作原理</span></span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc5215"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>2.2. </span><span lang=EN-US
+style='font-family:宋体;color:windowtext;text-decoration:none'><span lang=EN-US>工作流程</span></span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc25910"><span style='font-family:
+"Arial",sans-serif;color:windowtext;text-decoration:none'>3. </span><span
+lang=EN-US style='font-family:宋体;color:windowtext;text-decoration:none'><span
+lang=EN-US>数据模型</span></span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc16507"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>3.1. </span><span style='color:windowtext;
+text-decoration:none'>Route</span><span lang=EN-US style='font-family:宋体;
+color:windowtext;text-decoration:none'><span lang=EN-US>模型</span></span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc3904"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>3.2. </span><span style='color:windowtext;
+text-decoration:none'>Definition</span><span lang=EN-US style='font-family:
+宋体;color:windowtext;text-decoration:none'><span lang=EN-US>模型</span></span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc25448"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>3.3. </span><span style='color:windowtext;
+text-decoration:none'>Predicate</span><span lang=EN-US style='font-family:宋体;
+color:windowtext;text-decoration:none'><span lang=EN-US>工厂模型</span></span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc16121"><span style='font-family:
+"Arial",sans-serif;color:windowtext;text-decoration:none'>4. </span><span
+lang=EN-US style='font-family:宋体;color:windowtext;text-decoration:none'><span
+lang=EN-US>运行<span lang=EN-US>模型</span></span></span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc6108"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>4.1. </span><span style='color:windowtext;
+text-decoration:none'>web</span><span lang=EN-US style='font-family:宋体;
+color:windowtext;text-decoration:none'><span lang=EN-US>机制</span></span><span
+style='color:windowtext;text-decoration:none'>--</span><span lang=EN-US
+style='font-family:宋体;color:windowtext;text-decoration:none'><span lang=EN-US>详细介绍参考</span></span><span
+style='color:windowtext;text-decoration:none'>WebFlux</span><span lang=EN-US
+style='font-family:宋体;color:windowtext;text-decoration:none'><span lang=EN-US>（待补充）</span></span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc12133"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>4.2. </span><span style='color:windowtext;
+text-decoration:none'>Route</span><span lang=EN-US style='font-family:宋体;
+color:windowtext;text-decoration:none'><span lang=EN-US>机制</span></span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc4960"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>6.1.1. </span><span style='color:
+windowtext;text-decoration:none'>Filter</span><span lang=EN-US
+style='font-family:宋体;color:windowtext;text-decoration:none'><span lang=EN-US>机制</span></span><span
+style='color:windowtext;text-decoration:none'>-</span><span style='font-family:
+"Arial",sans-serif;color:windowtext;text-decoration:none'>GlobalFilter</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc29718"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>6.1.2. </span><span lang=EN-US
+style='font-family:宋体;color:windowtext;text-decoration:none'><span lang=EN-US>负载均衡机制</span></span><span
+style='color:windowtext;text-decoration:none'>-LoadBalancerClientFilter</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc18097"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>4.3. </span><span style='color:windowtext;
+text-decoration:none'>RouteDefinition</span><span lang=EN-US style='font-family:
+宋体;color:windowtext;text-decoration:none'><span lang=EN-US>机制</span></span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc24732"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>4.3.1. </span><span lang=EN-US
+style='font-family:宋体;color:windowtext;text-decoration:none'><span lang=EN-US>监听器</span></span><span
+style='color:windowtext;text-decoration:none'>-RouteRefreshListener</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc19921"><span style='font-family:
+宋体;color:windowtext;text-decoration:none'>4.3.2. </span><span lang=EN-US
+style='font-family:宋体;color:windowtext;text-decoration:none'><span lang=EN-US>工厂机制</span></span><span
+style='color:windowtext;text-decoration:none'>-RouteRefreshListener</span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc17602"><span style='font-family:
+"Arial",sans-serif;color:windowtext;text-decoration:none'>5. </span><span
+lang=EN-US style='font-family:宋体;color:windowtext;text-decoration:none'><span
+lang=EN-US>总结</span></span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc5613"><span style='font-family:
+"Arial",sans-serif;color:windowtext;text-decoration:none'>6. </span><span
+lang=EN-US style='font-family:宋体;color:windowtext;text-decoration:none'><span
+lang=EN-US>参考文献</span></span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc15152"><span
+lang=EN-US style='font-family:"Arial",sans-serif'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span style='font-family:宋体'>介绍</span></a></h1>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>该项目提供了一个构建在</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>
+Spring </span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>生态系统之上的</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>
+API </span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>网关，包括：</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Spring
+6</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>、</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Spring
+Boot 3 </span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>和</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>
+Project Reactor</span><span style='font-size:12.0pt;line-height:150%;
+font-family:宋体'>。</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Arial",sans-serif'>Spring Cloud Gateway </span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>旨在提供一种简单而有效的方法来路由到</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>
+API</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>，并为它们提供横切关注点，例如：安全性、监控</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>/</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>指标和弹性。</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc9945"><span
+lang=EN-US style='font-family:"Arial",sans-serif'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span style='font-family:宋体'>工作原理</span></a></h1>
+
+<h2 style='margin-left:1.0cm;text-indent:-1.0cm'><a name="_Toc25343"><span
+lang=EN-US style='font-family:宋体'>2.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:黑体'>工作原理</span></a></h2>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>下图提供了</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>
+Spring Cloud Gateway </span><span style='font-size:12.0pt;line-height:150%;
+font-family:宋体'>工作原理的高级概述：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;background:white'><span
+lang=EN-US style='font-size:9.5pt;font-family:"Segoe UI",sans-serif;color:#191E1E;
+letter-spacing:-.05pt;background:white'><img border=0 width=443 height=595
+id="图片 3" src="Spring%20Cloud%20Gateway.files/image001.gif" alt="IMG_256"></span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>客户端向</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>
+Spring Cloud Gateway </span><span style='font-size:12.0pt;line-height:150%;
+font-family:宋体'>发出请求。如果</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Arial",sans-serif'> Gateway Handler Mapping </span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>确定请求与路由匹配，则将其发送到</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>
+Gateway Web Handler</span><span style='font-size:12.0pt;line-height:150%;
+font-family:宋体'>。此处理程序通过特定于请求的过滤器链运行请求。过滤器被虚线分开的原因是过滤器可以在发送代理请求之前和之后运行逻辑。执行所有</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>“</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>预</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>”</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>过滤器逻辑。然后进行代理请求。发出代理请求后，运行</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>“post”</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>过滤器逻辑。</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>。</span></p>
+
+<h2 style='margin-left:1.0cm;text-indent:-1.0cm'><a name="_Toc5215"><span
+lang=EN-US style='font-family:宋体'>2.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:黑体'>工作流程</span></a></h2>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>启动</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>application</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>启动</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>GatewayAutoConfiguration</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>启动</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>nettyserver</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>调用</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>FilteringWebHandler</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>调用自定义</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>GlobalFilter</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc25910"><span
+lang=EN-US style='font-family:"Arial",sans-serif'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span style='font-family:宋体'>数据模型</span></a></h1>
+
+<h2 style='margin-left:1.0cm;text-indent:-1.0cm'><a name="_Toc16507"><span
+lang=EN-US style='font-family:宋体'>3.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Route</span></a><span style='font-family:黑体'>模型</span></h2>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><a
+name="_Toc126027683"><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Arial",sans-serif'>Route</span></a><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>：网关的基本构建块。它由</span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'> ID</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>、目标</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>
+URI</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>、谓词集合和过滤器集合定义。如果聚合谓词为真，则路由匹配。</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Predicate</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>：这是一个</span><a
+href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html"><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+color:windowtext;text-decoration:none'>Java 8 </span><span style='font-size:
+12.0pt;line-height:150%;font-family:宋体;color:windowtext;text-decoration:none'>函数谓词</span></a><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>。输入类型是</span><a
+href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/server/ServerWebExchange.html"><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+color:windowtext;text-decoration:none'>Spring FrameworkServerWebExchange</span></a><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>。这使您可以匹配</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>
+HTTP </span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>请求中的任何内容，例如标头或参数。</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Filter
+</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>：</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'> </span><a
+href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/server/GatewayFilter.html"><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+color:windowtext;text-decoration:none'>Spring Framework GatewayFilter</span></a><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>厂构建的实例。在这里，您可以在发送下游请求之前或之后修改请求和响应。</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'><img
+border=0 width=554 height=203 id="图片 10"
+src="Spring%20Cloud%20Gateway.files/image002.gif" alt=1675166558113></span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'> </span></p>
+
+<h2 style='margin-left:1.0cm;text-indent:-1.0cm'><a name="_Toc3904"><span
+lang=EN-US style='font-family:宋体'>3.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Definition</span></a><span style='font-family:
+黑体'>模型</span></h2>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RouteDefinition</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>路由定义，</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Spring-Cloud-Gateway</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>通过</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RouteDefinition</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>来转换生成具体的路由信息。聚合了断言</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>PredicateDefinition</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>，过滤器</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>FilterDefinition</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>。</span></p>
+
+<p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+0cm'><span lang=EN-US style='font-size:13.5pt;font-family:"微软雅黑",sans-serif;
+color:black'><img border=0 width=553 height=299 id="图片 11"
+src="Spring%20Cloud%20Gateway.files/image003.gif" alt=1675240731300></span></p>
+
+<p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+0cm'><span lang=EN-US style='font-size:13.5pt;font-family:"微软雅黑",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:8.4pt;text-align:left;
+background:white'><b><span lang=EN-US style='font-size:9.5pt;font-family:"Open Sans",sans-serif;
+color:#0B0A0A;background:white'>application.yml</span></b></p>
+
+<div style='border:solid #D9D9D9 1.0pt;padding:0cm 0cm 0cm 0cm'><pre
+style='border:none;padding:0cm'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#222222;background:#F8F8F8'>spring:</span></code></pre><pre
+style='border:none;padding:0cm'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#222222;background:#F8F8F8'> cloud:</span></code></pre><pre
+style='border:none;padding:0cm'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#222222;background:#F8F8F8'> gateway:</span></code></pre><pre
+style='border:none;padding:0cm'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#222222;background:#F8F8F8'> routes:</span></code></pre><pre
+style='border:none;padding:0cm'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#222222;background:#F8F8F8'> - id: after_route</span></code></pre><pre
+style='border:none;padding:0cm'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#222222;background:#F8F8F8'> uri: https://example.org</span></code></pre><pre
+style='border:none;padding:0cm'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#222222;background:#F8F8F8'> predicates:</span></code></pre><pre
+style='border:none;padding:0cm'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#222222;background:#F8F8F8'> - Cookie=mycookie,mycookievalue</span></code></pre><pre
+style='border:none;padding:0cm'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#222222;background:#F8F8F8'>&nbsp;</span></code></pre><pre
+style='border:none;padding:0cm'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#222222;background:#F8F8F8'>&nbsp;</span></code></pre></div>
+
+<h2 style='margin-left:1.0cm;text-indent:-1.0cm'><a name="_Toc25448"><span
+lang=EN-US style='font-family:宋体'>3.3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Predicate</span></a><span style='font-family:
+黑体'>工厂模型</span></h2>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RouteDefinition</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>路由定义，</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Spring-Cloud-Gateway</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>通过</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RouteDefinition</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>来转换生成具体的路由信息。聚合了断言</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>PredicateDefinition</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>，过滤器</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>FilterDefinition</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>。</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+After Route Predicate Factory --</span><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>时间：匹配之前</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+Before Route Predicate Factory --</span><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>时间：匹配之后</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+Between Route Predicate Factory --</span><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>匹配两个时间之间</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+Cookie Route Predicate Factory --</span><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>匹配</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Arial",sans-serif'>cookie</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>内容</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+Header Route Predicate Factory --</span><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>匹配</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Header </span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>内容</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+Host Route Predicate Factory--</span><span style='font-size:12.0pt;line-height:
+150%;font-family:宋体'>匹配</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Arial",sans-serif'>Host </span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>内容</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+Method Route Predicate Factory--</span><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>匹配</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Host </span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>内容</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+Path Route Predicate Factory --</span><span style='font-size:12.0pt;line-height:
+150%;font-family:宋体'>匹配</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Arial",sans-serif'>Path  </span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>内容</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+Query Route Predicate Factory -- </span><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>匹配参数</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+RemoteAddr Route Predicate Factory --</span><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>匹配远程地址</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>The
+Weight Route Predicate Factory --</span><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>配置权重路由谓</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc126027689"></a><a
+name="_Toc16121"><span lang=EN-US style='font-family:"Arial",sans-serif'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-family:宋体'>运行模型</span></a></h1>
+
+<h2 style='margin-left:1.0cm;text-indent:-1.0cm'><a name="_Toc6108"></a><a
+name="_Toc126027690"><span lang=EN-US style='font-family:宋体'>4.1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-US>web</span></a><span style='font-family:黑体'>机制</span><span
+lang=EN-US>--</span><span style='font-family:黑体'>详细介绍参考</span><span lang=EN-US>WebFlux</span><span
+style='font-family:黑体'>（待补充）</span></h2>
+
+<p class=MsoNormal><a name=t7></a><span lang=EN-US>&nbsp;</span></p>
+
+<h2 style='margin-left:1.0cm;text-indent:-1.0cm'><a name="_Toc12133"><span
+lang=EN-US style='font-family:宋体'>4.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Route</span></a><span style='font-family:黑体'>机制</span></h2>
+
+<h3 style='margin-left:35.45pt;text-indent:-35.45pt'><a name="_Toc4960"><span
+lang=EN-US style='font-family:宋体'>6.1.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Filter</span></a><span style='font-family:宋体'>机制</span><span
+lang=EN-US>-</span><span lang=EN-US style='font-size:12.0pt;line-height:172%;
+font-family:"Arial",sans-serif'>GlobalFilter</span></h3>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>配置过程：</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>自动配置</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>GatewayAutoConfiguration</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>启动</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>netty
+server</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>注解启动</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RoutePredicateFactory</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>与</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>GatewayFilterFactory</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>运行过程：</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>调用</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>GlobalFilter</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>的</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>filter</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>方法</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     public
+Mono&lt;Void&gt; filter(ServerWebExchange exchange, GatewayFilterChain chain) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           return
+exchange.getSession().flatMap(webSession -&gt; {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 return
+chain.filter(exchange);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>调用</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>DefaultGatewayFilterChain</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>的</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>filter</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>方法</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>@Override</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           public
+Mono&lt;Void&gt; filter(ServerWebExchange exchange) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 return
+Mono.defer(() -&gt; {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                       if
+(this.index &lt; filters.size()) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                             GatewayFilter
+filter = filters.get(this.index);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                            DefaultGatewayFilterChain
+chain = new DefaultGatewayFilterChain(this, this.index + 1);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                            return
+filter.filter(exchange, chain);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                       }
+else {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                            return
+Mono.empty(); // complete</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                       }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 });</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>调用</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>GatewayFilterAdapter</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>的</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>filter</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>方法</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>@Override</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           public
+Mono&lt;Void&gt; filter(ServerWebExchange exchange, GatewayFilterChain chain) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 return
+this.delegate.filter(exchange, chain);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>调用各个</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>filter</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h3 style='margin-left:35.45pt;text-indent:-35.45pt'><a name="_Toc29718"></a><a
+name=t9></a><span lang=EN-US style='font-family:宋体'>6.1.2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:宋体'>负载均衡机制</span><span lang=EN-US>-LoadBalancerClientFilter</span></h3>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Step
+1 </span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>：</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'> <span
+lang=EN-US>RibbonAutoConfiguration</span></span><span style='font-size:12.0pt;
+line-height:150%;font-family:宋体'>自动配置</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     @Bean</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     @ConditionalOnMissingBean(LoadBalancerClient.class)</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     public
+LoadBalancerClient loadBalancerClient() {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           return
+new RibbonLoadBalancerClient(springClientFactory());</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RibbonClientConfiguration
+</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>自动配置（默认）</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     @Bean</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     @ConditionalOnMissingBean</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     public
+ILoadBalancer ribbonLoadBalancer(IClientConfig config,</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 ServerList&lt;Server&gt;
+serverList, ServerListFilter&lt;Server&gt; serverListFilter,</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 IRule
+rule, IPing ping, ServerListUpdater serverListUpdater) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           if
+(this.propertiesFactory.isSet(ILoadBalancer.class, name)) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 return
+this.propertiesFactory.get(ILoadBalancer.class, config, name);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           return
+new ZoneAwareLoadBalancer&lt;&gt;(config, rule, ping, serverList,</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                       serverListFilter,
+serverListUpdater);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>BestAvailableRule</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>：选择最小请求数的</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Server</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RandomRule</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>：随机选择</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Server</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RoundRobinRule</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>：轮询选择</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Server</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RetryRule</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>：根据轮询的方式重试</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>WeightedResponseTimeRule</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>：根据响应时间去分配</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Weight</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>，</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Weight</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>越高，被选择的可能性就越大</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>ZoneAvoidanceRule</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>：根据</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Server</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>的</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>zone</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>区域和可用性来轮询选择，如果只有一个</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>zone</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>区域，行为跟</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RoundRobinRule</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>一致</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>AvailabilityFilteringRule</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>：过滤掉那些因为一直连接失败</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>(</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>标记了</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>circuit
+tripped)</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>和高并发</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>(activeConnections
+</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>超过配置的阈值</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>)</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>的</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Server</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>，尽量保证可用性</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>DynamicServerListLoadBalancer</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>：继承于</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>BaseLoadBalancer</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>，它对基础负载均衡器做了扩展。在该负载均衡器，实现了服务实例清单在运行期间的动态更新；同时还具备了对服务实例清单的过滤功能，也就是说可以通过过滤器来选择获取一批服务实例清单。</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>ZoneAwareLoadBalancer</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>：对</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>DynamicServerListLoadBalancer</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>的扩展。在</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>DynamicServerListLoadBalancer</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>中没有区分</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>zone</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>区域，而</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>ZoneAwareLoadBalancer</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>主要扩展的功能就是增加了</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>zone</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>区域过滤。</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Step
+2 </span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>：</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>LoadBalancerClientFilter</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>的</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>filter</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>方法</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>,</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>判断</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>LB</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>负载均衡。</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>@Override</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     public
+Mono&lt;Void&gt; filter(ServerWebExchange exchange, GatewayFilterChain chain) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           URI
+url = exchange.getAttribute(GATEWAY_REQUEST_URL_ATTR);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           String
+schemePrefix = exchange.getAttribute(GATEWAY_SCHEME_PREFIX_ATTR);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           if
+(url == null || (!&quot;lb&quot;.equals(url.getScheme()) &amp;&amp;
+!&quot;lb&quot;.equals(schemePrefix))) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 return
+chain.filter(exchange);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           //preserve
+the original url</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           addOriginalRequestUrl(exchange,
+url);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           log.trace(&quot;LoadBalancerClientFilter
+url before: &quot; + url);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           final
+ServiceInstance instance = choose(exchange);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           if
+(instance == null) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 String
+msg = &quot;Unable to find instance for &quot; + url.getHost();</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 if(properties.isUse404())
+{</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                       throw
+new FourOFourNotFoundException(msg);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 throw
+new NotFoundException(msg);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           URI
+uri = exchange.getRequest().getURI();</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           //
+if the `lb:&lt;scheme&gt;` mechanism was used, use `&lt;scheme&gt;` as the
+default,</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           //
+if the loadbalancer doesn't provide one.</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           String
+overrideScheme = instance.isSecure() ? &quot;https&quot; : &quot;http&quot;;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           if
+(schemePrefix != null) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 overrideScheme
+= url.getScheme();</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           URI
+requestUrl = loadBalancer.reconstructURI(new
+DelegatingServiceInstance(instance, overrideScheme), uri);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           log.trace(&quot;LoadBalancerClientFilter
+url chosen: &quot; + requestUrl);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           exchange.getAttributes().put(GATEWAY_REQUEST_URL_ATTR,
+requestUrl);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           return
+chain.filter(exchange);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Step
+3</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>：</span><span
+style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'> </span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>通过</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>LoadBalancerClient</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>获得真是访问地址</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 final
+ServiceInstance instance = choose(exchange);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Step
+4</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>：通过</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RibbonLoadBalancerClient</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>的</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>choose</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>方法</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     /**</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>      *
+New: Select a server using a 'key'.</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>      */</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     public
+ServiceInstance choose(String serviceId, Object hint) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           Server
+server = getServer(getLoadBalancer(serviceId), hint);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           if
+(server == null) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                 return
+null;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           return
+new RibbonServer(serviceId, server, isSecure(server, serviceId),</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>                       serverIntrospector(serviceId).getMetadata(server));</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>protected
+ILoadBalancer getLoadBalancer(String serviceId) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           return
+this.clientFactory.getLoadBalancer(serviceId);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Step
+5</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>：通过</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>ILoadBalancer
+</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>的获取默认算法</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>ZoneAwareLoadBalancer</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>的负载均衡</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>具体算法参考代码：</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'> @Override</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>   
+protected void setServerListForZones(Map&lt;String, List&lt;Server&gt;&gt;
+zoneServersMap) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>       
+super.setServerListForZones(zoneServersMap);</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>       
+if (balancers == null) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           
+balancers = new ConcurrentHashMap&lt;String, BaseLoadBalancer&gt;();</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>       
+}</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>       
+for (Map.Entry&lt;String, List&lt;Server&gt;&gt; entry:
+zoneServersMap.entrySet()) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>       
+   String zone = entry.getKey().toLowerCase();</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           
+getLoadBalancer(zone).setServersList(entry.getValue());</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>       
+}</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>       
+// check if there is any zone that no longer has a server</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>       
+// and set the list to empty so that the zone related metrics does not</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>       
+// contain stale data</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>  
+     for (Map.Entry&lt;String, BaseLoadBalancer&gt; existingLBEntry:
+balancers.entrySet()) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>           
+if (!zoneServersMap.keySet().contains(existingLBEntry.getKey())) {</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>               
+existingLBEntry.getValue().setServersList(Collections.emptyList());</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>     
+      }</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>       
+}</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>   
+}    </span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>。</span></p>
+
+<h2 style='margin-left:1.0cm;text-indent:-1.0cm'><a name="_Toc18097"><span
+lang=EN-US style='font-family:宋体'>4.3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>RouteDefinition</span></a><span
+style='font-family:黑体'>机制</span></h2>
+
+<h3 style='margin-left:35.45pt;text-indent:-35.45pt'><a name="_Toc24732"><span
+lang=EN-US style='font-family:宋体'>4.3.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体'>监听器</span><span lang=EN-US>-RouteRefreshListener</span></a></h3>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>通过</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>org.springframework.context.ApplicationEventPublisher</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>中时间机制监听</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>route</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>相关配置信息。关于</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>spring</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>事件机制参考</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>spring</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>相关篇幅</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>步骤，</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>1</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>从</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>nacos</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>或者</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>spring
+config</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体'>中获取配置信息的中</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RouteDefinition</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>信息</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>2.</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>通过</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RouteDefinitionWriter</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>进行更新</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>RouteDefinition</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>信息</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>3.</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>通过</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>ApplicationEventPublisher</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>发布事件</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>4.</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>实现</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>spring
+gateway 7*24 </span><span style='font-size:12.0pt;line-height:150%;font-family:
+宋体'>不重启运行</span><span style='font-size:12.0pt;line-height:150%;font-family:
+"Arial",sans-serif'> </span></p>
+
+<h3 style='margin-left:35.45pt;text-indent:-35.45pt'><a name="_Toc19921"><span
+lang=EN-US style='font-family:宋体'>4.3.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体'>工厂机制</span><span lang=EN-US>-RouteRefreshListener</span></a></h3>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+style='font-size:12.0pt;font-family:宋体'>与</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>route</span><span
+style='font-size:12.0pt;font-family:宋体'>的</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>GlobalFilter</span><span
+style='font-size:12.0pt;font-family:宋体'>类似，</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+style='font-size:12.0pt;font-family:宋体'>配置过程：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+style='font-size:12.0pt;font-family:宋体'>自动配置</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>GatewayAutoConfiguration</span><span
+style='font-size:12.0pt;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+style='font-size:12.0pt;font-family:宋体'>启动</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>netty server</span><span
+style='font-size:12.0pt;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+style='font-size:12.0pt;font-family:宋体'>注解启动</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>RoutePredicateFactory</span><span
+style='font-size:12.0pt;font-family:宋体'>与</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>RouteLocator</span><span
+style='font-size:12.0pt;font-family:宋体'>；</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     @Bean</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     public
+RouteLocator routeDefinitionRouteLocator(GatewayProperties properties,</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                                                                           List&lt;GatewayFilterFactory&gt;
+GatewayFilters,</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                                                                           List&lt;RoutePredicateFactory&gt;
+predicates,</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                                                                           RouteDefinitionLocator
+routeDefinitionLocator,</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                                                                           @Qualifier(&quot;webFluxConversionService&quot;)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                                                                           ConversionService
+conversionService) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           return
+new RouteDefinitionRouteLocator(routeDefinitionLocator, predicates,
+GatewayFilters,</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       properties,
+conversionService);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+style='font-size:12.0pt;font-family:宋体'>运行过程：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+style='font-size:12.0pt;font-family:宋体'>调用</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>RouteDefinitionRouteLocator</span><span
+style='font-size:12.0pt;font-family:宋体'>的</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>getRoutes</span><span
+style='font-size:12.0pt;font-family:宋体'>和</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>convertToRoute</span><span
+style='font-size:12.0pt;font-family:宋体'>方法，</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>lookup</span><span
+style='font-size:12.0pt;font-family:宋体'>方法</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     @Override</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     public
+Flux&lt;Route&gt; getRoutes() {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           return
+this.routeDefinitionLocator.getRouteDefinitions()</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       .map(this::convertToRoute)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       //TODO:
+error handling</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       .map(route
+-&gt; {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                            if
+(logger.isDebugEnabled()) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                                  logger.debug(&quot;RouteDefinition
+matched: &quot; + route.getId());</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                            }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                            return
+route;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       });</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           /*
+TODO: trace logging</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 if
+(logger.isTraceEnabled()) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       logger.trace(&quot;RouteDefinition
+did not match: &quot; + routeDefinition.getId());</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 }*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     private
+Route convertToRoute(RouteDefinition routeDefinition) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           AsyncPredicate&lt;ServerWebExchange&gt;
+predicate = combinePredicates(routeDefinition);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           List&lt;GatewayFilter&gt;
+gatewayFilters = getFilters(routeDefinition);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           return
+Route.async(routeDefinition)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       .asyncPredicate(predicate)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       .replaceFilters(gatewayFilters)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       .build();</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>private
+AsyncPredicate&lt;ServerWebExchange&gt; combinePredicates(RouteDefinition
+routeDefinition) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           List&lt;PredicateDefinition&gt;
+predicates = routeDefinition.getPredicates();</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           AsyncPredicate&lt;ServerWebExchange&gt;
+predicate = lookup(routeDefinition, predicates.get(0));</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           for
+(PredicateDefinition andPredicate : predicates.subList(1, predicates.size())) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 AsyncPredicate&lt;ServerWebExchange&gt;
+found = lookup(routeDefinition, andPredicate);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 predicate
+= predicate.and(found);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           return
+predicate;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>@SuppressWarnings(&quot;unchecked&quot;)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     private
+AsyncPredicate&lt;ServerWebExchange&gt; lookup(RouteDefinition route,
+PredicateDefinition predicate) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           RoutePredicateFactory&lt;Object&gt;
+factory = this.predicates.get(predicate.getName());</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           if
+(factory == null) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           
+throw new IllegalArgumentException(&quot;Unable to find RoutePredicateFactory
+with name &quot; + predicate.getName());</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           Map&lt;String,
+String&gt; args = predicate.getArgs();</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           if
+(logger.isDebugEnabled()) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 logger.debug(&quot;RouteDefinition
+&quot; + route.getId() + &quot; applying &quot;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                            +
+args + &quot; to &quot; + predicate.getName());</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>       
+Map&lt;String, Object&gt; properties = factory.shortcutType().normalize(args,
+factory, this.parser, this.beanFactory);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>       
+Object config = factory.newConfig();</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>       
+ConfigurationUtils.bind(config, properties, factory.shortcutFieldPrefix(),
+predicate.getName(),</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       validator,
+conversionService);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>        if
+(this.publisher != null) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           
+this.publisher.publishEvent(new PredicateArgsEvent(this, route.getId(),
+properties));</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>        }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>       
+return factory.applyAsync(config);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+style='font-size:12.0pt;font-family:宋体'>调用各个</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>RoutePredicateFactory</span><span
+style='font-size:12.0pt;font-family:宋体'>的</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>apply</span><span
+style='font-size:12.0pt;font-family:宋体'>方法，例如</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>CookieRoutePredicateFactory</span><span
+style='font-size:12.0pt;font-family:宋体'>：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>@Override</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     public
+Predicate&lt;ServerWebExchange&gt; apply(Config config) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           return
+exchange -&gt; {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 List&lt;HttpCookie&gt;
+cookies = exchange.getRequest().getCookies().get(config.name);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 if
+(cookies == null) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       return
+false;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 for
+(HttpCookie cookie : cookies) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       if
+(cookie.getValue().matches(config.regexp)) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                            return
+true;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                       }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>                 return
+false;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>           };</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:24.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif'>     }</span></p>
+
+<p class=MsoNormal><a name=t11></a><span lang=EN-US>&nbsp;</span></p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc126027698"></a><a
+name="_Toc17602"><span lang=EN-US style='font-family:"Arial",sans-serif'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-family:宋体'>总结</span></a></h1>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>略。</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc126027699"></a><a
+name="_Toc9177"></a><a name="_Toc5613"><span lang=EN-US style='font-family:
+"Arial",sans-serif'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-family:宋体'>参考文献</span></a></h1>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>spring-cloud-gateway</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>官网</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'><a
+href="https://cloud.spring.io/spring-cloud-gateway/reference/html/"><span
+style='color:windowtext;text-decoration:none'>https://cloud.spring.io/spring-cloud-gateway/reference/html/</span></a></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;line-height:150%'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;line-height:150%'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>Spring-Cloud-Gateway+Ribbon</span><span
+style='font-size:12.0pt;line-height:150%;font-family:宋体'>负载均衡</span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>https://blog.csdn.net/htmlxxxx/article/details/115379226</span></p>
+
+</div>
+
+</body>
+
+</html>
