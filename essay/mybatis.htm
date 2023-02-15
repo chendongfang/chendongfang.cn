@@ -3,2833 +3,36 @@
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=Generator content="Microsoft Word 15 (filtered)">
-<title>mybatis-陈东方</title>
+<title>mybatis</title>
 <style>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:Helvetica;
-	panose-1:2 11 6 4 2 2 2 2 2 4;}
-@font-face
-	{font-family:Courier;
-	panose-1:2 7 4 9 2 2 5 2 4 4;}
-@font-face
-	{font-family:"Tms Rmn";
-	panose-1:2 2 6 3 4 5 5 2 3 4;}
-@font-face
-	{font-family:Helv;
-	panose-1:2 11 6 4 2 2 2 3 2 4;}
-@font-face
-	{font-family:"New York";
-	panose-1:2 4 5 3 6 5 6 2 3 4;}
-@font-face
-	{font-family:System;
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"MS Mincho";
-	panose-1:2 2 6 9 4 2 5 8 3 4;}
-@font-face
-	{font-family:Batang;
-	panose-1:2 3 6 0 0 1 1 1 1 1;}
-@font-face
 	{font-family:宋体;
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:PMingLiU;
-	panose-1:2 1 6 1 0 1 1 1 1 1;}
-@font-face
-	{font-family:"MS Gothic";
-	panose-1:2 11 6 9 7 2 5 8 2 4;}
-@font-face
-	{font-family:Dotum;
-	panose-1:2 11 6 0 0 1 1 1 1 1;}
 @font-face
 	{font-family:黑体;
 	panose-1:2 1 6 9 6 1 1 1 1 1;}
 @font-face
-	{font-family:MingLiU;
-	panose-1:2 1 6 9 0 1 1 1 1 1;}
-@font-face
-	{font-family:Mincho;
-	panose-1:2 2 6 9 4 3 5 8 3 5;}
-@font-face
-	{font-family:Gulim;
-	panose-1:2 11 6 0 0 1 1 1 1 1;}
-@font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Angsana New";
-	panose-1:2 2 6 3 5 4 5 2 3 4;}
-@font-face
-	{font-family:"Cordia New";
-	panose-1:2 11 3 4 2 2 2 2 2 4;}
-@font-face
-	{font-family:Mangal;
-	panose-1:0 0 4 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Latha;
-	panose-1:2 0 4 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Sylfaen;
-	panose-1:1 10 5 2 5 3 6 3 3 3;}
-@font-face
-	{font-family:Vrinda;
-	panose-1:0 0 4 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Raavi;
-	panose-1:2 0 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Shruti;
-	panose-1:2 0 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Sendnya;
-	panose-1:0 0 4 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Gautami;
-	panose-1:2 0 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Tunga;
-	panose-1:0 0 4 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Estrangelo Edessa";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:"Yu Gothic";
-	panose-1:2 11 4 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:等线;
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
 @font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;}
 @font-face
-	{font-family:"Calibri Light";
-	panose-1:2 15 3 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Palatino Linotype";
-	panose-1:2 4 5 2 5 5 5 3 3 4;}
-@font-face
-	{font-family:Verdana;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"Arial Unicode MS";
-	panose-1:2 11 6 4 2 2 2 2 2 4;}
-@font-face
-	{font-family:"等线 Light";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:"Segoe UI Emoji";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
 	{font-family:微软雅黑;
 	panose-1:2 11 5 3 2 2 4 2 2 4;}
-@font-face
-	{font-family:Cambria;
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:minorEastAsia;
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:minorBidi;
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Marlett;
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Arial Black";
-	panose-1:2 11 10 4 2 1 2 2 2 4;}
-@font-face
-	{font-family:"Bahnschrift Light";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Bahnschrift SemiLight";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:Bahnschrift;
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Bahnschrift SemiBold";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Bahnschrift Light SemiCondensed";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Bahnschrift SemiLight SemiConde";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Bahnschrift SemiCondensed";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Bahnschrift SemiBold SemiConden";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Bahnschrift Light Condensed";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Bahnschrift SemiLight Condensed";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Bahnschrift Condensed";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Bahnschrift SemiBold Condensed";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:Candara;
-	panose-1:2 14 5 2 3 3 3 2 2 4;}
-@font-face
-	{font-family:"Candara Light";
-	panose-1:2 14 5 2 3 3 3 2 2 4;}
-@font-face
-	{font-family:"Comic Sans MS";
-	panose-1:3 15 7 2 3 3 2 2 2 4;}
 @font-face
 	{font-family:Consolas;
 	panose-1:2 11 6 9 2 2 4 3 2 4;}
 @font-face
-	{font-family:Constantia;
-	panose-1:2 3 6 2 5 3 6 3 3 3;}
-@font-face
-	{font-family:Corbel;
-	panose-1:2 11 5 3 2 2 4 2 2 4;}
-@font-face
-	{font-family:"Corbel Light";
-	panose-1:2 11 3 3 2 2 4 2 2 4;}
-@font-face
-	{font-family:Ebrima;
-	panose-1:2 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Franklin Gothic Medium";
-	panose-1:2 11 6 3 2 1 2 2 2 4;}
-@font-face
-	{font-family:Gabriola;
-	panose-1:4 4 6 5 5 16 2 2 13 2;}
-@font-face
-	{font-family:Gadugi;
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:Georgia;
-	panose-1:2 4 5 2 5 4 5 2 3 3;}
-@font-face
-	{font-family:Impact;
-	panose-1:2 11 8 6 3 9 2 5 2 4;}
-@font-face
-	{font-family:"Ink Free";
-	panose-1:3 8 4 2 0 5 0 0 0 0;}
-@font-face
-	{font-family:"Javanese Text";
-	panose-1:2 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Leelawadee UI";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Leelawadee UI Semilight";
-	panose-1:2 11 4 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Lucida Console";
-	panose-1:2 11 6 9 4 5 4 2 2 4;}
-@font-face
-	{font-family:"Lucida Sans Unicode";
-	panose-1:2 11 6 2 3 5 4 2 2 4;}
-@font-face
-	{font-family:"Malgun Gothic";
-	panose-1:2 11 5 3 2 0 0 2 0 4;}
-@font-face
-	{font-family:"\@Malgun Gothic";}
-@font-face
-	{font-family:"Malgun Gothic Semilight";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"\@Malgun Gothic Semilight";}
-@font-face
-	{font-family:"Microsoft Himalaya";
-	panose-1:1 1 1 0 1 1 1 1 1 1;}
-@font-face
-	{font-family:"Microsoft JhengHei";
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"\@Microsoft JhengHei";}
-@font-face
-	{font-family:"Microsoft JhengHei UI";
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"\@Microsoft JhengHei UI";}
-@font-face
-	{font-family:"Microsoft JhengHei Light";
-	panose-1:2 11 3 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"\@Microsoft JhengHei Light";}
-@font-face
-	{font-family:"Microsoft JhengHei UI Light";
-	panose-1:2 11 3 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"\@Microsoft JhengHei UI Light";}
-@font-face
-	{font-family:"Microsoft New Tai Lue";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Microsoft PhagsPa";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Microsoft Sans Serif";
-	panose-1:2 11 6 4 2 2 2 2 2 4;}
-@font-face
-	{font-family:"Microsoft Tai Le";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"\@微软雅黑";}
-@font-face
-	{font-family:"Microsoft YaHei UI";
-	panose-1:2 11 5 3 2 2 4 2 2 4;}
-@font-face
-	{font-family:"\@Microsoft YaHei UI";}
-@font-face
-	{font-family:"微软雅黑 Light";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"\@微软雅黑 Light";}
-@font-face
-	{font-family:"Microsoft YaHei UI Light";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"\@Microsoft YaHei UI Light";}
-@font-face
-	{font-family:"Microsoft Yi Baiti";
-	panose-1:3 0 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:MingLiU-ExtB;
-	panose-1:2 2 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"\@MingLiU-ExtB";}
-@font-face
-	{font-family:PMingLiU-ExtB;
-	panose-1:2 2 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"\@PMingLiU-ExtB";}
-@font-face
-	{font-family:MingLiU_HKSCS-ExtB;
-	panose-1:2 2 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"\@MingLiU_HKSCS-ExtB";}
-@font-face
-	{font-family:"Mongolian Baiti";
-	panose-1:3 0 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"\@MS Gothic";
-	panose-1:2 11 6 9 7 2 5 8 2 4;}
-@font-face
-	{font-family:"MS UI Gothic";
-	panose-1:2 11 6 0 7 2 5 8 2 4;}
-@font-face
-	{font-family:"\@MS UI Gothic";}
-@font-face
-	{font-family:"MS PGothic";
-	panose-1:2 11 6 0 7 2 5 8 2 4;}
-@font-face
-	{font-family:"\@MS PGothic";}
-@font-face
-	{font-family:"MV Boli";
-	panose-1:2 0 5 0 3 2 0 9 0 0;}
-@font-face
-	{font-family:"Myanmar Text";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Nirmala UI";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Nirmala UI Semilight";
-	panose-1:2 11 4 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Segoe Fluent Icons";
-	panose-1:5 10 1 2 1 1 1 1 1 1;}
-@font-face
-	{font-family:"Segoe MDL2 Assets";
-	panose-1:5 10 1 2 1 1 1 1 1 1;}
-@font-face
-	{font-family:"Segoe Print";
-	panose-1:2 0 6 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe Script";
-	panose-1:3 11 5 4 2 0 0 0 0 3;}
-@font-face
-	{font-family:"Segoe UI";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Segoe UI Black";
-	panose-1:2 11 10 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Segoe UI Historic";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Segoe UI Light";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Segoe UI Semibold";
-	panose-1:2 11 7 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Segoe UI Semilight";
-	panose-1:2 11 4 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Segoe UI Symbol";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
-@font-face
-	{font-family:"Segoe UI Variable Small Light";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Small Semilig";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Small";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Small Semibol";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Text Light";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Text Semiligh";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Text";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Text Semibold";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Display Light";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Display Semil";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Display";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Segoe UI Variable Display Semib";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
 	{font-family:"\@宋体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:新宋体;
-	panose-1:2 1 6 9 3 1 1 1 1 1;}
-@font-face
-	{font-family:"\@新宋体";}
-@font-face
-	{font-family:SimSun-ExtB;
-	panose-1:2 1 6 9 6 1 1 1 1 1;}
-@font-face
-	{font-family:"\@SimSun-ExtB";}
-@font-face
-	{font-family:"Sitka Small";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Small Semibold";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Text";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Text Semibold";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Subheading";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Subheading Semibold";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Heading";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Heading Semibold";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Display";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Display Semibold";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Banner";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Sitka Banner Semibold";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"Trebuchet MS";
-	panose-1:2 11 6 3 2 2 2 2 2 4;}
-@font-face
-	{font-family:Webdings;
-	panose-1:5 3 1 2 1 5 9 6 7 3;}
-@font-face
-	{font-family:"\@Yu Gothic";
-	panose-1:2 11 4 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Yu Gothic UI";
-	panose-1:2 11 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"\@Yu Gothic UI";}
-@font-face
-	{font-family:"Yu Gothic UI Semibold";
-	panose-1:2 11 7 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"\@Yu Gothic UI Semibold";}
-@font-face
-	{font-family:"Yu Gothic Light";
-	panose-1:2 11 3 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"\@Yu Gothic Light";}
-@font-face
-	{font-family:"Yu Gothic UI Light";
-	panose-1:2 11 3 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"\@Yu Gothic UI Light";}
-@font-face
-	{font-family:"Yu Gothic Medium";
-	panose-1:2 11 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"\@Yu Gothic Medium";}
-@font-face
-	{font-family:"Yu Gothic UI Semilight";
-	panose-1:2 11 4 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"\@Yu Gothic UI Semilight";}
-@font-face
-	{font-family:"\@等线";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:"\@等线 Light";}
-@font-face
-	{font-family:仿宋;
-	panose-1:2 1 6 9 6 1 1 1 1 1;}
-@font-face
-	{font-family:"\@仿宋";}
-@font-face
-	{font-family:楷体;
-	panose-1:2 1 6 9 6 1 1 1 1 1;}
-@font-face
-	{font-family:"\@楷体";}
 @font-face
 	{font-family:"\@黑体";
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
 @font-face
-	{font-family:"HoloLens MDL2 Assets";
-	panose-1:5 10 1 2 1 1 1 1 1 1;}
-@font-face
-	{font-family:"MT Extra";
-	panose-1:5 5 1 2 1 2 5 2 2 2;}
-@font-face
-	{font-family:"Agency FB";
-	panose-1:2 11 5 3 2 2 2 2 2 4;}
-@font-face
-	{font-family:Algerian;
-	panose-1:4 2 7 5 4 10 2 6 7 2;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
-@font-face
-	{font-family:"Arial Narrow";
-	panose-1:2 11 6 6 2 2 2 3 2 4;}
-@font-face
-	{font-family:"Arial Rounded MT Bold";
-	panose-1:2 15 7 4 3 5 4 3 2 4;}
-@font-face
-	{font-family:"Baskerville Old Face";
-	panose-1:2 2 6 2 8 5 5 2 3 3;}
-@font-face
-	{font-family:"Bauhaus 93";
-	panose-1:4 3 9 5 2 11 2 2 12 2;}
-@font-face
-	{font-family:"Bell MT";
-	panose-1:2 2 5 3 6 3 5 2 3 3;}
-@font-face
-	{font-family:"Bernard MT Condensed";
-	panose-1:2 5 8 6 6 9 5 2 4 4;}
-@font-face
-	{font-family:"Bodoni MT";
-	panose-1:2 7 6 3 8 6 6 2 2 3;}
-@font-face
-	{font-family:"Bodoni MT Black";
-	panose-1:2 7 10 3 8 6 6 2 2 3;}
-@font-face
-	{font-family:"Bodoni MT Condensed";
-	panose-1:2 7 6 6 8 6 6 2 2 3;}
-@font-face
-	{font-family:"Bodoni MT Poster Compressed";
-	panose-1:2 7 7 6 8 6 1 5 2 4;}
-@font-face
-	{font-family:"Bookman Old Style";
-	panose-1:2 5 6 4 5 5 5 2 2 4;}
-@font-face
-	{font-family:"Bradley Hand ITC";
-	panose-1:3 7 4 2 5 3 2 3 2 3;}
-@font-face
-	{font-family:"Britannic Bold";
-	panose-1:2 11 9 3 6 7 3 2 2 4;}
-@font-face
-	{font-family:"Berlin Sans FB";
-	panose-1:2 14 6 2 2 5 2 2 3 6;}
-@font-face
-	{font-family:"Berlin Sans FB Demi";
-	panose-1:2 14 8 2 2 5 2 2 3 6;}
-@font-face
-	{font-family:Broadway;
-	panose-1:4 4 9 5 8 11 2 2 5 2;}
-@font-face
-	{font-family:"Brush Script MT";
-	panose-1:3 6 8 2 4 4 6 7 3 4;}
-@font-face
-	{font-family:"Bookshelf Symbol 7";
-	panose-1:5 1 1 1 1 1 1 1 1 1;}
-@font-face
-	{font-family:"Californian FB";
-	panose-1:2 7 4 3 6 8 11 3 2 4;}
-@font-face
-	{font-family:"Calisto MT";
-	panose-1:2 4 6 3 5 5 5 3 3 4;}
-@font-face
-	{font-family:Castellar;
-	panose-1:2 10 4 2 6 4 6 1 3 1;}
-@font-face
-	{font-family:"Century Schoolbook";
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
-@font-face
-	{font-family:Centaur;
-	panose-1:2 3 5 4 5 2 5 2 3 4;}
-@font-face
-	{font-family:Chiller;
-	panose-1:4 2 4 4 3 16 7 2 6 2;}
-@font-face
-	{font-family:"Colonna MT";
-	panose-1:4 2 8 5 6 2 2 3 2 3;}
-@font-face
-	{font-family:"Cooper Black";
-	panose-1:2 8 9 4 4 3 11 2 4 4;}
-@font-face
-	{font-family:"Copperplate Gothic Bold";
-	panose-1:2 14 7 5 2 2 6 2 4 4;}
-@font-face
-	{font-family:"Copperplate Gothic Light";
-	panose-1:2 14 5 7 2 2 6 2 4 4;}
-@font-face
-	{font-family:"Curlz MT";
-	panose-1:4 4 4 4 5 7 2 2 2 2;}
-@font-face
-	{font-family:Dubai;
-	panose-1:2 11 5 3 3 4 3 3 2 4;}
-@font-face
-	{font-family:"Dubai Light";
-	panose-1:2 11 3 3 3 4 3 3 2 4;}
-@font-face
-	{font-family:"Dubai Medium";
-	panose-1:2 11 6 3 3 4 3 3 2 4;}
-@font-face
-	{font-family:Elephant;
-	panose-1:2 2 9 4 9 5 5 2 3 3;}
-@font-face
-	{font-family:"Engravers MT";
-	panose-1:2 9 7 7 8 5 5 2 3 4;}
-@font-face
-	{font-family:"Eras Bold ITC";
-	panose-1:2 11 9 7 3 5 4 2 2 4;}
-@font-face
-	{font-family:"Eras Demi ITC";
-	panose-1:2 11 8 5 3 5 4 2 8 4;}
-@font-face
-	{font-family:"Eras Light ITC";
-	panose-1:2 11 4 2 3 5 4 2 8 4;}
-@font-face
-	{font-family:"Eras Medium ITC";
-	panose-1:2 11 6 2 3 5 4 2 8 4;}
-@font-face
-	{font-family:"Felix Titling";
-	panose-1:4 6 5 5 6 2 2 2 10 4;}
-@font-face
-	{font-family:Forte;
-	panose-1:3 6 9 2 4 5 2 7 2 3;}
-@font-face
-	{font-family:"Franklin Gothic Book";
-	panose-1:2 11 5 3 2 1 2 2 2 4;}
-@font-face
-	{font-family:"Franklin Gothic Demi";
-	panose-1:2 11 7 3 2 1 2 2 2 4;}
-@font-face
-	{font-family:"Franklin Gothic Demi Cond";
-	panose-1:2 11 7 6 3 4 2 2 2 4;}
-@font-face
-	{font-family:"Franklin Gothic Heavy";
-	panose-1:2 11 9 3 2 1 2 2 2 4;}
-@font-face
-	{font-family:"Franklin Gothic Medium Cond";
-	panose-1:2 11 6 6 3 4 2 2 2 4;}
-@font-face
-	{font-family:"Freestyle Script";
-	panose-1:3 8 4 2 3 2 5 11 4 4;}
-@font-face
-	{font-family:"French Script MT";
-	panose-1:3 2 4 2 4 6 7 4 6 5;}
-@font-face
-	{font-family:"Footlight MT Light";
-	panose-1:2 4 6 2 6 3 10 2 3 4;}
-@font-face
-	{font-family:方正舒体;
-	panose-1:2 1 6 1 3 1 1 1 1 1;}
-@font-face
-	{font-family:"\@方正舒体";}
-@font-face
-	{font-family:方正姚体;
-	panose-1:2 1 6 1 3 1 1 1 1 1;}
-@font-face
-	{font-family:"\@方正姚体";}
-@font-face
-	{font-family:Garamond;
-	panose-1:2 2 4 4 3 3 1 1 8 3;}
-@font-face
-	{font-family:Gigi;
-	panose-1:4 4 5 4 6 16 7 2 13 2;}
-@font-face
-	{font-family:"Gill Sans MT";
-	panose-1:2 11 5 2 2 1 4 2 2 3;}
-@font-face
-	{font-family:"Gill Sans MT Condensed";
-	panose-1:2 11 5 6 2 1 4 2 2 3;}
-@font-face
-	{font-family:"Gill Sans Ultra Bold Condensed";
-	panose-1:2 11 10 6 2 1 4 2 2 3;}
-@font-face
-	{font-family:"Gill Sans Ultra Bold";
-	panose-1:2 11 10 2 2 1 4 2 2 3;}
-@font-face
-	{font-family:"Gloucester MT Extra Condensed";
-	panose-1:2 3 8 8 2 6 1 1 1 1;}
-@font-face
-	{font-family:"Gill Sans MT Ext Condensed Bold";
-	panose-1:2 11 9 2 2 1 4 2 2 3;}
-@font-face
-	{font-family:"Century Gothic";
-	panose-1:2 11 5 2 2 2 2 2 2 4;}
-@font-face
-	{font-family:"Goudy Old Style";
-	panose-1:2 2 5 2 5 3 5 2 3 3;}
-@font-face
-	{font-family:"Goudy Stout";
-	panose-1:2 2 9 4 7 3 11 2 4 1;}
-@font-face
-	{font-family:"Harlow Solid Italic";
-	panose-1:4 3 6 4 2 15 2 2 13 2;}
-@font-face
-	{font-family:Harrington;
-	panose-1:4 4 5 5 5 10 2 2 7 2;}
-@font-face
-	{font-family:Haettenschweiler;
-	panose-1:2 11 7 6 4 9 2 6 2 4;}
-@font-face
-	{font-family:"High Tower Text";
-	panose-1:2 4 5 2 5 5 6 3 3 3;}
-@font-face
-	{font-family:"Imprint MT Shadow";
-	panose-1:4 2 6 5 6 3 3 3 2 2;}
-@font-face
-	{font-family:"Informal Roman";
-	panose-1:3 6 4 2 3 4 6 11 2 4;}
-@font-face
-	{font-family:"Blackadder ITC";
-	panose-1:4 2 5 5 5 16 7 2 13 2;}
-@font-face
-	{font-family:"Edwardian Script ITC";
-	panose-1:3 3 3 2 4 7 7 13 8 4;}
-@font-face
-	{font-family:"Kristen ITC";
-	panose-1:3 5 5 2 4 2 2 3 2 2;}
-@font-face
-	{font-family:Jokerman;
-	panose-1:4 9 6 5 6 13 6 2 7 2;}
-@font-face
-	{font-family:"Juice ITC";
-	panose-1:4 4 4 3 4 10 2 2 2 2;}
-@font-face
-	{font-family:"Kunstler Script";
-	panose-1:3 3 4 2 2 6 7 13 13 6;}
-@font-face
-	{font-family:"Wide Latin";
-	panose-1:2 10 10 7 5 5 5 2 4 4;}
-@font-face
-	{font-family:"Lucida Bright";
-	panose-1:2 4 6 2 5 5 5 2 3 4;}
-@font-face
-	{font-family:"Lucida Calligraphy";
-	panose-1:3 1 1 1 1 1 1 1 1 1;}
-@font-face
-	{font-family:"Lucida Fax";
-	panose-1:2 6 6 2 5 5 5 2 2 4;}
-@font-face
-	{font-family:"Lucida Handwriting";
-	panose-1:3 1 1 1 1 1 1 1 1 1;}
-@font-face
-	{font-family:"Lucida Sans";
-	panose-1:2 11 6 2 3 5 4 2 2 4;}
-@font-face
-	{font-family:"Lucida Sans Typewriter";
-	panose-1:2 11 5 9 3 5 4 3 2 4;}
-@font-face
-	{font-family:Magneto;
-	panose-1:4 3 8 5 5 8 2 2 13 2;}
-@font-face
-	{font-family:"Maiandra GD";
-	panose-1:2 14 5 2 3 3 8 2 2 4;}
-@font-face
-	{font-family:"Matura MT Script Capitals";
-	panose-1:3 2 8 2 6 6 2 7 2 2;}
-@font-face
-	{font-family:Mistral;
-	panose-1:3 9 7 2 3 4 7 2 4 3;}
-@font-face
-	{font-family:"Modern No\. 20";
-	panose-1:2 7 7 4 7 5 5 2 3 3;}
-@font-face
-	{font-family:"Monotype Corsiva";
-	panose-1:3 1 1 1 1 2 1 1 1 1;}
-@font-face
-	{font-family:"Niagara Engraved";
-	panose-1:4 2 5 2 7 7 3 3 2 2;}
-@font-face
-	{font-family:"Niagara Solid";
-	panose-1:4 2 5 2 7 7 2 2 2 2;}
-@font-face
-	{font-family:"OCR A Extended";
-	panose-1:2 1 5 9 2 1 2 1 3 3;}
-@font-face
-	{font-family:"Old English Text MT";
-	panose-1:3 4 9 2 4 5 8 3 8 6;}
-@font-face
-	{font-family:Onyx;
-	panose-1:4 5 6 2 8 7 2 2 2 3;}
-@font-face
-	{font-family:"MS Outlook";
-	panose-1:5 1 1 0 1 0 0 0 0 0;}
-@font-face
-	{font-family:"Palace Script MT";
-	panose-1:3 3 3 2 2 6 7 12 11 5;}
-@font-face
-	{font-family:Papyrus;
-	panose-1:3 7 5 2 6 5 2 3 2 5;}
-@font-face
-	{font-family:Parchment;
-	panose-1:3 4 6 2 4 7 8 4 8 4;}
-@font-face
-	{font-family:Perpetua;
-	panose-1:2 2 5 2 6 4 1 2 3 3;}
-@font-face
-	{font-family:"Perpetua Titling MT";
-	panose-1:2 2 5 2 6 5 5 2 8 4;}
-@font-face
-	{font-family:Playbill;
-	panose-1:4 5 6 3 10 6 2 2 2 2;}
-@font-face
-	{font-family:"Poor Richard";
-	panose-1:2 8 5 2 5 5 5 2 7 2;}
-@font-face
-	{font-family:Pristina;
-	panose-1:3 6 4 2 4 4 6 8 2 4;}
-@font-face
-	{font-family:"Rage Italic";
-	panose-1:3 7 5 2 4 5 7 7 3 4;}
-@font-face
-	{font-family:Ravie;
-	panose-1:4 4 8 5 5 8 9 2 6 2;}
-@font-face
-	{font-family:"MS Reference Sans Serif";
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"MS Reference Specialty";
-	panose-1:5 0 5 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Rockwell Condensed";
-	panose-1:2 6 6 3 5 4 5 2 1 4;}
-@font-face
-	{font-family:Rockwell;
-	panose-1:2 6 6 3 2 2 5 2 4 3;}
-@font-face
-	{font-family:"Rockwell Extra Bold";
-	panose-1:2 6 9 3 4 5 5 2 4 3;}
-@font-face
-	{font-family:"Script MT Bold";
-	panose-1:3 4 6 2 4 6 7 8 9 4;}
-@font-face
-	{font-family:"Showcard Gothic";
-	panose-1:4 2 9 4 2 1 2 2 6 4;}
-@font-face
-	{font-family:隶书;
-	panose-1:2 1 5 9 6 1 1 1 1 1;}
-@font-face
-	{font-family:"\@隶书";}
-@font-face
-	{font-family:幼圆;
-	panose-1:2 1 5 9 6 1 1 1 1 1;}
-@font-face
-	{font-family:"\@幼圆";}
-@font-face
-	{font-family:"Snap ITC";
-	panose-1:4 4 10 7 6 10 2 2 2 2;}
-@font-face
-	{font-family:华文彩云;
-	panose-1:2 1 8 0 4 1 1 1 1 1;}
-@font-face
-	{font-family:"\@华文彩云";}
-@font-face
-	{font-family:Stencil;
-	panose-1:4 4 9 5 13 8 2 2 4 4;}
-@font-face
-	{font-family:华文仿宋;
-	panose-1:2 1 6 0 4 1 1 1 1 1;}
-@font-face
-	{font-family:"\@华文仿宋";}
-@font-face
-	{font-family:华文琥珀;
-	panose-1:2 1 8 0 4 1 1 1 1 1;}
-@font-face
-	{font-family:"\@华文琥珀";}
-@font-face
-	{font-family:华文楷体;
-	panose-1:2 1 6 0 4 1 1 1 1 1;}
-@font-face
-	{font-family:"\@华文楷体";}
-@font-face
-	{font-family:华文隶书;
-	panose-1:2 1 8 0 4 1 1 1 1 1;}
-@font-face
-	{font-family:"\@华文隶书";}
-@font-face
-	{font-family:华文宋体;
-	panose-1:2 1 6 0 4 1 1 1 1 1;}
-@font-face
-	{font-family:"\@华文宋体";}
-@font-face
-	{font-family:华文细黑;
-	panose-1:2 1 6 0 4 1 1 1 1 1;}
-@font-face
-	{font-family:"\@华文细黑";}
-@font-face
-	{font-family:华文行楷;
-	panose-1:2 1 8 0 4 1 1 1 1 1;}
-@font-face
-	{font-family:"\@华文行楷";}
-@font-face
-	{font-family:华文新魏;
-	panose-1:2 1 8 0 4 1 1 1 1 1;}
-@font-face
-	{font-family:"\@华文新魏";}
-@font-face
-	{font-family:华文中宋;
-	panose-1:2 1 6 0 4 1 1 1 1 1;}
-@font-face
-	{font-family:"\@华文中宋";}
-@font-face
-	{font-family:"Tw Cen MT";
-	panose-1:2 11 6 2 2 1 4 2 6 3;}
-@font-face
-	{font-family:"Tw Cen MT Condensed";
-	panose-1:2 11 6 6 2 1 4 2 2 3;}
-@font-face
-	{font-family:"Tw Cen MT Condensed Extra Bold";
-	panose-1:2 11 8 3 2 2 2 2 2 4;}
-@font-face
-	{font-family:"Tempus Sans ITC";
-	panose-1:4 2 4 4 3 13 7 2 2 2;}
-@font-face
-	{font-family:"Viner Hand ITC";
-	panose-1:3 7 5 2 3 5 2 2 2 3;}
-@font-face
-	{font-family:Vivaldi;
-	panose-1:3 2 6 2 5 5 6 9 8 4;}
-@font-face
-	{font-family:"Vladimir Script";
-	panose-1:3 5 4 2 4 4 7 7 3 5;}
-@font-face
-	{font-family:"Wingdings 2";
-	panose-1:5 2 1 2 1 5 7 7 7 7;}
-@font-face
-	{font-family:"Wingdings 3";
-	panose-1:5 4 1 2 1 8 7 7 7 7;}
-@font-face
-	{font-family:icomoon;
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"DejaVu Sans Mono";
-	panose-1:2 11 6 9 3 8 4 2 2 4;}
-@font-face
-	{font-family:"DejaVu Math TeX Gyre";
-	panose-1:2 0 5 3 0 0 0 0 0 0;}
-@font-face
-	{font-family:Arvo;
-	panose-1:2 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Droid Serif";
-	panose-1:2 2 6 0 6 5 0 2 2 0;}
-@font-face
-	{font-family:"Indie Flower";
-	panose-1:2 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Lobster;
-	panose-1:2 0 5 6 0 0 0 2 0 3;}
-@font-face
-	{font-family:"Open Sans";
-	panose-1:2 11 6 6 3 5 4 2 2 4;}
-@font-face
-	{font-family:"Poiret One";
-	panose-1:2 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Raleway;
-	panose-1:2 11 0 3 3 1 1 6 0 3;}
-@font-face
-	{font-family:Roboto;
-	panose-1:2 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Roboto Condensed";
-	panose-1:2 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Roboto Slab";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cascadia Code ExtraLight";
-	panose-1:2 11 6 9 2 0 0 2 0 4;}
-@font-face
-	{font-family:"Cascadia Code Light";
-	panose-1:2 11 6 9 2 0 0 2 0 4;}
-@font-face
-	{font-family:"Cascadia Code SemiLight";
-	panose-1:2 11 6 9 2 0 0 2 0 4;}
-@font-face
-	{font-family:"Cascadia Code";
-	panose-1:2 11 6 9 2 0 0 2 0 4;}
-@font-face
-	{font-family:"Cascadia Code SemiBold";
-	panose-1:2 11 6 9 2 0 0 2 0 4;}
-@font-face
-	{font-family:"Cascadia Mono ExtraLight";
-	panose-1:2 11 6 9 2 0 0 2 0 4;}
-@font-face
-	{font-family:"Cascadia Mono Light";
-	panose-1:2 11 6 9 2 0 0 2 0 4;}
-@font-face
-	{font-family:"Cascadia Mono SemiLight";
-	panose-1:2 11 6 9 2 0 0 2 0 4;}
-@font-face
-	{font-family:"Cascadia Mono";
-	panose-1:2 11 6 9 2 0 0 2 0 4;}
-@font-face
-	{font-family:"Cascadia Mono SemiBold";
-	panose-1:2 11 6 9 2 0 0 2 0 4;}
-@font-face
-	{font-family:Abadi;}
-@font-face
-	{font-family:"Abadi Extra Light";}
-@font-face
-	{font-family:Abel;}
-@font-face
-	{font-family:"Abril Fatface";}
-@font-face
-	{font-family:"ADLaM Display";}
-@font-face
-	{font-family:Aharoni;}
-@font-face
-	{font-family:"Al Fresco";}
-@font-face
-	{font-family:Aldhabi;}
-@font-face
-	{font-family:Alef;}
-@font-face
-	{font-family:Aleo;}
-@font-face
-	{font-family:"Aleo Light";}
-@font-face
-	{font-family:"Amasis MT Pro";}
-@font-face
-	{font-family:"Amasis MT Pro Black";}
-@font-face
-	{font-family:"Amasis MT Pro Light";}
-@font-face
-	{font-family:"Amasis MT Pro Medium";}
-@font-face
-	{font-family:"Amatic SC";}
-@font-face
-	{font-family:AngsanaUPC;}
-@font-face
-	{font-family:Anton;}
-@font-face
-	{font-family:Aparajita;}
-@font-face
-	{font-family:"Arabic Typesetting";}
-@font-face
-	{font-family:"Aref Ruqaa";}
-@font-face
-	{font-family:"Arial Nova";}
-@font-face
-	{font-family:"Arial Nova Cond";}
-@font-face
-	{font-family:"Arial Nova Cond Light";}
-@font-face
-	{font-family:"Arial Nova Light";}
-@font-face
-	{font-family:Assistant;}
-@font-face
-	{font-family:"Assistant ExtraBold";}
-@font-face
-	{font-family:"Assistant ExtraLight";}
-@font-face
-	{font-family:"Assistant Light";}
-@font-face
-	{font-family:"Assistant SemiBold";}
-@font-face
-	{font-family:Athiti;}
-@font-face
-	{font-family:"Athiti ExtraLight";}
-@font-face
-	{font-family:"Athiti Light";}
-@font-face
-	{font-family:"Athiti Medium";}
-@font-face
-	{font-family:"Athiti SemiBold";}
-@font-face
-	{font-family:"Avenir Next LT Pro";}
-@font-face
-	{font-family:"Avenir Next LT Pro Demi";}
-@font-face
-	{font-family:"Avenir Next LT Pro Light";}
-@font-face
-	{font-family:"Baguet Script";}
-@font-face
-	{font-family:Barlow;}
-@font-face
-	{font-family:"Barlow Black";}
-@font-face
-	{font-family:"Barlow Condensed";}
-@font-face
-	{font-family:"Barlow Condensed Black";}
-@font-face
-	{font-family:"Barlow Condensed ExtraBold";}
-@font-face
-	{font-family:"Barlow Condensed ExtraLight";}
-@font-face
-	{font-family:"Barlow Condensed Light";}
-@font-face
-	{font-family:"Barlow Condensed Medium";}
-@font-face
-	{font-family:"Barlow Condensed SemiBold";}
-@font-face
-	{font-family:"Barlow Condensed Thin";}
-@font-face
-	{font-family:"Barlow ExtraBold";}
-@font-face
-	{font-family:"Barlow ExtraLight";}
-@font-face
-	{font-family:"Barlow Light";}
-@font-face
-	{font-family:"Barlow Medium";}
-@font-face
-	{font-family:"Barlow Semi Condensed";}
-@font-face
-	{font-family:"Barlow Semi Condensed Black";}
-@font-face
-	{font-family:"Barlow Semi Condensed ExLight";}
-@font-face
-	{font-family:"Barlow Semi Condensed ExtraBold";}
-@font-face
-	{font-family:"Barlow Semi Condensed Light";}
-@font-face
-	{font-family:"Barlow Semi Condensed Medium";}
-@font-face
-	{font-family:"Barlow Semi Condensed SemiBold";}
-@font-face
-	{font-family:"Barlow Semi Condensed Thin";}
-@font-face
-	{font-family:"Barlow SemiBold";}
-@font-face
-	{font-family:"Barlow Thin";}
-@font-face
-	{font-family:BatangChe;}
-@font-face
-	{font-family:"Bebas Neue";}
-@font-face
-	{font-family:Bembo;}
-@font-face
-	{font-family:Bierstadt;}
-@font-face
-	{font-family:"Bierstadt Display";}
-@font-face
-	{font-family:BierstadtAlt;}
-@font-face
-	{font-family:"BierstadtAlt2 Cond";}
-@font-face
-	{font-family:"BierstadtAlt3 Cond";}
-@font-face
-	{font-family:"BierstadtAlt4 Cond";}
-@font-face
-	{font-family:BierstadtAlt5;}
-@font-face
-	{font-family:Biome;}
-@font-face
-	{font-family:"Biome Light";}
-@font-face
-	{font-family:"Boucherie Sans";}
-@font-face
-	{font-family:"Browallia New";}
-@font-face
-	{font-family:BrowalliaUPC;}
-@font-face
-	{font-family:"Buxton Sketch";}
-@font-face
-	{font-family:"Caveat Brush";}
-@font-face
-	{font-family:Cavolini;}
-@font-face
-	{font-family:"Chamberi Super Display";}
-@font-face
-	{font-family:Charmonman;}
-@font-face
-	{font-family:Chonburi;}
-@font-face
-	{font-family:"Cochocib Script Latin Pro";}
-@font-face
-	{font-family:"Concert One";}
-@font-face
-	{font-family:Cond;}
-@font-face
-	{font-family:Congenial;}
-@font-face
-	{font-family:"Congenial Black";}
-@font-face
-	{font-family:"Congenial Light";}
-@font-face
-	{font-family:"Congenial SemiBold";}
-@font-face
-	{font-family:"Congenial UltraLight";}
-@font-face
-	{font-family:Convection;}
-@font-face
-	{font-family:"Convection Condensed";}
-@font-face
-	{font-family:"Convection Extra Bold";}
-@font-face
-	{font-family:"Convection Symbol";}
-@font-face
-	{font-family:"Convection UI";}
-@font-face
-	{font-family:CordiaUPC;}
-@font-face
-	{font-family:Dante;}
-@font-face
-	{font-family:DaunPenh;}
-@font-face
-	{font-family:David;}
-@font-face
-	{font-family:Daytona;}
-@font-face
-	{font-family:"Daytona Condensed";}
-@font-face
-	{font-family:"Daytona Condensed Light";}
-@font-face
-	{font-family:"Daytona Light";}
-@font-face
-	{font-family:"Didact Gothic";}
-@font-face
-	{font-family:DilleniaUPC;}
-@font-face
-	{font-family:"DM Mono";}
-@font-face
-	{font-family:"DM Mono Light";}
-@font-face
-	{font-family:"DM Mono Medium";}
-@font-face
-	{font-family:"DM Sans";}
-@font-face
-	{font-family:"DM Sans Medium";}
-@font-face
-	{font-family:"DM Serif Display";}
-@font-face
-	{font-family:"DM Serif Text";}
-@font-face
-	{font-family:DokChampa;}
-@font-face
-	{font-family:Dosis;}
-@font-face
-	{font-family:"Dosis ExtraBold";}
-@font-face
-	{font-family:"Dosis ExtraLight";}
-@font-face
-	{font-family:"Dosis Light";}
-@font-face
-	{font-family:"Dosis Medium";}
-@font-face
-	{font-family:"Dosis SemiBold";}
-@font-face
-	{font-family:DotumChe;}
-@font-face
-	{font-family:"Dreaming Outloud Pro";}
-@font-face
-	{font-family:"Dreaming Outloud Script Pro";}
-@font-face
-	{font-family:"EB Garamond";}
-@font-face
-	{font-family:"EB Garamond ExtraBold";}
-@font-face
-	{font-family:"EB Garamond Medium";}
-@font-face
-	{font-family:"EB Garamond SemiBold";}
-@font-face
-	{font-family:"Elephant Pro";}
-@font-face
-	{font-family:EucrosiaUPC;}
-@font-face
-	{font-family:Euphemia;}
-@font-face
-	{font-family:Fahkwang;}
-@font-face
-	{font-family:"Fahkwang ExtraLight";}
-@font-face
-	{font-family:"Fahkwang Light";}
-@font-face
-	{font-family:"Fahkwang Medium";}
-@font-face
-	{font-family:"Fahkwang SemiBold";}
-@font-face
-	{font-family:"Fairwater Script";}
-@font-face
-	{font-family:"Fairwater Script Light";}
-@font-face
-	{font-family:"Fave Script Bold Pro";}
-@font-face
-	{font-family:"Fira Code";}
-@font-face
-	{font-family:"Fira Code Light";}
-@font-face
-	{font-family:"Fira Code Medium";}
-@font-face
-	{font-family:"Fira Code Retina";}
-@font-face
-	{font-family:"Fira Mono";}
-@font-face
-	{font-family:"Fira Mono Medium";}
-@font-face
-	{font-family:"Fira Sans";}
-@font-face
-	{font-family:"Fira Sans Black";}
-@font-face
-	{font-family:"Fira Sans Condensed";}
-@font-face
-	{font-family:"Fira Sans Condensed Black";}
-@font-face
-	{font-family:"Fira Sans Condensed ExtraBold";}
-@font-face
-	{font-family:"Fira Sans Condensed ExtraLight";}
-@font-face
-	{font-family:"Fira Sans Condensed Light";}
-@font-face
-	{font-family:"Fira Sans Condensed Medium";}
-@font-face
-	{font-family:"Fira Sans Condensed SemiBold";}
-@font-face
-	{font-family:"Fira Sans Condensed Thin";}
-@font-face
-	{font-family:"Fira Sans Extra Condensed";}
-@font-face
-	{font-family:"Fira Sans Extra Condensed Black";}
-@font-face
-	{font-family:"Fira Sans Extra Condensed Light";}
-@font-face
-	{font-family:"Fira Sans Extra Condensed Thin";}
-@font-face
-	{font-family:"Fira Sans ExtraBold";}
-@font-face
-	{font-family:"Fira Sans ExtraLight";}
-@font-face
-	{font-family:"Fira Sans Light";}
-@font-face
-	{font-family:"Fira Sans Medium";}
-@font-face
-	{font-family:"Fira Sans SemiBold";}
-@font-face
-	{font-family:"Fira Sans Thin";}
-@font-face
-	{font-family:"Fjalla One";}
-@font-face
-	{font-family:"Forte Forward";}
-@font-face
-	{font-family:"Frank Ruhl Libre";}
-@font-face
-	{font-family:"Frank Ruhl Libre Black";}
-@font-face
-	{font-family:"Frank Ruhl Libre Light";}
-@font-face
-	{font-family:"Frank Ruhl Libre Medium";}
-@font-face
-	{font-family:FrankRuehl;}
-@font-face
-	{font-family:"Fredoka One";}
-@font-face
-	{font-family:FreesiaUPC;}
-@font-face
-	{font-family:Gabriela;}
-@font-face
-	{font-family:Gaegu;}
-@font-face
-	{font-family:"Gaegu Light";}
-@font-face
-	{font-family:"Georgia Pro";}
-@font-face
-	{font-family:"Georgia Pro Black";}
-@font-face
-	{font-family:"Georgia Pro Cond";}
-@font-face
-	{font-family:"Georgia Pro Cond Black";}
-@font-face
-	{font-family:"Georgia Pro Cond Light";}
-@font-face
-	{font-family:"Georgia Pro Cond Semibold";}
-@font-face
-	{font-family:"Georgia Pro Light";}
-@font-face
-	{font-family:"Georgia Pro Semibold";}
-@font-face
-	{font-family:"Gill Sans Nova";}
-@font-face
-	{font-family:"Gill Sans Nova Cond";}
-@font-face
-	{font-family:"Gill Sans Nova Cond Lt";}
-@font-face
-	{font-family:"Gill Sans Nova Cond Ultra Bold";}
-@font-face
-	{font-family:"Gill Sans Nova Cond XBd";}
-@font-face
-	{font-family:"Gill Sans Nova Light";}
-@font-face
-	{font-family:"Gill Sans Nova Ultra Bold";}
-@font-face
-	{font-family:Gisha;}
-@font-face
-	{font-family:"Goudy Type";}
-@font-face
-	{font-family:Grandview;}
-@font-face
-	{font-family:"Grandview Display";}
-@font-face
-	{font-family:Grotesque;}
-@font-face
-	{font-family:"Grotesque Light";}
-@font-face
-	{font-family:GulimChe;}
-@font-face
-	{font-family:Gungsuh;}
-@font-face
-	{font-family:GungsuhChe;}
-@font-face
-	{font-family:"Hadassah Friedlaender";}
-@font-face
-	{font-family:"Hammersmith One";}
-@font-face
-	{font-family:Heebo;}
-@font-face
-	{font-family:"Heebo Black";}
-@font-face
-	{font-family:"Heebo ExtraBold";}
-@font-face
-	{font-family:"Heebo Light";}
-@font-face
-	{font-family:"Heebo Medium";}
-@font-face
-	{font-family:"Heebo Thin";}
-@font-face
-	{font-family:HGGothicE;}
-@font-face
-	{font-family:HGMaruGothicMPRO;}
-@font-face
-	{font-family:HGMinchoE;}
-@font-face
-	{font-family:HGPGothicE;}
-@font-face
-	{font-family:HGPMinchoE;}
-@font-face
-	{font-family:HGPSoeiKakugothicUB;}
-@font-face
-	{font-family:HGSGothicE;}
-@font-face
-	{font-family:HGSMinchoE;}
-@font-face
-	{font-family:HGSoeiKakugothicUB;}
-@font-face
-	{font-family:HGSSoeiKakugothicUB;}
-@font-face
-	{font-family:Hind;}
-@font-face
-	{font-family:"Hind Colombo";}
-@font-face
-	{font-family:"Hind Colombo Light";}
-@font-face
-	{font-family:"Hind Colombo Medium";}
-@font-face
-	{font-family:"Hind Colombo SemiBold";}
-@font-face
-	{font-family:"Hind Guntur";}
-@font-face
-	{font-family:"Hind Guntur Light";}
-@font-face
-	{font-family:"Hind Guntur Medium";}
-@font-face
-	{font-family:"Hind Guntur SemiBold";}
-@font-face
-	{font-family:"Hind Jalandhar";}
-@font-face
-	{font-family:"Hind Jalandhar Light";}
-@font-face
-	{font-family:"Hind Jalandhar Medium";}
-@font-face
-	{font-family:"Hind Jalandhar SemiBold";}
-@font-face
-	{font-family:"Hind Kochi";}
-@font-face
-	{font-family:"Hind Kochi Light";}
-@font-face
-	{font-family:"Hind Kochi Medium";}
-@font-face
-	{font-family:"Hind Kochi SemiBold";}
-@font-face
-	{font-family:"Hind Light";}
-@font-face
-	{font-family:"Hind Madurai";}
-@font-face
-	{font-family:"Hind Madurai Light";}
-@font-face
-	{font-family:"Hind Madurai Medium";}
-@font-face
-	{font-family:"Hind Madurai SemiBold";}
-@font-face
-	{font-family:"Hind Medium";}
-@font-face
-	{font-family:"Hind Mysuru";}
-@font-face
-	{font-family:"Hind Mysuru Light";}
-@font-face
-	{font-family:"Hind Mysuru Medium";}
-@font-face
-	{font-family:"Hind Mysuru SemiBold";}
-@font-face
-	{font-family:"Hind SemiBold";}
-@font-face
-	{font-family:"Hind Siliguri";}
-@font-face
-	{font-family:"Hind Siliguri Light";}
-@font-face
-	{font-family:"Hind Siliguri Medium";}
-@font-face
-	{font-family:"Hind Siliguri SemiBold";}
-@font-face
-	{font-family:"Hind Vadodara";}
-@font-face
-	{font-family:"Hind Vadodara Light";}
-@font-face
-	{font-family:"Hind Vadodara Medium";}
-@font-face
-	{font-family:"Hind Vadodara SemiBold";}
-@font-face
-	{font-family:"IBM Plex Mono";}
-@font-face
-	{font-family:"IBM Plex Mono ExtraLight";}
-@font-face
-	{font-family:"IBM Plex Mono Light";}
-@font-face
-	{font-family:"IBM Plex Mono Medium";}
-@font-face
-	{font-family:"IBM Plex Mono SemiBold";}
-@font-face
-	{font-family:"IBM Plex Mono Thin";}
-@font-face
-	{font-family:"IBM Plex Sans";}
-@font-face
-	{font-family:"IBM Plex Sans Condensed";}
-@font-face
-	{font-family:"IBM Plex Sans Condensed Light";}
-@font-face
-	{font-family:"IBM Plex Sans Condensed Medium";}
-@font-face
-	{font-family:"IBM Plex Sans Condensed Thin";}
-@font-face
-	{font-family:"IBM Plex Sans ExtraLight";}
-@font-face
-	{font-family:"IBM Plex Sans Light";}
-@font-face
-	{font-family:"IBM Plex Sans Medium";}
-@font-face
-	{font-family:"IBM Plex Sans SemiBold";}
-@font-face
-	{font-family:"IBM Plex Sans Thin";}
-@font-face
-	{font-family:"IBM Plex Serif";}
-@font-face
-	{font-family:"IBM Plex Serif ExtraLight";}
-@font-face
-	{font-family:"IBM Plex Serif Light";}
-@font-face
-	{font-family:"IBM Plex Serif Medium";}
-@font-face
-	{font-family:"IBM Plex Serif SemiBold";}
-@font-face
-	{font-family:"IBM Plex Serif Thin";}
-@font-face
-	{font-family:Inconsolata;}
-@font-face
-	{font-family:"Inconsolata Black";}
-@font-face
-	{font-family:"Inconsolata Bold";}
-@font-face
-	{font-family:"Inconsolata Condensed";}
-@font-face
-	{font-family:"Inconsolata Condensed Black";}
-@font-face
-	{font-family:"Inconsolata Condensed Bold";}
-@font-face
-	{font-family:"Inconsolata Condensed ExtraBold";}
-@font-face
-	{font-family:"Inconsolata Condensed Light";}
-@font-face
-	{font-family:"Inconsolata Condensed Medium";}
-@font-face
-	{font-family:"Inconsolata Condensed SemiBold";}
-@font-face
-	{font-family:"Inconsolata Expanded";}
-@font-face
-	{font-family:"Inconsolata Expanded Black";}
-@font-face
-	{font-family:"Inconsolata Expanded Bold";}
-@font-face
-	{font-family:"Inconsolata Expanded ExtraBold";}
-@font-face
-	{font-family:"Inconsolata Expanded ExtraLight";}
-@font-face
-	{font-family:"Inconsolata Expanded Light";}
-@font-face
-	{font-family:"Inconsolata Expanded Medium";}
-@font-face
-	{font-family:"Inconsolata Expanded SemiBold";}
-@font-face
-	{font-family:"Inconsolata ExtraBold";}
-@font-face
-	{font-family:"Inconsolata ExtraCondensed";}
-@font-face
-	{font-family:"Inconsolata ExtraCondensed Bold";}
-@font-face
-	{font-family:"Inconsolata ExtraExpanded";}
-@font-face
-	{font-family:"Inconsolata ExtraExpanded Black";}
-@font-face
-	{font-family:"Inconsolata ExtraExpanded Bold";}
-@font-face
-	{font-family:"Inconsolata ExtraExpanded Light";}
-@font-face
-	{font-family:"Inconsolata ExtraLight";}
-@font-face
-	{font-family:"Inconsolata Light";}
-@font-face
-	{font-family:"Inconsolata Medium";}
-@font-face
-	{font-family:"Inconsolata SemiBold";}
-@font-face
-	{font-family:"Inconsolata SemiCondensed";}
-@font-face
-	{font-family:"Inconsolata SemiCondensed Black";}
-@font-face
-	{font-family:"Inconsolata SemiCondensed Bold";}
-@font-face
-	{font-family:"Inconsolata SemiCondensed Light";}
-@font-face
-	{font-family:"Inconsolata SemiExpanded";}
-@font-face
-	{font-family:"Inconsolata SemiExpanded Black";}
-@font-face
-	{font-family:"Inconsolata SemiExpanded Bold";}
-@font-face
-	{font-family:"Inconsolata SemiExpanded Light";}
-@font-face
-	{font-family:"Inconsolata SemiExpanded Medium";}
-@font-face
-	{font-family:"Inconsolata UltraCondensed";}
-@font-face
-	{font-family:"Inconsolata UltraCondensed Bold";}
-@font-face
-	{font-family:"Inconsolata UltraExpanded";}
-@font-face
-	{font-family:"Inconsolata UltraExpanded Black";}
-@font-face
-	{font-family:"Inconsolata UltraExpanded Bold";}
-@font-face
-	{font-family:"Inconsolata UltraExpanded Light";}
-@font-face
-	{font-family:IrisUPC;}
-@font-face
-	{font-family:"Iskoola Pota";}
-@font-face
-	{font-family:Italianno;}
-@font-face
-	{font-family:JasmineUPC;}
-@font-face
-	{font-family:"Josefin Sans";}
-@font-face
-	{font-family:"Josefin Sans Bold";}
-@font-face
-	{font-family:"Josefin Sans Light";}
-@font-face
-	{font-family:"Josefin Sans SemiBold";}
-@font-face
-	{font-family:"Josefin Sans Thin";}
-@font-face
-	{font-family:"Josefin Slab";}
-@font-face
-	{font-family:"Josefin Slab Light";}
-@font-face
-	{font-family:"Josefin Slab SemiBold";}
-@font-face
-	{font-family:"Josefin Slab Thin";}
-@font-face
-	{font-family:Jumble;}
-@font-face
-	{font-family:Kalinga;}
-@font-face
-	{font-family:Karla;}
-@font-face
-	{font-family:"Karla ExtraBold";}
-@font-face
-	{font-family:"Karla ExtraLight";}
-@font-face
-	{font-family:"Karla Light";}
-@font-face
-	{font-family:"Karla Medium";}
-@font-face
-	{font-family:"Karla Tamil Inclined";}
-@font-face
-	{font-family:"Karla Tamil Upright";}
-@font-face
-	{font-family:Kartika;}
-@font-face
-	{font-family:Kermit;}
-@font-face
-	{font-family:"Kermit Condensed";}
-@font-face
-	{font-family:"Kermit Expanded";}
-@font-face
-	{font-family:"Kermit Extrabold";}
-@font-face
-	{font-family:"Kermit Extrabold Condensed";}
-@font-face
-	{font-family:"Kermit Extrabold Expanded";}
-@font-face
-	{font-family:"Kermit Extralight";}
-@font-face
-	{font-family:"Kermit Extralight Condensed";}
-@font-face
-	{font-family:"Kermit Extralight Expanded";}
-@font-face
-	{font-family:"Kermit Light";}
-@font-face
-	{font-family:"Kermit Light Condensed";}
-@font-face
-	{font-family:"Kermit Light Expanded";}
-@font-face
-	{font-family:"Kermit Semibold";}
-@font-face
-	{font-family:"Kermit Semibold Condensed";}
-@font-face
-	{font-family:"Kermit Semibold Expanded";}
-@font-face
-	{font-family:"Kermit Thin";}
-@font-face
-	{font-family:"Kermit Thin Condensed";}
-@font-face
-	{font-family:"Kermit Thin Expanded";}
-@font-face
-	{font-family:"Khmer UI";}
-@font-face
-	{font-family:Kigelia;}
-@font-face
-	{font-family:"Kigelia Arabic";}
-@font-face
-	{font-family:"Kigelia Arabic Light";}
-@font-face
-	{font-family:"Kigelia Light";}
-@font-face
-	{font-family:"Klee One";}
-@font-face
-	{font-family:"Klee One SemiBold";}
-@font-face
-	{font-family:KodchiangUPC;}
-@font-face
-	{font-family:Kokila;}
-@font-face
-	{font-family:Krub;}
-@font-face
-	{font-family:"Krub ExtraLight";}
-@font-face
-	{font-family:"Krub Light";}
-@font-face
-	{font-family:"Krub Medium";}
-@font-face
-	{font-family:"Krub SemiBold";}
-@font-face
-	{font-family:Lalezar;}
-@font-face
-	{font-family:"Lao UI";}
-@font-face
-	{font-family:Lato;}
-@font-face
-	{font-family:"Lato Black";}
-@font-face
-	{font-family:"Lato ExtraBold";}
-@font-face
-	{font-family:"Lato ExtraLight";}
-@font-face
-	{font-family:"Lato Light";}
-@font-face
-	{font-family:"Lato Medium";}
-@font-face
-	{font-family:"Lato SemiBold";}
-@font-face
-	{font-family:"Lato Thin";}
-@font-face
-	{font-family:Leelawadee;}
-@font-face
-	{font-family:"Levenim MT";}
-@font-face
-	{font-family:"Libre Barcode 128";}
-@font-face
-	{font-family:"Libre Barcode 128 Text";}
-@font-face
-	{font-family:"Libre Barcode 39";}
-@font-face
-	{font-family:"Libre Barcode 39 Extended";}
-@font-face
-	{font-family:"Libre Barcode 39 Extended Text";}
-@font-face
-	{font-family:"Libre Barcode 39 Text";}
-@font-face
-	{font-family:"Libre Barcode EAN13 Text";}
-@font-face
-	{font-family:"Libre Baskerville";}
-@font-face
-	{font-family:"Libre Franklin";}
-@font-face
-	{font-family:"Libre Franklin Black";}
-@font-face
-	{font-family:"Libre Franklin ExtraBold";}
-@font-face
-	{font-family:"Libre Franklin ExtraLight";}
-@font-face
-	{font-family:"Libre Franklin Light";}
-@font-face
-	{font-family:"Libre Franklin Medium";}
-@font-face
-	{font-family:"Libre Franklin SemiBold";}
-@font-face
-	{font-family:"Libre Franklin Thin";}
-@font-face
-	{font-family:Ligconsolata;}
-@font-face
-	{font-family:LilyUPC;}
-@font-face
-	{font-family:Livvic;}
-@font-face
-	{font-family:"Livvic Black";}
-@font-face
-	{font-family:"Livvic ExtraLight";}
-@font-face
-	{font-family:"Livvic Light";}
-@font-face
-	{font-family:"Livvic Medium";}
-@font-face
-	{font-family:"Livvic SemiBold";}
-@font-face
-	{font-family:"Livvic Thin";}
-@font-face
-	{font-family:"Lobster Two";}
-@font-face
-	{font-family:Lora;}
-@font-face
-	{font-family:"Lora Medium";}
-@font-face
-	{font-family:"Mangal Pro";}
-@font-face
-	{font-family:Meddon;}
-@font-face
-	{font-family:Meiryo;}
-@font-face
-	{font-family:"Meiryo UI";}
-@font-face
-	{font-family:Merriweather;}
-@font-face
-	{font-family:"Merriweather Black";}
-@font-face
-	{font-family:"Merriweather Light";}
-@font-face
-	{font-family:"Merriweather Sans";}
-@font-face
-	{font-family:"Merriweather Sans ExtraBold";}
-@font-face
-	{font-family:"Merriweather Sans Light";}
-@font-face
-	{font-family:"Microsoft GothicNeo";}
-@font-face
-	{font-family:"Microsoft GothicNeo Light";}
-@font-face
-	{font-family:"Microsoft Uighur";}
-@font-face
-	{font-family:"Microsoft YaHei Light";}
-@font-face
-	{font-family:MingLiU_HKSCS;}
-@font-face
-	{font-family:Miriam;}
-@font-face
-	{font-family:"Miriam Fixed";}
-@font-face
-	{font-family:"Miriam Libre";}
-@font-face
-	{font-family:Mitr;}
-@font-face
-	{font-family:"Mitr ExtraLight";}
-@font-face
-	{font-family:"Mitr Light";}
-@font-face
-	{font-family:"Mitr Medium";}
-@font-face
-	{font-family:"Mitr SemiBold";}
-@font-face
-	{font-family:"Modern Love";}
-@font-face
-	{font-family:"Modern Love Caps";}
-@font-face
-	{font-family:"Modern Love Grunge";}
-@font-face
-	{font-family:Montserrat;}
-@font-face
-	{font-family:"Montserrat Black";}
-@font-face
-	{font-family:"Montserrat ExtraBold";}
-@font-face
-	{font-family:"Montserrat ExtraLight";}
-@font-face
-	{font-family:"Montserrat Light";}
-@font-face
-	{font-family:"Montserrat Medium";}
-@font-face
-	{font-family:"Montserrat SemiBold";}
-@font-face
-	{font-family:"Montserrat Thin";}
-@font-face
-	{font-family:MoolBoran;}
-@font-face
-	{font-family:"MS PMincho";}
-@font-face
-	{font-family:"Mystical Woods Rough Script";}
-@font-face
-	{font-family:"Mystical Woods Smooth Script";}
-@font-face
-	{font-family:"Nanum Brush Script";}
-@font-face
-	{font-family:"Nanum Pen";}
-@font-face
-	{font-family:NanumGothic;}
-@font-face
-	{font-family:NanumGothicCoding;}
-@font-face
-	{font-family:NanumGothicExtraBold;}
-@font-face
-	{font-family:NanumMyeongjo;}
-@font-face
-	{font-family:NanumMyeongjoExtraBold;}
-@font-face
-	{font-family:Narkisim;}
-@font-face
-	{font-family:"Neue Haas Grotesk Text Pro";}
-@font-face
-	{font-family:"News Gothic MT";}
-@font-face
-	{font-family:Nina;}
-@font-face
-	{font-family:"Nirmala Text";}
-@font-face
-	{font-family:"Nirmala Text Semilight";}
-@font-face
-	{font-family:"Nordique Inline";}
-@font-face
-	{font-family:"Noto Music";}
-@font-face
-	{font-family:"Noto Nastaliq Urdu";}
-@font-face
-	{font-family:"Noto Sans";}
-@font-face
-	{font-family:"Noto Sans AnatoHiero";}
-@font-face
-	{font-family:"Noto Sans Avestan";}
-@font-face
-	{font-family:"Noto Sans Bassa Vah";}
-@font-face
-	{font-family:"Noto Sans Batak";}
-@font-face
-	{font-family:"Noto Sans Bhaiksuki";}
-@font-face
-	{font-family:"Noto Sans Brahmi";}
-@font-face
-	{font-family:"Noto Sans Buginese";}
-@font-face
-	{font-family:"Noto Sans Buhid";}
-@font-face
-	{font-family:"Noto Sans Carian";}
-@font-face
-	{font-family:"Noto Sans CaucAlban";}
-@font-face
-	{font-family:"Noto Sans Chakma";}
-@font-face
-	{font-family:"Noto Sans Coptic";}
-@font-face
-	{font-family:"Noto Sans Cuneiform";}
-@font-face
-	{font-family:"Noto Sans Cypriot";}
-@font-face
-	{font-family:"Noto Sans Deseret";}
-@font-face
-	{font-family:"Noto Sans Devanagari";}
-@font-face
-	{font-family:"Noto Sans Devanagari Black";}
-@font-face
-	{font-family:"Noto Sans Devanagari ExtraBold";}
-@font-face
-	{font-family:"Noto Sans Devanagari ExtraLight";}
-@font-face
-	{font-family:"Noto Sans Devanagari Light";}
-@font-face
-	{font-family:"Noto Sans Devanagari Medium";}
-@font-face
-	{font-family:"Noto Sans Devanagari SemiBold";}
-@font-face
-	{font-family:"Noto Sans Devanagari Thin";}
-@font-face
-	{font-family:"Noto Sans Devanagari UI";}
-@font-face
-	{font-family:"Noto Sans Devanagari UI Black";}
-@font-face
-	{font-family:"Noto Sans Devanagari UI Light";}
-@font-face
-	{font-family:"Noto Sans Devanagari UI Medium";}
-@font-face
-	{font-family:"Noto Sans Devanagari UI Thin";}
-@font-face
-	{font-family:"Noto Sans Duployan";}
-@font-face
-	{font-family:"Noto Sans EgyptHiero";}
-@font-face
-	{font-family:"Noto Sans Elbasan";}
-@font-face
-	{font-family:"Noto Sans Elymaic";}
-@font-face
-	{font-family:"Noto Sans Glagolitic";}
-@font-face
-	{font-family:"Noto Sans Gothic";}
-@font-face
-	{font-family:"Noto Sans Grantha";}
-@font-face
-	{font-family:"Noto Sans Gujarati";}
-@font-face
-	{font-family:"Noto Sans Gujarati Black";}
-@font-face
-	{font-family:"Noto Sans Gujarati ExtraBold";}
-@font-face
-	{font-family:"Noto Sans Gujarati ExtraLight";}
-@font-face
-	{font-family:"Noto Sans Gujarati Light";}
-@font-face
-	{font-family:"Noto Sans Gujarati Medium";}
-@font-face
-	{font-family:"Noto Sans Gujarati SemiBold";}
-@font-face
-	{font-family:"Noto Sans Gujarati Thin";}
-@font-face
-	{font-family:"Noto Sans Gujarati UI";}
-@font-face
-	{font-family:"Noto Sans Gujarati UI Black";}
-@font-face
-	{font-family:"Noto Sans Gujarati UI ExtraBold";}
-@font-face
-	{font-family:"Noto Sans Gujarati UI Light";}
-@font-face
-	{font-family:"Noto Sans Gujarati UI Medium";}
-@font-face
-	{font-family:"Noto Sans Gujarati UI SemiBold";}
-@font-face
-	{font-family:"Noto Sans Gujarati UI Thin";}
-@font-face
-	{font-family:"Noto Sans Gunjala Gondi";}
-@font-face
-	{font-family:"Noto Sans Hanunoo";}
-@font-face
-	{font-family:"Noto Sans Hatran";}
-@font-face
-	{font-family:"Noto Sans ImpAramaic";}
-@font-face
-	{font-family:"Noto Sans Indic Siyaq Numbers";}
-@font-face
-	{font-family:"Noto Sans InsPahlavi";}
-@font-face
-	{font-family:"Noto Sans InsParthi";}
-@font-face
-	{font-family:"Noto Sans Javanese";}
-@font-face
-	{font-family:"Noto Sans Kaithi";}
-@font-face
-	{font-family:"Noto Sans Kharoshthi";}
-@font-face
-	{font-family:"Noto Sans Khojki";}
-@font-face
-	{font-family:"Noto Sans Khudawadi";}
-@font-face
-	{font-family:"Noto Sans Lepcha";}
-@font-face
-	{font-family:"Noto Sans Limbu";}
-@font-face
-	{font-family:"Noto Sans Linear A";}
-@font-face
-	{font-family:"Noto Sans Linear B";}
-@font-face
-	{font-family:"Noto Sans Lycian";}
-@font-face
-	{font-family:"Noto Sans Lydian";}
-@font-face
-	{font-family:"Noto Sans Mahajani";}
-@font-face
-	{font-family:"Noto Sans Mandaic";}
-@font-face
-	{font-family:"Noto Sans Manichaean";}
-@font-face
-	{font-family:"Noto Sans Marchen";}
-@font-face
-	{font-family:"Noto Sans Masaram Gondi";}
-@font-face
-	{font-family:"Noto Sans Math";}
-@font-face
-	{font-family:"Noto Sans Mayan Numerals";}
-@font-face
-	{font-family:"Noto Sans Mende Kikakui";}
-@font-face
-	{font-family:"Noto Sans Meroitic";}
-@font-face
-	{font-family:"Noto Sans Miao";}
-@font-face
-	{font-family:"Noto Sans Modi";}
-@font-face
-	{font-family:"Noto Sans Mongolian";}
-@font-face
-	{font-family:"Noto Sans Mro";}
-@font-face
-	{font-family:"Noto Sans Multani";}
-@font-face
-	{font-family:"Noto Sans Myanmar";}
-@font-face
-	{font-family:"Noto Sans Myanmar Blk";}
-@font-face
-	{font-family:"Noto Sans Myanmar ExtBd";}
-@font-face
-	{font-family:"Noto Sans Myanmar ExtLt";}
-@font-face
-	{font-family:"Noto Sans Myanmar Light";}
-@font-face
-	{font-family:"Noto Sans Myanmar Med";}
-@font-face
-	{font-family:"Noto Sans Myanmar SemBd";}
-@font-face
-	{font-family:"Noto Sans Myanmar Thin";}
-@font-face
-	{font-family:"Noto Sans Myanmar UI";}
-@font-face
-	{font-family:"Noto Sans Myanmar UI Black";}
-@font-face
-	{font-family:"Noto Sans Myanmar UI ExtraBold";}
-@font-face
-	{font-family:"Noto Sans Myanmar UI ExtraLight";}
-@font-face
-	{font-family:"Noto Sans Myanmar UI Light";}
-@font-face
-	{font-family:"Noto Sans Myanmar UI Medium";}
-@font-face
-	{font-family:"Noto Sans Myanmar UI SemiBold";}
-@font-face
-	{font-family:"Noto Sans Myanmar UI Thin";}
-@font-face
-	{font-family:"Noto Sans Nabataean";}
-@font-face
-	{font-family:"Noto Sans Newa";}
-@font-face
-	{font-family:"Noto Sans NewTaiLue";}
-@font-face
-	{font-family:"Noto Sans NKo";}
-@font-face
-	{font-family:"Noto Sans Nushu";}
-@font-face
-	{font-family:"Noto Sans Ogham";}
-@font-face
-	{font-family:"Noto Sans Old Italic";}
-@font-face
-	{font-family:"Noto Sans Old Permic";}
-@font-face
-	{font-family:"Noto Sans Old Turkic";}
-@font-face
-	{font-family:"Noto Sans OldHung";}
-@font-face
-	{font-family:"Noto Sans OldNorArab";}
-@font-face
-	{font-family:"Noto Sans OldPersian";}
-@font-face
-	{font-family:"Noto Sans OldSogdian";}
-@font-face
-	{font-family:"Noto Sans OldSouArab";}
-@font-face
-	{font-family:"Noto Sans Oriya";}
-@font-face
-	{font-family:"Noto Sans Oriya Blk";}
-@font-face
-	{font-family:"Noto Sans Oriya Thin";}
-@font-face
-	{font-family:"Noto Sans Oriya UI";}
-@font-face
-	{font-family:"Noto Sans Oriya UI Blk";}
-@font-face
-	{font-family:"Noto Sans Oriya UI Thin";}
-@font-face
-	{font-family:"Noto Sans Osage";}
-@font-face
-	{font-family:"Noto Sans Osmanya";}
-@font-face
-	{font-family:"Noto Sans Pahawh Hmong";}
-@font-face
-	{font-family:"Noto Sans Palmyrene";}
-@font-face
-	{font-family:"Noto Sans PauCinHau";}
-@font-face
-	{font-family:"Noto Sans PhagsPa";}
-@font-face
-	{font-family:"Noto Sans Phoenician";}
-@font-face
-	{font-family:"Noto Sans PsaPahlavi";}
-@font-face
-	{font-family:"Noto Sans Rejang";}
-@font-face
-	{font-family:"Noto Sans Runic";}
-@font-face
-	{font-family:"Noto Sans Samaritan";}
-@font-face
-	{font-family:"Noto Sans Saurashtra";}
-@font-face
-	{font-family:"Noto Sans Sharada";}
-@font-face
-	{font-family:"Noto Sans Shavian";}
-@font-face
-	{font-family:"Noto Sans Siddham";}
-@font-face
-	{font-family:"Noto Sans Sogdian";}
-@font-face
-	{font-family:"Noto Sans Soyombo";}
-@font-face
-	{font-family:"Noto Sans Syloti Nagri";}
-@font-face
-	{font-family:"Noto Sans Symbols2";}
-@font-face
-	{font-family:"Noto Sans Syriac";}
-@font-face
-	{font-family:"Noto Sans Syriac Black";}
-@font-face
-	{font-family:"Noto Sans Syriac Thin";}
-@font-face
-	{font-family:"Noto Sans Tagalog";}
-@font-face
-	{font-family:"Noto Sans Tagbanwa";}
-@font-face
-	{font-family:"Noto Sans Tai Le";}
-@font-face
-	{font-family:"Noto Sans Tai Viet";}
-@font-face
-	{font-family:"Noto Sans Takri";}
-@font-face
-	{font-family:"Noto Sans Tamil Supplement";}
-@font-face
-	{font-family:"Noto Sans Thai Looped Black";}
-@font-face
-	{font-family:"Noto Sans Thai Looped Bold";}
-@font-face
-	{font-family:"Noto Sans Thai Looped ExtLight";}
-@font-face
-	{font-family:"Noto Sans Thai Looped Extrabold";}
-@font-face
-	{font-family:"Noto Sans Thai Looped Light";}
-@font-face
-	{font-family:"Noto Sans Thai Looped Medium";}
-@font-face
-	{font-family:"Noto Sans Thai Looped Regular";}
-@font-face
-	{font-family:"Noto Sans Thai Looped Semibold";}
-@font-face
-	{font-family:"Noto Sans Thai Looped Thin";}
-@font-face
-	{font-family:"Noto Sans Tifinagh";}
-@font-face
-	{font-family:"Noto Sans Tirhuta";}
-@font-face
-	{font-family:"Noto Sans Ugaritic";}
-@font-face
-	{font-family:"Noto Sans Vai";}
-@font-face
-	{font-family:"Noto Sans Wancho";}
-@font-face
-	{font-family:"Noto Sans WarangCiti";}
-@font-face
-	{font-family:"Noto Sans Yi";}
-@font-face
-	{font-family:"Noto Sans Zanabazar";}
-@font-face
-	{font-family:"Noto Serif";}
-@font-face
-	{font-family:"Noto Serif Ahom";}
-@font-face
-	{font-family:"Noto Serif Balinese";}
-@font-face
-	{font-family:"Noto Serif Dogra";}
-@font-face
-	{font-family:"Noto Serif Grantha";}
-@font-face
-	{font-family:"Noto Serif Myanmar";}
-@font-face
-	{font-family:"Noto Serif Myanmar Blk";}
-@font-face
-	{font-family:"Noto Serif Myanmar ExtBd";}
-@font-face
-	{font-family:"Noto Serif Myanmar ExtLt";}
-@font-face
-	{font-family:"Noto Serif Myanmar Light";}
-@font-face
-	{font-family:"Noto Serif Myanmar Med";}
-@font-face
-	{font-family:"Noto Serif Myanmar SemBd";}
-@font-face
-	{font-family:"Noto Serif Myanmar Thin";}
-@font-face
-	{font-family:"Noto Serif Tangut";}
-@font-face
-	{font-family:"Noto Traditional Nushu";}
-@font-face
-	{font-family:Nunito;}
-@font-face
-	{font-family:"Nunito Black";}
-@font-face
-	{font-family:"Nunito ExtraBold";}
-@font-face
-	{font-family:"Nunito ExtraLight";}
-@font-face
-	{font-family:"Nunito Light";}
-@font-face
-	{font-family:"Nunito Sans";}
-@font-face
-	{font-family:"Nunito Sans Black";}
-@font-face
-	{font-family:"Nunito Sans ExtraBold";}
-@font-face
-	{font-family:"Nunito Sans ExtraLight";}
-@font-face
-	{font-family:"Nunito Sans Light";}
-@font-face
-	{font-family:"Nunito Sans SemiBold";}
-@font-face
-	{font-family:"Nunito SemiBold";}
-@font-face
-	{font-family:Nyala;}
-@font-face
-	{font-family:OCRB;}
-@font-face
-	{font-family:"Open Sans ExtraBold";}
-@font-face
-	{font-family:"Open Sans Light";}
-@font-face
-	{font-family:"Open Sans SemiBold";}
-@font-face
-	{font-family:Oranienbaum;}
-@font-face
-	{font-family:Oswald;}
-@font-face
-	{font-family:"Oswald ExtraLight";}
-@font-face
-	{font-family:"Oswald Light";}
-@font-face
-	{font-family:"Oswald Medium";}
-@font-face
-	{font-family:"Oswald SemiBold";}
-@font-face
-	{font-family:Oxygen;}
-@font-face
-	{font-family:"Oxygen Light";}
-@font-face
-	{font-family:"Oxygen Mono";}
-@font-face
-	{font-family:Pacifico;}
-@font-face
-	{font-family:Palanquin;}
-@font-face
-	{font-family:"Palanquin ExtraLight";}
-@font-face
-	{font-family:"Palanquin Light";}
-@font-face
-	{font-family:"Palanquin Medium";}
-@font-face
-	{font-family:"Palanquin SemiBold";}
-@font-face
-	{font-family:"Palanquin Thin";}
-@font-face
-	{font-family:"Patrick Hand";}
-@font-face
-	{font-family:"Patrick Hand SC";}
-@font-face
-	{font-family:"Petit Formal Script";}
-@font-face
-	{font-family:"Plantagenet Cherokee";}
-@font-face
-	{font-family:"Playfair Display";}
-@font-face
-	{font-family:"Playfair Display Black";}
-@font-face
-	{font-family:"Playfair Display SC";}
-@font-face
-	{font-family:"Playfair Display SC Black";}
-@font-face
-	{font-family:Poppins;}
-@font-face
-	{font-family:"Poppins Black";}
-@font-face
-	{font-family:"Poppins ExtraBold";}
-@font-face
-	{font-family:"Poppins ExtraLight";}
-@font-face
-	{font-family:"Poppins Light";}
-@font-face
-	{font-family:"Poppins Medium";}
-@font-face
-	{font-family:"Poppins SemiBold";}
-@font-face
-	{font-family:"Poppins Thin";}
-@font-face
-	{font-family:Posterama;}
-@font-face
-	{font-family:Pridi;}
-@font-face
-	{font-family:"Pridi ExtraLight";}
-@font-face
-	{font-family:"Pridi Light";}
-@font-face
-	{font-family:"Pridi Medium";}
-@font-face
-	{font-family:"Pridi SemiBold";}
-@font-face
-	{font-family:Prompt;}
-@font-face
-	{font-family:"Prompt Black";}
-@font-face
-	{font-family:"Prompt ExtraBold";}
-@font-face
-	{font-family:"Prompt ExtraLight";}
-@font-face
-	{font-family:"Prompt Light";}
-@font-face
-	{font-family:"Prompt Medium";}
-@font-face
-	{font-family:"Prompt SemiBold";}
-@font-face
-	{font-family:"Prompt Thin";}
-@font-face
-	{font-family:"PT Mono";}
-@font-face
-	{font-family:"PT Sans";}
-@font-face
-	{font-family:"PT Sans Caption";}
-@font-face
-	{font-family:"PT Sans Narrow";}
-@font-face
-	{font-family:"PT Serif";}
-@font-face
-	{font-family:"PT Serif Caption";}
-@font-face
-	{font-family:Quattrocento;}
-@font-face
-	{font-family:"Quattrocento Sans";}
-@font-face
-	{font-family:Questrial;}
-@font-face
-	{font-family:"Quire Sans";}
-@font-face
-	{font-family:"Quire Sans Light";}
-@font-face
-	{font-family:"Quire Sans Pro Light";}
-@font-face
-	{font-family:"Raleway Black";}
-@font-face
-	{font-family:"Raleway ExtraBold";}
-@font-face
-	{font-family:"Raleway ExtraLight";}
-@font-face
-	{font-family:"Raleway Light";}
-@font-face
-	{font-family:"Raleway Medium";}
-@font-face
-	{font-family:"Raleway SemiBold";}
-@font-face
-	{font-family:"Raleway Thin";}
-@font-face
-	{font-family:"Rastanty Cortez";}
-@font-face
-	{font-family:"Reem Kufi";}
-@font-face
-	{font-family:"Roboto Black";}
-@font-face
-	{font-family:"Roboto Condensed Light";}
-@font-face
-	{font-family:"Roboto Condensed Medium";}
-@font-face
-	{font-family:"Roboto Light";}
-@font-face
-	{font-family:"Roboto Medium";}
-@font-face
-	{font-family:"Roboto Mono";}
-@font-face
-	{font-family:"Roboto Mono Light";}
-@font-face
-	{font-family:"Roboto Mono Medium";}
-@font-face
-	{font-family:"Roboto Mono Thin";}
-@font-face
-	{font-family:"Roboto Serif 20pt";}
-@font-face
-	{font-family:"Roboto Serif 20pt Black";}
-@font-face
-	{font-family:"Roboto Serif 20pt ExtraBold";}
-@font-face
-	{font-family:"Roboto Serif 20pt ExtraLight";}
-@font-face
-	{font-family:"Roboto Serif 20pt Light";}
-@font-face
-	{font-family:"Roboto Serif 20pt Medium";}
-@font-face
-	{font-family:"Roboto Serif 20pt SemiBold";}
-@font-face
-	{font-family:"Roboto Serif 20pt Thin";}
-@font-face
-	{font-family:"Roboto Slab Black";}
-@font-face
-	{font-family:"Roboto Slab ExtraBold";}
-@font-face
-	{font-family:"Roboto Slab ExtraLight";}
-@font-face
-	{font-family:"Roboto Slab Light";}
-@font-face
-	{font-family:"Roboto Slab Medium";}
-@font-face
-	{font-family:"Roboto Slab SemiBold";}
-@font-face
-	{font-family:"Roboto Slab Thin";}
-@font-face
-	{font-family:"Roboto Thin";}
-@font-face
-	{font-family:"Rockwell Light";}
-@font-face
-	{font-family:"Rockwell Nova";}
-@font-face
-	{font-family:"Rockwell Nova Cond";}
-@font-face
-	{font-family:"Rockwell Nova Cond Light";}
-@font-face
-	{font-family:"Rockwell Nova Extra Bold";}
-@font-face
-	{font-family:"Rockwell Nova Light";}
-@font-face
-	{font-family:Rod;}
-@font-face
-	{font-family:"Sabon Next LT";}
-@font-face
-	{font-family:Sacramento;}
-@font-face
-	{font-family:Sagona;}
-@font-face
-	{font-family:"Sagona Book";}
-@font-face
-	{font-family:"Sagona ExtraLight";}
-@font-face
-	{font-family:"Sakkal Majalla";}
-@font-face
-	{font-family:"Sanskrit Text";}
-@font-face
-	{font-family:Seaford;}
-@font-face
-	{font-family:"Seaford Display";}
-@font-face
-	{font-family:"Secular One";}
-@font-face
-	{font-family:"Segoe Marker";}
-@font-face
-	{font-family:"Segoe Pro";}
-@font-face
-	{font-family:"Segoe Pro Black";}
-@font-face
-	{font-family:"Segoe Pro Cond";}
-@font-face
-	{font-family:"Segoe Pro Display";}
-@font-face
-	{font-family:"Segoe Pro Display Light";}
-@font-face
-	{font-family:"Segoe Pro Display Semibold";}
-@font-face
-	{font-family:"Segoe Pro Display SemiLight";}
-@font-face
-	{font-family:"Segoe Pro Light";}
-@font-face
-	{font-family:"Segoe Pro Semibold";}
-@font-face
-	{font-family:"Segoe Pro SemiLight";}
-@font-face
-	{font-family:"Segoe UI Emoji L";}
-@font-face
-	{font-family:"Segoe Xbox Symbol";}
-@font-face
-	{font-family:Selawik;}
-@font-face
-	{font-family:"Selawik Light";}
-@font-face
-	{font-family:"Selawik Semibold";}
-@font-face
-	{font-family:"Shadows Into Light Two";}
-@font-face
-	{font-family:"Shonar Bangla";}
-@font-face
-	{font-family:"Simplified Arabic";}
-@font-face
-	{font-family:"Simplified Arabic Fixed";}
-@font-face
-	{font-family:Skeena;}
-@font-face
-	{font-family:"Skeena Display";}
-@font-face
-	{font-family:"Source Code Pro";}
-@font-face
-	{font-family:"Source Code Pro Black";}
-@font-face
-	{font-family:"Source Code Pro ExtraLight";}
-@font-face
-	{font-family:"Source Code Pro Light";}
-@font-face
-	{font-family:"Source Code Pro Medium";}
-@font-face
-	{font-family:"Source Code Pro Semibold";}
-@font-face
-	{font-family:"Source Sans Pro";}
-@font-face
-	{font-family:"Source Sans Pro Black";}
-@font-face
-	{font-family:"Source Sans Pro ExtraLight";}
-@font-face
-	{font-family:"Source Sans Pro Light";}
-@font-face
-	{font-family:"Source Sans Pro SemiBold";}
-@font-face
-	{font-family:"Source Serif Pro";}
-@font-face
-	{font-family:"Source Serif Pro Black";}
-@font-face
-	{font-family:"Source Serif Pro ExtraLight";}
-@font-face
-	{font-family:"Source Serif Pro Light";}
-@font-face
-	{font-family:"Source Serif Pro SemiBold";}
-@font-face
-	{font-family:"Speak Pro";}
-@font-face
-	{font-family:"Speak Pro Light";}
-@font-face
-	{font-family:Staatliches;}
-@font-face
-	{font-family:"Suez One";}
-@font-face
-	{font-family:Tenorite;}
-@font-face
-	{font-family:"Tenorite Display";}
-@font-face
-	{font-family:"TH SarabunPSK";}
-@font-face
-	{font-family:"The Hand";}
-@font-face
-	{font-family:"The Hand Black";}
-@font-face
-	{font-family:"The Hand Extrablack";}
-@font-face
-	{font-family:"The Hand Light";}
-@font-face
-	{font-family:"The Serif Hand";}
-@font-face
-	{font-family:"The Serif Hand Black";}
-@font-face
-	{font-family:"The Serif Hand Extrablack";}
-@font-face
-	{font-family:"The Serif Hand Light";}
-@font-face
-	{font-family:"Tisa Offc Serif Pro";}
-@font-face
-	{font-family:"Tisa Offc Serif Pro Thin";}
-@font-face
-	{font-family:"Titillium Web";}
-@font-face
-	{font-family:"Titillium Web Black";}
-@font-face
-	{font-family:"Titillium Web ExtraLight";}
-@font-face
-	{font-family:"Titillium Web Light";}
-@font-face
-	{font-family:"Titillium Web SemiBold";}
-@font-face
-	{font-family:"Trade Gothic Inline";}
-@font-face
-	{font-family:"Trade Gothic Next";}
-@font-face
-	{font-family:"Trade Gothic Next Cond";}
-@font-face
-	{font-family:"Trade Gothic Next Heavy";}
-@font-face
-	{font-family:"Trade Gothic Next HvyCd";}
-@font-face
-	{font-family:"Trade Gothic Next Light";}
-@font-face
-	{font-family:"Trade Gothic Next Rounded";}
-@font-face
-	{font-family:"Traditional Arabic";}
-@font-face
-	{font-family:Trirong;}
-@font-face
-	{font-family:"Trirong Black";}
-@font-face
-	{font-family:"Trirong ExtraBold";}
-@font-face
-	{font-family:"Trirong ExtraLight";}
-@font-face
-	{font-family:"Trirong Light";}
-@font-face
-	{font-family:"Trirong Medium";}
-@font-face
-	{font-family:"Trirong SemiBold";}
-@font-face
-	{font-family:"Trirong Thin";}
-@font-face
-	{font-family:Ubuntu;}
-@font-face
-	{font-family:"Ubuntu Condensed";}
-@font-face
-	{font-family:"Ubuntu Light";}
-@font-face
-	{font-family:"Ubuntu Medium";}
-@font-face
-	{font-family:"Ubuntu Mono";}
-@font-face
-	{font-family:"UD Digi Kyokasho N-B";}
-@font-face
-	{font-family:"UD Digi Kyokasho N-R";}
-@font-face
-	{font-family:"UD Digi Kyokasho NK-B";}
-@font-face
-	{font-family:"UD Digi Kyokasho NK-R";}
-@font-face
-	{font-family:"UD Digi Kyokasho NP-B";}
-@font-face
-	{font-family:"UD Digi Kyokasho NP-R";}
-@font-face
-	{font-family:Univers;}
-@font-face
-	{font-family:"Univers Condensed";}
-@font-face
-	{font-family:"Univers Condensed Light";}
-@font-face
-	{font-family:"Univers Light";}
-@font-face
-	{font-family:"Urdu Typesetting";}
-@font-face
-	{font-family:Utsaah;}
-@font-face
-	{font-family:Vani;}
-@font-face
-	{font-family:"Varela Round";}
-@font-face
-	{font-family:"Verdana Pro";}
-@font-face
-	{font-family:"Verdana Pro Black";}
-@font-face
-	{font-family:"Verdana Pro Cond";}
-@font-face
-	{font-family:"Verdana Pro Cond Black";}
-@font-face
-	{font-family:"Verdana Pro Cond Light";}
-@font-face
-	{font-family:"Verdana Pro Cond SemiBold";}
-@font-face
-	{font-family:"Verdana Pro Light";}
-@font-face
-	{font-family:"Verdana Pro SemiBold";}
-@font-face
-	{font-family:Vijaya;}
-@font-face
-	{font-family:"Walbaum Display";}
-@font-face
-	{font-family:"Walbaum Display Heavy";}
-@font-face
-	{font-family:"Walbaum Display Light";}
-@font-face
-	{font-family:"Walbaum Display SemiBold";}
-@font-face
-	{font-family:"Walbaum Heading";}
-@font-face
-	{font-family:"Walbaum Text";}
-@font-face
-	{font-family:"Work Sans";}
-@font-face
-	{font-family:"Work Sans Black";}
-@font-face
-	{font-family:"Work Sans ExtraBold";}
-@font-face
-	{font-family:"Work Sans ExtraLight";}
-@font-face
-	{font-family:"Work Sans Light";}
-@font-face
-	{font-family:"Work Sans Medium";}
-@font-face
-	{font-family:"Work Sans SemiBold";}
-@font-face
-	{font-family:"Work Sans Thin";}
-@font-face
-	{font-family:Yesteryear;}
-@font-face
-	{font-family:"Yu Mincho";}
-@font-face
-	{font-family:"Yu Mincho Demibold";}
-@font-face
-	{font-family:"Yu Mincho Light";}
-@font-face
-	{font-family:仿宋_GB2312;}
-@font-face
-	{font-family:"Helvetica Neue";}
+	{font-family:"\@微软雅黑";}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin:0cm;
@@ -2992,14 +195,6 @@ span.a0
 	{mso-style-name:"正文文本首行缩进 字符";
 	mso-style-link:正文文本首行缩进;
 	font-family:"Calibri",sans-serif;}
-span.msoIns
-	{mso-style-name:"";
-	text-decoration:underline;
-	color:teal;}
-span.msoDel
-	{mso-style-name:"";
-	text-decoration:line-through;
-	color:red;}
 .MsoChpDefault
 	{font-size:10.0pt;}
  /* Page Definitions */
@@ -3024,116 +219,115 @@ text-justify-trim:punctuation'>
 
 <div class=WordSection1 style='layout-grid:15.6pt'>
 
-<h1 align=center style='text-align:center'><a name="_Toc127397299"><span
+<h1 align=center style='text-align:center'><a name="_Toc127397682"><span
 lang=EN-US>Mybatis</span></a></h1>
 
 <p class=MsoToc1><span
-class=MsoHyperlink><span lang=EN-US><a href="#_Toc127397299">Mybatis</a></span></span></p>
+class=MsoHyperlink><span lang=EN-US><a href="#_Toc127397682">Mybatis</a></span></span></p>
 
 <p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397300">1.<span style='color:windowtext;text-decoration:none'>     </span>Source</a></span></span></p>
+href="#_Toc127397683">1.<span style='color:windowtext;text-decoration:none'>     </span>Source</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397301">1.1 Version</a></span></span></p>
+href="#_Toc127397684">1.1 Version</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397302">1.2 Introduce</a></span></span></p>
+href="#_Toc127397685">1.2 Introduce</a></span></span></p>
 
 <p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397303">2.<span style='color:windowtext;text-decoration:none'>     </span>Session</a></span></span></p>
+href="#_Toc127397686">2.<span style='color:windowtext;text-decoration:none'>     </span>Session</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397304">2.1 SqlSessionManager</a></span></span></p>
+href="#_Toc127397687">2.1 SqlSessionManager</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397305">2.2 SqlSession</a></span></span></p>
+href="#_Toc127397688">2.2 SqlSession</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397306">2.3 DefaultSqlSession</a></span></span></p>
+href="#_Toc127397689">2.3 DefaultSqlSession</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397307">2.4 SqlSessionFactory</a></span></span></p>
+href="#_Toc127397690">2.4 SqlSessionFactory</a></span></span></p>
 
 <p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397308">3.<span style='color:windowtext;text-decoration:none'>     </span>Executor</a></span></span></p>
+href="#_Toc127397691">3.<span style='color:windowtext;text-decoration:none'>     </span>Executor</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397309">3.1 Executor</a></span></span></p>
+href="#_Toc127397692">3.1 Executor</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397310">3.2 BaseExecutor</a></span></span></p>
+href="#_Toc127397693">3.2 BaseExecutor</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397311">3.3 CachingExecutor</a></span></span></p>
+href="#_Toc127397694">3.3 CachingExecutor</a></span></span></p>
 
 <p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397312">4.<span style='color:windowtext;text-decoration:none'>     </span>Handler</a></span></span></p>
+href="#_Toc127397695">4.<span style='color:windowtext;text-decoration:none'>     </span>Handler</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397313">4.1 StatementHandler</a></span></span></p>
+href="#_Toc127397696">4.1 StatementHandler</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397314">4.2 ParameterHandler</a></span></span></p>
+href="#_Toc127397697">4.2 ParameterHandler</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397315">4.3 ResultHandler</a></span></span></p>
+href="#_Toc127397698">4.3 ResultHandler</a></span></span></p>
 
 <p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397316">5.<span style='color:windowtext;text-decoration:none'>     </span>cache</a></span></span></p>
+href="#_Toc127397699">5.<span style='color:windowtext;text-decoration:none'>     </span>cache</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397317">5.1 cache</a></span></span></p>
+href="#_Toc127397700">5.1 cache</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397318">5.2 CacheKey</a></span></span></p>
+href="#_Toc127397701">5.2 CacheKey</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397319">5.3 TransactionalCacheManager</a></span></span></p>
+href="#_Toc127397702">5.3 TransactionalCacheManager</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397320">5.4 CachingExecutor</a></span></span></p>
+href="#_Toc127397703">5.4 CachingExecutor</a></span></span></p>
 
 <p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397321">6.<span style='color:windowtext;text-decoration:none'>     </span>reflection</a></span></span></p>
+href="#_Toc127397704">6.<span style='color:windowtext;text-decoration:none'>     </span>reflection</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397322">6.1 Invoker</a></span></span></p>
+href="#_Toc127397705">6.1 Invoker</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397323">6.2 Invoker<span style='font-family:Consolas;background:
-#E8F2FE'> Reflector</span></a></span></span></p>
+href="#_Toc127397706">6.2 Reflector</a></span></span></p>
 
 <p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397324">7.<span style='color:windowtext;text-decoration:none'>     </span>binding</a></span></span></p>
+href="#_Toc127397707">7.<span style='color:windowtext;text-decoration:none'>     </span>binding</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397325">7.1 MapperProxy</a></span></span></p>
+href="#_Toc127397708">7.1 MapperProxy</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397326">7.2 MapperMethod</a></span></span></p>
+href="#_Toc127397709">7.2 MapperMethod</a></span></span></p>
 
 <p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397327">8.<span style='color:windowtext;text-decoration:none'>     </span>mapping</a></span></span></p>
+href="#_Toc127397710">8.<span style='color:windowtext;text-decoration:none'>     </span>mapping</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397328">8.1 BoundSql</a></span></span></p>
+href="#_Toc127397711">8.1 BoundSql</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397329">8.2 MappedStatement</a></span></span></p>
+href="#_Toc127397712">8.2 MappedStatement</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397330">8.3 ParameterMapping</a></span></span></p>
+href="#_Toc127397713">8.3 ParameterMapping</a></span></span></p>
 
 <p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397331">8.4 ResultMapping</a></span></span></p>
+href="#_Toc127397714">8.4 ResultMapping</a></span></span></p>
 
 <p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
-href="#_Toc127397332">9.<span style='color:windowtext;text-decoration:none'>     </span><span
+href="#_Toc127397715">9.<span style='color:windowtext;text-decoration:none'>     </span><span
 lang=EN-US style='font-family:宋体'><span lang=EN-US>参考文献</span></span></a></span></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>&nbsp;</span></p>
 
-<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397300"><span
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397683"><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>1.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>Source</span></a></h2>
@@ -3141,7 +335,7 @@ lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-s
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
 lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397301"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397684"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>1.1 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>Version</span></a></h3>
 
@@ -3150,7 +344,7 @@ lang=EN-US style='color:black;background:white'>Version</span><span
 style='font-family:宋体;color:black;background:white'>：</span><span lang=EN-US
 style='color:black;background:white'>mybatis-3.5.2-sources</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397302"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397685"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>1.2 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>Introduce</span></a></h3>
 
@@ -3164,7 +358,7 @@ src="mybatis.files/image001.gif" alt="IMG_256"></span></p>
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
 lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
 
-<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397303"><span
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397686"><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>2.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>Session</span></a></h2>
@@ -3172,11 +366,12 @@ lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-s
 <h3 style='margin-left:0cm;text-indent:0cm'><span lang=EN-US style='font-size:
 12.0pt;font-family:"Calibri",sans-serif'>2.1 </span><span lang=EN-US
 style='font-size:12.0pt;font-family:"Calibri",sans-serif'> <a
-name="_Toc127397304">SqlSessionManager</a></span></h3>
+name="_Toc127397687">SqlSessionManager</a></span></h3>
 
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
-lang=EN-US style='color:black;background:white'>org.apache.ibatis.session. SqlSessionManager</span><span
-style='font-family:宋体;color:black;background:white'>的主要属性</span></p>
+lang=EN-US style='color:black;background:white'>org.apache.ibatis.session.
+SqlSessionManager</span><span style='font-family:宋体;color:black;background:
+white'>的主要属性</span></p>
 
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
 lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
@@ -3187,7 +382,8 @@ SqlSessionManager implements SqlSessionFactory, SqlSession {</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>  private final
 SqlSessionFactory sqlSessionFactory;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private final SqlSession sqlSessionProxy;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private final SqlSession
+sqlSessionProxy;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private final
 ThreadLocal&lt;SqlSession&gt; localSqlSession = new ThreadLocal&lt;&gt;();</span></p>
@@ -3201,7 +397,8 @@ sqlSessionFactory;</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>    this.sqlSessionProxy =
 (SqlSession) Proxy.newProxyInstance(</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        SqlSessionFactory.class.getClassLoader(),</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>       
+SqlSessionFactory.class.getClassLoader(),</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        new
 Class[]{SqlSession.class},</span></p>
@@ -3218,8 +415,9 @@ margin-left:1.2pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
 12.0pt'>&nbsp;</span></p>
 
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
-lang=EN-US style='color:black;background:white'>org.apache.ibatis.session. SqlSessionManager</span><span
-style='font-family:宋体;color:black;background:white'>的事务提交，关闭等</span></p>
+lang=EN-US style='color:black;background:white'>org.apache.ibatis.session.
+SqlSessionManager</span><span style='font-family:宋体;color:black;background:
+white'>的事务提交，关闭等</span></p>
 
 <p class=MsoNormal style='margin-top:4.8pt;margin-right:0cm;margin-bottom:0cm;
 margin-left:1.2pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
@@ -3234,8 +432,8 @@ margin-left:1.2pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
 <p class=COR-><span lang=EN-US style='color:black'>  public void commit(boolean
 force) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    final SqlSession sqlSession
-= localSqlSession.get();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    final SqlSession
+sqlSession = localSqlSession.get();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    if (sqlSession == null)
 {</span></p>
@@ -3246,7 +444,8 @@ started.&quot;);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    sqlSession.commit(force);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>   
+sqlSession.commit(force);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -3256,8 +455,8 @@ started.&quot;);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  public void rollback() {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    final SqlSession sqlSession
-= localSqlSession.get();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    final SqlSession
+sqlSession = localSqlSession.get();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    if (sqlSession == null)
 {</span></p>
@@ -3284,7 +483,7 @@ margin-left:1.2pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
 margin-left:1.2pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
 12.0pt'>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397305"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397688"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>2.2 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>SqlSession</span></a></h3>
 
@@ -3292,8 +491,8 @@ lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>SqlSession<
 lang=EN-US style='color:black;background:white'>org.apache.ibatis.session. SqlSession</span><span
 style='font-family:宋体;color:black;background:white'>的主要方法</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>public interface SqlSession extends
-Closeable {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>public interface SqlSession
+extends Closeable {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  &lt;T&gt; T
 selectOne(String statement);</span></p>
@@ -3301,7 +500,8 @@ selectOne(String statement);</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>&lt;T&gt; T selectOne(String
 statement, Object parameter);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  int insert(String statement);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  int insert(String
+statement);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>…</span></p>
 
@@ -3309,7 +509,7 @@ statement, Object parameter);</span></p>
 
 <p class=MsoBodyTextFirstIndent style='text-indent:10.5pt'><span lang=EN-US>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397306"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397689"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>2.3 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>DefaultSqlSession</span></a></h3>
 
@@ -3322,25 +522,28 @@ style='font-family:宋体;color:black;background:white'>案例</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>@Override</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  public &lt;E&gt;
-List&lt;E&gt; selectList(String statement, Object parameter, RowBounds rowBounds)
-{</span></p>
+List&lt;E&gt; selectList(String statement, Object parameter, RowBounds
+rowBounds) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    try {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      MappedStatement ms = configuration.getMappedStatement(statement);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      MappedStatement ms =
+configuration.getMappedStatement(statement);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      return executor.query(ms,
-wrapCollection(parameter), rowBounds, Executor.NO_RESULT_HANDLER);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      return
+executor.query(ms, wrapCollection(parameter), rowBounds,
+Executor.NO_RESULT_HANDLER);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } catch (Exception e) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      throw
-ExceptionFactory.wrapException(&quot;Error querying database.  Cause: &quot; + e,
-e);</span></p>
+ExceptionFactory.wrapException(&quot;Error querying database.  Cause: &quot; +
+e, e);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } finally {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      ErrorContext.instance().reset();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+ErrorContext.instance().reset();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
@@ -3354,13 +557,14 @@ margin-left:1.2pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
 margin-left:1.2pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
 12.0pt'>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397307"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397690"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>2.4 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>SqlSessionFactory</span></a></h3>
 
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
-lang=EN-US style='color:black;background:white'>org.apache.ibatis.session. SqlSessionFactory</span><span
-style='font-family:宋体;color:black;background:white'>的主要方法</span></p>
+lang=EN-US style='color:black;background:white'>org.apache.ibatis.session.
+SqlSessionFactory</span><span style='font-family:宋体;color:black;background:
+white'>的主要方法</span></p>
 
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
 lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
@@ -3376,8 +580,8 @@ SqlSessionFactory {</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  SqlSession openSession(boolean
-autoCommit);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  SqlSession
+openSession(boolean autoCommit);</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
@@ -3431,32 +635,34 @@ white'>的方法</span></p>
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private SqlSession
-openSessionFromDataSource(ExecutorType execType, TransactionIsolationLevel level,
-boolean autoCommit) {</span></p>
+openSessionFromDataSource(ExecutorType execType, TransactionIsolationLevel
+level, boolean autoCommit) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    Transaction tx = null;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    try {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      final Environment environment
-= configuration.getEnvironment();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      final Environment
+environment = configuration.getEnvironment();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      final
-TransactionFactory transactionFactory = getTransactionFactoryFromEnvironment(environment);</span></p>
+TransactionFactory transactionFactory =
+getTransactionFactoryFromEnvironment(environment);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      tx = transactionFactory.newTransaction(environment.getDataSource(),
-level, autoCommit);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      tx =
+transactionFactory.newTransaction(environment.getDataSource(), level,
+autoCommit);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      final Executor executor
-= configuration.newExecutor(tx, execType);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      final Executor
+executor = configuration.newExecutor(tx, execType);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      return new
 DefaultSqlSession(configuration, executor, autoCommit);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } catch (Exception e) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      closeTransaction(tx); //
-may have fetched a connection so lets call close()</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      closeTransaction(tx);
+// may have fetched a connection so lets call close()</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      throw
 ExceptionFactory.wrapException(&quot;Error opening session.  Cause: &quot; + e,
@@ -3464,7 +670,8 @@ e);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } finally {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      ErrorContext.instance().reset();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+ErrorContext.instance().reset();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
@@ -3477,12 +684,12 @@ lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
 margin-left:1.2pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
 12.0pt'>&nbsp;</span></p>
 
-<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397308"><span
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397691"><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>3.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>Executor</span></a></h2>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397309"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397692"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>3.1 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>Executor</span></a></h3>
 
@@ -3494,19 +701,19 @@ style='font-family:宋体;color:black;background:white'>的主要方法</span></
 
 <p class=COR-><span lang=EN-US style='color:black'>public interface Executor {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  ResultHandler NO_RESULT_HANDLER
-= null;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  ResultHandler
+NO_RESULT_HANDLER = null;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  int update(MappedStatement
 ms, Object parameter) throws SQLException;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  &lt;E&gt; List&lt;E&gt;
-query(MappedStatement ms, Object parameter, RowBounds rowBounds, ResultHandler resultHandler,
-CacheKey cacheKey, BoundSql boundSql) throws SQLException;</span></p>
+query(MappedStatement ms, Object parameter, RowBounds rowBounds, ResultHandler
+resultHandler, CacheKey cacheKey, BoundSql boundSql) throws SQLException;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  &lt;E&gt; List&lt;E&gt;
-query(MappedStatement ms, Object parameter, RowBounds rowBounds, ResultHandler resultHandler)
-throws SQLException;</span></p>
+query(MappedStatement ms, Object parameter, RowBounds rowBounds, ResultHandler
+resultHandler) throws SQLException;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  &lt;E&gt; Cursor&lt;E&gt;
 queryCursor(MappedStatement ms, Object parameter, RowBounds rowBounds) throws
@@ -3515,11 +722,11 @@ SQLException;</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>  List&lt;BatchResult&gt;
 flushStatements() throws SQLException;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  void commit(boolean required)
-throws SQLException;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  void commit(boolean
+required) throws SQLException;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  void rollback(boolean required)
-throws SQLException;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  void rollback(boolean
+required) throws SQLException;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  CacheKey
 createCacheKey(MappedStatement ms, Object parameterObject, RowBounds rowBounds,
@@ -3537,7 +744,8 @@ CacheKey key, Class&lt;?&gt; targetType);</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>  Transaction
 getTransaction();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  void close(boolean forceRollback);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  void close(boolean
+forceRollback);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  boolean isClosed();</span></p>
 
@@ -3548,7 +756,7 @@ setExecutorWrapper(Executor executor);</span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397310"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397693"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>3.2 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>BaseExecutor</span></a></h3>
 
@@ -3603,25 +811,26 @@ style='font-family:宋体;color:black;background:white'>实现</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>  @Override</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  public &lt;E&gt;
-List&lt;E&gt; doQuery(MappedStatement ms, Object parameter, RowBounds rowBounds,
-ResultHandler resultHandler, BoundSql boundSql) throws SQLException {</span></p>
+List&lt;E&gt; doQuery(MappedStatement ms, Object parameter, RowBounds
+rowBounds, ResultHandler resultHandler, BoundSql boundSql) throws SQLException
+{</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    Statement stmt = null;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    try {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      Configuration configuration
-= ms.getConfiguration();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      Configuration
+configuration = ms.getConfiguration();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      StatementHandler handler
-= configuration.newStatementHandler(wrapper, ms, parameter, rowBounds, resultHandler,
-boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      StatementHandler
+handler = configuration.newStatementHandler(wrapper, ms, parameter, rowBounds,
+resultHandler, boundSql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      stmt =
 prepareStatement(handler, ms.getStatementLog());</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      return handler.query(stmt,
-resultHandler);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      return
+handler.query(stmt, resultHandler);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } finally {</span></p>
 
@@ -3667,12 +876,14 @@ SQLException {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    BoundSql boundSql = handler.getBoundSql();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    String sql = boundSql.getSql();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    String sql =
+boundSql.getSql();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    if (hasStatementFor(sql))
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    if
+(hasStatementFor(sql)) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      stmt = getStatement(sql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      stmt =
+getStatement(sql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>     
 applyTransactionTimeout(stmt);</span></p>
@@ -3685,11 +896,13 @@ applyTransactionTimeout(stmt);</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>      stmt = handler.prepare(connection,
 transaction.getTimeout());</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      putStatement(sql, stmt);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      putStatement(sql,
+stmt);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    handler.parameterize(stmt);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>   
+handler.parameterize(stmt);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    return stmt;</span></p>
 
@@ -3702,8 +915,8 @@ hasStatementFor(String sql) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    try {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      return statementMap.keySet().contains(sql)
-&amp;&amp; !statementMap.get(sql).getConnection().isClosed();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      return
+statementMap.keySet().contains(sql) &amp;&amp; !statementMap.get(sql).getConnection().isClosed();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } catch (SQLException e)
 {</span></p>
@@ -3772,7 +985,7 @@ isClosed() {</span></p>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397311"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397694"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>3.3 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>CachingExecutor</span></a></h3>
 
@@ -3792,19 +1005,22 @@ implements Executor {</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private final Executor delegate;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private final Executor
+delegate;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private final
 TransactionalCacheManager tcm = new TransactionalCacheManager();</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  public
-CachingExecutor(Executor delegate) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  public CachingExecutor(Executor
+delegate) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.delegate = delegate;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.delegate =
+delegate;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    delegate.setExecutorWrapper(this);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>   
+delegate.setExecutorWrapper(this);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -3853,30 +1069,33 @@ ResultHandler resultHandler, CacheKey key, BoundSql boundSql)</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      throws SQLException {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    Cache cache = ms.getCache();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    Cache cache =
+ms.getCache();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    if (cache != null) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      flushCacheIfRequired(ms);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+flushCacheIfRequired(ms);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      if (ms.isUseCache()
 &amp;&amp; resultHandler == null) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        ensureNoOutParams(ms,
-boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>       
+ensureNoOutParams(ms, boundSql);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        @SuppressWarnings(&quot;unchecked&quot;)</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>       
+@SuppressWarnings(&quot;unchecked&quot;)</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        List&lt;E&gt; list =
 (List&lt;E&gt;) tcm.getObject(cache, key);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        if (list == null) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          list = delegate.query(ms,
-parameterObject, rowBounds, resultHandler, key, boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          list =
+delegate.query(ms, parameterObject, rowBounds, resultHandler, key, boundSql);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          tcm.putObject(cache,
-key, list); // issue #578 and #116</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>         
+tcm.putObject(cache, key, list); // issue #578 and #116</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        }</span></p>
 
@@ -3886,8 +1105,8 @@ key, list); // issue #578 and #116</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    return delegate.query(ms,
-parameterObject, rowBounds, resultHandler, key, boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    return
+delegate.query(ms, parameterObject, rowBounds, resultHandler, key, boundSql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -3897,12 +1116,12 @@ parameterObject, rowBounds, resultHandler, key, boundSql);</span></p>
 margin-left:1.2pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
 12.0pt'>&nbsp;</span></p>
 
-<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397312"><span
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397695"><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>4.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>Handler</span></a></h2>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397313"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397696"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>4.1 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>StatementHandler</span></a></h3>
 
@@ -3928,20 +1147,22 @@ prepare(Connection connection, Integer transactionTimeout)</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  void parameterize(Statement
+<p class=COR-><span lang=EN-US style='color:black'>  void
+parameterize(Statement statement)</span></p>
+
+<p class=COR-><span lang=EN-US style='color:black'>      throws SQLException;</span></p>
+
+<p class=COR-><span lang=EN-US>&nbsp;</span></p>
+
+<p class=COR-><span lang=EN-US style='color:black'>  void batch(Statement
 statement)</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      throws SQLException;</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  void batch(Statement statement)</span></p>
-
-<p class=COR-><span lang=EN-US style='color:black'>      throws SQLException;</span></p>
-
-<p class=COR-><span lang=EN-US>&nbsp;</span></p>
-
-<p class=COR-><span lang=EN-US style='color:black'>  int update(Statement statement)</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  int update(Statement
+statement)</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      throws SQLException;</span></p>
 
@@ -3989,8 +1210,8 @@ style='font-family:宋体;color:black;background:white'>是构造方法</span></
 <p class=MsoNormal><u><span lang=EN-US style='font-size:14.0pt;font-family:
 Consolas;color:black;background:#E8F2FE'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>public class RoutingStatementHandler
-implements StatementHandler {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>public class
+RoutingStatementHandler implements StatementHandler {</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
@@ -4000,39 +1221,44 @@ StatementHandler delegate;</span></p>
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  public
-RoutingStatementHandler(Executor executor, MappedStatement ms, Object parameter,
-RowBounds rowBounds, ResultHandler resultHandler, BoundSql boundSql) {</span></p>
+RoutingStatementHandler(Executor executor, MappedStatement ms, Object
+parameter, RowBounds rowBounds, ResultHandler resultHandler, BoundSql boundSql)
+{</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    switch (ms.getStatementType())
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    switch
+(ms.getStatementType()) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      case STATEMENT:</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        delegate = new
-SimpleStatementHandler(executor, ms, parameter, rowBounds, resultHandler, boundSql);</span></p>
+SimpleStatementHandler(executor, ms, parameter, rowBounds, resultHandler,
+boundSql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        break;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      case PREPARED:</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        delegate = new
-PreparedStatementHandler(executor, ms, parameter, rowBounds, resultHandler, boundSql);</span></p>
+PreparedStatementHandler(executor, ms, parameter, rowBounds, resultHandler,
+boundSql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        break;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      case CALLABLE:</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        delegate = new
-CallableStatementHandler(executor, ms, parameter, rowBounds, resultHandler, boundSql);</span></p>
+CallableStatementHandler(executor, ms, parameter, rowBounds, resultHandler,
+boundSql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        break;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      default:</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        throw new
-ExecutorException(&quot;Unknown statement type: &quot; + ms.getStatementType());</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        throw new
+ExecutorException(&quot;Unknown statement type: &quot; +
+ms.getStatementType());</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
@@ -4081,61 +1307,72 @@ ParameterHandler parameterHandler;</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  protected final Executor executor;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  protected final Executor
+executor;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  protected final
 MappedStatement mappedStatement;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  protected final RowBounds rowBounds;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  protected final RowBounds
+rowBounds;</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  protected BoundSql boundSql;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  protected BoundSql
+boundSql;</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  protected
 BaseStatementHandler(Executor executor, MappedStatement mappedStatement, Object
-parameterObject, RowBounds rowBounds, ResultHandler resultHandler, BoundSql boundSql)
-{</span></p>
+parameterObject, RowBounds rowBounds, ResultHandler resultHandler, BoundSql
+boundSql) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.configuration = mappedStatement.getConfiguration();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.configuration =
+mappedStatement.getConfiguration();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.executor = executor;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.executor =
+executor;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.mappedStatement = mappedStatement;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.mappedStatement =
+mappedStatement;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.rowBounds = rowBounds;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.rowBounds =
+rowBounds;</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    this.typeHandlerRegistry
 = configuration.getTypeHandlerRegistry();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.objectFactory = configuration.getObjectFactory();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.objectFactory =
+configuration.getObjectFactory();</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    if (boundSql == null) { //
-issue #435, get the key before calculating the statement</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    if (boundSql == null) {
+// issue #435, get the key before calculating the statement</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      generateKeys(parameterObject);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      boundSql = mappedStatement.getBoundSql(parameterObject);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      boundSql =
+mappedStatement.getBoundSql(parameterObject);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.boundSql = boundSql;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.boundSql =
+boundSql;</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.parameterHandler = configuration.newParameterHandler(mappedStatement,
-parameterObject, boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.parameterHandler =
+configuration.newParameterHandler(mappedStatement, parameterObject, boundSql);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.resultSetHandler = configuration.newResultSetHandler(executor,
-mappedStatement, rowBounds, parameterHandler, resultHandler, boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.resultSetHandler =
+configuration.newResultSetHandler(executor, mappedStatement, rowBounds,
+parameterHandler, resultHandler, boundSql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -4165,11 +1402,11 @@ SimpleStatementHandler extends BaseStatementHandler {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  public
 SimpleStatementHandler(Executor executor, MappedStatement mappedStatement,
-Object parameter, RowBounds rowBounds, ResultHandler resultHandler, BoundSql boundSql)
-{</span></p>
+Object parameter, RowBounds rowBounds, ResultHandler resultHandler, BoundSql
+boundSql) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    super(executor, mappedStatement,
-parameter, rowBounds, resultHandler, boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    super(executor,
+mappedStatement, parameter, rowBounds, resultHandler, boundSql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -4180,42 +1417,49 @@ parameter, rowBounds, resultHandler, boundSql);</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>  public int
 update(Statement statement) throws SQLException {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    String sql = boundSql.getSql();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    String sql =
+boundSql.getSql();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    Object parameterObject =
 boundSql.getParameterObject();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    KeyGenerator keyGenerator
-= mappedStatement.getKeyGenerator();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    KeyGenerator
+keyGenerator = mappedStatement.getKeyGenerator();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    int rows;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    if (keyGenerator instanceof
-Jdbc3KeyGenerator) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    if (keyGenerator
+instanceof Jdbc3KeyGenerator) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      statement.execute(sql,
 Statement.RETURN_GENERATED_KEYS);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      rows = statement.getUpdateCount();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      rows =
+statement.getUpdateCount();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      keyGenerator.processAfter(executor,
 mappedStatement, statement, parameterObject);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    } else if (keyGenerator instanceof
-SelectKeyGenerator) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    } else if (keyGenerator
+instanceof SelectKeyGenerator) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      statement.execute(sql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+statement.execute(sql);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      rows = statement.getUpdateCount();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      rows =
+statement.getUpdateCount();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      keyGenerator.processAfter(executor,
-mappedStatement, statement, parameterObject);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+keyGenerator.processAfter(executor, mappedStatement, statement,
+parameterObject);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } else {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      statement.execute(sql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+statement.execute(sql);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      rows = statement.getUpdateCount();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      rows =
+statement.getUpdateCount();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
@@ -4246,11 +1490,11 @@ PreparedStatementHandler extends BaseStatementHandler {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  public
 PreparedStatementHandler(Executor executor, MappedStatement mappedStatement,
-Object parameter, RowBounds rowBounds, ResultHandler resultHandler, BoundSql boundSql)
-{</span></p>
+Object parameter, RowBounds rowBounds, ResultHandler resultHandler, BoundSql
+boundSql) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    super(executor, mappedStatement,
-parameter, rowBounds, resultHandler, boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    super(executor,
+mappedStatement, parameter, rowBounds, resultHandler, boundSql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -4266,16 +1510,17 @@ update(Statement statement) throws SQLException {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    ps.execute();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    int rows = ps.getUpdateCount();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    int rows =
+ps.getUpdateCount();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    Object parameterObject =
 boundSql.getParameterObject();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    KeyGenerator keyGenerator
-= mappedStatement.getKeyGenerator();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    KeyGenerator
+keyGenerator = mappedStatement.getKeyGenerator();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    keyGenerator.processAfter(executor,
-mappedStatement, ps, parameterObject);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>   
+keyGenerator.processAfter(executor, mappedStatement, ps, parameterObject);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    return rows;</span></p>
 
@@ -4304,13 +1549,12 @@ CallableStatementHandler extends BaseStatementHandler {</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  public
-CallableStatementHandler(Executor executor, MappedStatement mappedStatement,
-Object parameter, RowBounds rowBounds, ResultHandler resultHandler, BoundSql boundSql)
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  public CallableStatementHandler(Executor
+executor, MappedStatement mappedStatement, Object parameter, RowBounds
+rowBounds, ResultHandler resultHandler, BoundSql boundSql) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    super(executor, mappedStatement,
-parameter, rowBounds, resultHandler, boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    super(executor,
+mappedStatement, parameter, rowBounds, resultHandler, boundSql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -4326,18 +1570,20 @@ update(Statement statement) throws SQLException {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    cs.execute();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    int rows = cs.getUpdateCount();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    int rows =
+cs.getUpdateCount();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    Object parameterObject =
 boundSql.getParameterObject();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    KeyGenerator keyGenerator
-= mappedStatement.getKeyGenerator();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    KeyGenerator
+keyGenerator = mappedStatement.getKeyGenerator();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    keyGenerator.processAfter(executor,
-mappedStatement, cs, parameterObject);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>   
+keyGenerator.processAfter(executor, mappedStatement, cs, parameterObject);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    resultSetHandler.handleOutputParameters(cs);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>   
+resultSetHandler.handleOutputParameters(cs);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    return rows;</span></p>
 
@@ -4354,7 +1600,7 @@ lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;</spa
 
 <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397314"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397697"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>4.2 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>ParameterHandler</span></a></h3>
 
@@ -4379,11 +1625,12 @@ white'>ParameterMapping</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>  public void
 setParameters(PreparedStatement ps) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    ErrorContext.instance().activity(&quot;setting
-parameters&quot;).object(mappedStatement.getParameterMap().getId());</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>   
+ErrorContext.instance().activity(&quot;setting parameters&quot;).object(mappedStatement.getParameterMap().getId());</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>   
-List&lt;ParameterMapping&gt; parameterMappings = boundSql.getParameterMappings();</span></p>
+List&lt;ParameterMapping&gt; parameterMappings =
+boundSql.getParameterMappings();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    if (parameterMappings !=
 null) {</span></p>
@@ -4391,43 +1638,47 @@ null) {</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>      for (int i = 0; i &lt;
 parameterMappings.size(); i++) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        ParameterMapping parameterMapping
-= parameterMappings.get(i);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        ParameterMapping
+parameterMapping = parameterMappings.get(i);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        if (parameterMapping.getMode()
-!= ParameterMode.OUT) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        if
+(parameterMapping.getMode() != ParameterMode.OUT) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          Object value;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          String propertyName
-= parameterMapping.getProperty();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          String
+propertyName = parameterMapping.getProperty();</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          if (boundSql.hasAdditionalParameter(propertyName))
-{ // issue #448 ask first for additional params</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          if
+(boundSql.hasAdditionalParameter(propertyName)) { // issue #448 ask first for
+additional params</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>            value = boundSql.getAdditionalParameter(propertyName);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>            value =
+boundSql.getAdditionalParameter(propertyName);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          } else if (parameterObject
-== null) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          } else if
+(parameterObject == null) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>            value = null;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          } else if (typeHandlerRegistry.hasTypeHandler(parameterObject.getClass()))
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          } else if
+(typeHandlerRegistry.hasTypeHandler(parameterObject.getClass())) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>            value = parameterObject;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>            value =
+parameterObject;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          } else {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>            MetaObject metaObject
-= configuration.newMetaObject(parameterObject);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>            MetaObject
+metaObject = configuration.newMetaObject(parameterObject);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>            value = metaObject.getValue(propertyName);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>            value =
+metaObject.getValue(propertyName);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          }</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          TypeHandler typeHandler
-= parameterMapping.getTypeHandler();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          TypeHandler
+typeHandler = parameterMapping.getTypeHandler();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          JdbcType jdbcType
 = parameterMapping.getJdbcType();</span></p>
@@ -4435,7 +1686,8 @@ parameterMappings.size(); i++) {</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>          if (value == null
 &amp;&amp; jdbcType == null) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>            jdbcType = configuration.getJdbcTypeForNull();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>            jdbcType =
+configuration.getJdbcTypeForNull();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          }</span></p>
 
@@ -4448,8 +1700,8 @@ i + 1, value, jdbcType);</span></p>
 (TypeException | SQLException e) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>            throw new
-TypeException(&quot;Could not set parameters for mapping: &quot; + parameterMapping
-+ &quot;. Cause: &quot; + e, e);</span></p>
+TypeException(&quot;Could not set parameters for mapping: &quot; +
+parameterMapping + &quot;. Cause: &quot; + e, e);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          }</span></p>
 
@@ -4463,7 +1715,7 @@ TypeException(&quot;Could not set parameters for mapping: &quot; + parameterMapp
 
 <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397315"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397698"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>4.3 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>ResultHandler</span></a></h3>
 
@@ -4471,8 +1723,8 @@ lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>ResultHandl
 color:black;background:#E8F2FE'>&nbsp;</span></p>
 
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
-lang=EN-US style='color:black;background:white'>org.apache.ibatis.session. ResultHandler</span><span
-style='font-family:宋体;color:black;background:white'>方法</span></p>
+lang=EN-US style='color:black;background:white'>org.apache.ibatis.session.
+ResultHandler</span><span style='font-family:宋体;color:black;background:white'>方法</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
@@ -4514,7 +1766,8 @@ DefaultMapResultHandler&lt;K, V&gt; implements ResultHandler&lt;V&gt; {</span></
 <p class=COR-><span lang=EN-US style='color:black'>  private final Map&lt;K,
 V&gt; mappedResults;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private final String mapKey;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private final String
+mapKey;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private final
 ObjectFactory objectFactory;</span></p>
@@ -4527,20 +1780,24 @@ ReflectorFactory reflectorFactory;</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  @SuppressWarnings(&quot;unchecked&quot;)</span></p>
+<p class=COR-><span lang=EN-US style='color:black'> 
+@SuppressWarnings(&quot;unchecked&quot;)</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  public
 DefaultMapResultHandler(String mapKey, ObjectFactory objectFactory,
 ObjectWrapperFactory objectWrapperFactory, ReflectorFactory reflectorFactory) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.objectFactory = objectFactory;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.objectFactory =
+objectFactory;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.objectWrapperFactory
-= objectWrapperFactory;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>   
+this.objectWrapperFactory = objectWrapperFactory;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.reflectorFactory = reflectorFactory;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.reflectorFactory =
+reflectorFactory;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.mappedResults = objectFactory.create(Map.class);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.mappedResults =
+objectFactory.create(Map.class);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    this.mapKey = mapKey;</span></p>
 
@@ -4553,17 +1810,21 @@ ObjectWrapperFactory objectWrapperFactory, ReflectorFactory reflectorFactory) {<
 <p class=COR-><span lang=EN-US style='color:black'>  public void
 handleResult(ResultContext&lt;? extends V&gt; context) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    final V value = context.getResultObject();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    final V value =
+context.getResultObject();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    final MetaObject mo =
-MetaObject.forObject(value, objectFactory, objectWrapperFactory, reflectorFactory);</span></p>
+MetaObject.forObject(value, objectFactory, objectWrapperFactory,
+reflectorFactory);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    // TODO is that
 assignment always true?</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    final K key = (K) mo.getValue(mapKey);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    final K key = (K)
+mo.getValue(mapKey);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    mappedResults.put(key, value);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    mappedResults.put(key,
+value);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -4589,7 +1850,7 @@ V&gt; list = selectList(statement, parameter, rowBounds);</span></p>
 DefaultMapResultHandler&lt;K, V&gt; mapResultHandler = new
 DefaultMapResultHandler&lt;&gt;(mapKey,</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>            configuration.getObjectFactory(),
+<p class=COR-><span lang=EN-US style='color:black'>            configuration.getObjectFactory(),
 configuration.getObjectWrapperFactory(), configuration.getReflectorFactory());</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    final
@@ -4597,13 +1858,15 @@ DefaultResultContext&lt;V&gt; context = new DefaultResultContext&lt;&gt;();</spa
 
 <p class=COR-><span lang=EN-US style='color:black'>    for (V o : list) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      context.nextResultObject(o);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+context.nextResultObject(o);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      mapResultHandler.handleResult(context);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      mapResultHandler.handleResult(context);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    return mapResultHandler.getMappedResults();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    return
+mapResultHandler.getMappedResults();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -4611,12 +1874,12 @@ DefaultResultContext&lt;V&gt; context = new DefaultResultContext&lt;&gt;();</spa
 
 <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>&nbsp;</span></p>
 
-<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397316"><span
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397699"><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>5.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>cache</span></a></h2>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397317"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397700"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>5.1 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>cache</span></a></h3>
 
@@ -4632,7 +1895,8 @@ src="mybatis.files/image002.gif" alt=Mybatis缓存机制></span><span lang=EN-US
 <p class=COR-><span lang=EN-US style='color:black'>  void putObject(Object key,
 Object value);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  Object getObject(Object key);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  Object getObject(Object
+key);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  Object removeObject(Object
 key);</span></p>
@@ -4644,7 +1908,7 @@ key);</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>  default ReadWriteLock
 getReadWriteLock() {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    return null;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    return null;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -4655,7 +1919,7 @@ getReadWriteLock() {</span></p>
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
 lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397318"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397701"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>5.2 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>CacheKey</span></a></h3>
 
@@ -4663,13 +1927,16 @@ lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>CacheKey</s
 lang=EN-US style='color:black;background:white'>org.apache.ibatis.cache .CacheKey</span><span
 style='font-family:宋体;color:black;background:white'>内容</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>private List&lt;Object&gt; updateList;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>private List&lt;Object&gt;
+updateList;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  public CacheKey() {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.hashcode = DEFAULT_HASHCODE;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.hashcode =
+DEFAULT_HASHCODE;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.multiplier = DEFAULT_MULTIPLYER;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.multiplier =
+DEFAULT_MULTIPLYER;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    this.count = 0;</span></p>
 
@@ -4682,7 +1949,7 @@ ArrayList&lt;&gt;();</span></p>
 
 <p class=MsoBodyTextFirstIndent style='text-indent:10.5pt'><span lang=EN-US>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397319"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397702"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>5.3 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>TransactionalCacheManager</span></a></h3>
 
@@ -4716,7 +1983,7 @@ HashMap&lt;&gt;();</span></p>
 <h3 style='margin-left:0cm;text-indent:0cm'><span lang=EN-US style='font-size:
 12.0pt;font-family:"Calibri",sans-serif'>5.4 </span><span lang=EN-US
 style='font-size:12.0pt;font-family:"Calibri",sans-serif'> <a
-name="_Toc127397320">CachingExecutor</a></span></h3>
+name="_Toc127397703">CachingExecutor</a></span></h3>
 
 <p class=MsoBodyTextFirstIndent style='text-indent:10.5pt'><span lang=EN-US>&nbsp;</span></p>
 
@@ -4737,11 +2004,11 @@ style='color:black;background:white'>cacheEnabled</span><span style='font-family
 <p class=COR-><span lang=EN-US style='color:black'>  public Executor
 newExecutor(Transaction transaction, ExecutorType executorType) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    executorType = executorType
-== null ? defaultExecutorType : executorType;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    executorType =
+executorType == null ? defaultExecutorType : executorType;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    executorType = executorType
-== null ? ExecutorType.SIMPLE : executorType;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    executorType =
+executorType == null ? ExecutorType.SIMPLE : executorType;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    Executor executor;</span></p>
 
@@ -4751,8 +2018,8 @@ newExecutor(Transaction transaction, ExecutorType executorType) {</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>      executor = new
 BatchExecutor(this, transaction);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    } else if (ExecutorType.REUSE
-== executorType) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    } else if
+(ExecutorType.REUSE == executorType) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      executor = new
 ReuseExecutor(this, transaction);</span></p>
@@ -4771,7 +2038,8 @@ CachingExecutor(executor);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    executor = (Executor) interceptorChain.pluginAll(executor);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    executor = (Executor)
+interceptorChain.pluginAll(executor);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    return executor;</span></p>
 
@@ -4786,35 +2054,38 @@ style='font-family:宋体;color:black;background:white'>是缓存使用二级缓
 <p class=COR-><span lang=EN-US style='color:black'>  @Override</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  public &lt;E&gt;
-List&lt;E&gt; query(MappedStatement ms, Object parameterObject, RowBounds rowBounds,
-ResultHandler resultHandler, CacheKey key, BoundSql boundSql)</span></p>
+List&lt;E&gt; query(MappedStatement ms, Object parameterObject, RowBounds
+rowBounds, ResultHandler resultHandler, CacheKey key, BoundSql boundSql)</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      throws SQLException {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    Cache cache = ms.getCache();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    Cache cache =
+ms.getCache();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    if (cache != null) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      flushCacheIfRequired(ms);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+flushCacheIfRequired(ms);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      if (ms.isUseCache()
 &amp;&amp; resultHandler == null) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        ensureNoOutParams(ms,
-boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>       
+ensureNoOutParams(ms, boundSql);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        @SuppressWarnings(&quot;unchecked&quot;)</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>       
+@SuppressWarnings(&quot;unchecked&quot;)</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        List&lt;E&gt; list =
 (List&lt;E&gt;) tcm.getObject(cache, key);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        if (list == null) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          list = delegate.query(ms,
-parameterObject, rowBounds, resultHandler, key, boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          list =
+delegate.query(ms, parameterObject, rowBounds, resultHandler, key, boundSql);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          tcm.putObject(cache,
-key, list); // issue #578 and #116</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>         
+tcm.putObject(cache, key, list); // issue #578 and #116</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        }</span></p>
 
@@ -4824,8 +2095,8 @@ key, list); // issue #578 and #116</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    return delegate.query(ms,
-parameterObject, rowBounds, resultHandler, key, boundSql);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    return
+delegate.query(ms, parameterObject, rowBounds, resultHandler, key, boundSql);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -4835,12 +2106,12 @@ parameterObject, rowBounds, resultHandler, key, boundSql);</span></p>
 
 <p class=MsoBodyTextFirstIndent style='text-indent:0cm'><span lang=EN-US>&nbsp;</span></p>
 
-<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397321"><span
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397704"><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>6.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>reflection</span></a></h2>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397322"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397705"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>6.1 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>Invoker</span></a></h3>
 
@@ -4863,15 +2134,16 @@ style='font-family:宋体;color:black;background:white'>主要内容</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>public class MethodInvoker implements
-Invoker {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>public class MethodInvoker
+implements Invoker {</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private final
 Class&lt;?&gt; type;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private final Method method;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private final Method
+method;</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
@@ -4882,14 +2154,16 @@ MethodInvoker(Method method) {</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    if (method.getParameterTypes().length
-== 1) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    if
+(method.getParameterTypes().length == 1) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      type = method.getParameterTypes()[0];</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      type =
+method.getParameterTypes()[0];</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } else {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      type = method.getReturnType();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      type =
+method.getReturnType();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
@@ -4905,19 +2179,20 @@ InvocationTargetException {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    try {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      return method.invoke(target,
-args);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      return
+method.invoke(target, args);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    } catch
-(IllegalAccessException e) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    } catch (IllegalAccessException
+e) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      if (Reflector.canControlMemberAccessible())
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      if
+(Reflector.canControlMemberAccessible()) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        method.setAccessible(true);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>       
+method.setAccessible(true);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        return method.invoke(target,
-args);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        return
+method.invoke(target, args);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      } else {</span></p>
 
@@ -4936,7 +2211,7 @@ args);</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>  public Class&lt;?&gt;
 getType() {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    return type;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    return type;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -4987,17 +2262,19 @@ invoke(Object target, Object[] args) throws IllegalAccessException {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    try {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      return field.get(target);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      return
+field.get(target);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } catch
 (IllegalAccessException e) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      if (Reflector.canControlMemberAccessible())
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      if
+(Reflector.canControlMemberAccessible()) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        field.setAccessible(true);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        return field.get(target);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        return
+field.get(target);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      } else {</span></p>
 
@@ -5067,17 +2344,20 @@ invoke(Object target, Object[] args) throws IllegalAccessException {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    try {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      field.set(target, args[0]);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      field.set(target,
+args[0]);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } catch
 (IllegalAccessException e) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      if (Reflector.canControlMemberAccessible())
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      if
+(Reflector.canControlMemberAccessible()) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        field.setAccessible(true);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>       
+field.setAccessible(true);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        field.set(target, args[0]);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        field.set(target,
+args[0]);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      } else {</span></p>
 
@@ -5091,40 +2371,23 @@ invoke(Object target, Object[] args) throws IllegalAccessException {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
-<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas'>&nbsp;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  @Override</span></p>
 
-<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>  </span><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#646464'>@Override</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  public Class&lt;?&gt;
+getType() {</span></p>
 
-<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>  </span><b><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
-Class&lt;?&gt; getType() {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    return field.getType();</span></p>
 
-<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>    </span><b><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>return</span></b><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>field</span><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.getType();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
-<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>  }</span></p>
-
-<p class=MsoNormal><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
-color:black'>}</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>}</span></p>
 
 <p class=MsoNormal><u><span lang=EN-US style='font-size:14.0pt;font-family:
 Consolas;color:black;background:#E8F2FE'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397323"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397706"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>6.2 </span><span
-lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>Invoker</span></a><span
-lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black;background:
-#E8F2FE'> Reflector</span></h3>
+lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>Reflector</span></a></h3>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
@@ -5145,7 +2408,8 @@ Class&lt;?&gt; type;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private final String[] readablePropertyNames;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private final String[] writablePropertyNames;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private final String[]
+writablePropertyNames;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private final
 Map&lt;String, Invoker&gt; setMethods = new HashMap&lt;&gt;();</span></p>
@@ -5174,7 +2438,8 @@ Reflector(Class&lt;?&gt; clazz) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    type = clazz;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    addDefaultConstructor(clazz);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>   
+addDefaultConstructor(clazz);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    addGetMethods(clazz);</span></p>
 
@@ -5182,25 +2447,25 @@ Reflector(Class&lt;?&gt; clazz) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    addFields(clazz);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    readablePropertyNames = getMethods.keySet().toArray(new
-String[0]);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    readablePropertyNames =
+getMethods.keySet().toArray(new String[0]);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    writablePropertyNames = setMethods.keySet().toArray(new
-String[0]);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    writablePropertyNames =
+setMethods.keySet().toArray(new String[0]);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    for (String propName : readablePropertyNames)
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    for (String propName :
+readablePropertyNames) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      caseInsensitivePropertyMap.put(propName.toUpperCase(Locale.ENGLISH),
-propName);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+caseInsensitivePropertyMap.put(propName.toUpperCase(Locale.ENGLISH), propName);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    for (String propName : writablePropertyNames)
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    for (String propName :
+writablePropertyNames) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      caseInsensitivePropertyMap.put(propName.toUpperCase(Locale.ENGLISH),
-propName);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+caseInsensitivePropertyMap.put(propName.toUpperCase(Locale.ENGLISH), propName);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
@@ -5211,12 +2476,12 @@ propName);</span></p>
 <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
 lang=EN-US style='font-size:14.0pt;font-family:Consolas'>&nbsp;</span></p>
 
-<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397324"><span
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397707"><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>7.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>binding</span></a></h2>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397325"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397708"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>7.1 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>MapperProxy</span></a></h3>
 
@@ -5237,10 +2502,11 @@ MapperProxy&lt;T&gt; implements InvocationHandler, Serializable {</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private static final long serialVersionUID
-= -6424540398559729838L;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private static final long
+serialVersionUID = -6424540398559729838L;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private final SqlSession sqlSession;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private final SqlSession
+sqlSession;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private final
 Class&lt;T&gt; mapperInterface;</span></p>
@@ -5254,11 +2520,14 @@ Map&lt;Method, MapperMethod&gt; methodCache;</span></p>
 MapperProxy(SqlSession sqlSession, Class&lt;T&gt; mapperInterface,
 Map&lt;Method, MapperMethod&gt; methodCache) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.sqlSession = sqlSession;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.sqlSession =
+sqlSession;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.mapperInterface = mapperInterface;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.mapperInterface =
+mapperInterface;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    this.methodCache = methodCache;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    this.methodCache =
+methodCache;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -5271,14 +2540,14 @@ invoke(Object proxy, Method method, Object[] args) throws Throwable {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    try {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      if (Object.class.equals(method.getDeclaringClass()))
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      if
+(Object.class.equals(method.getDeclaringClass())) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        return method.invoke(this,
-args);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        return
+method.invoke(this, args);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      } else if (method.isDefault())
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      } else if
+(method.isDefault()) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        return
 invokeDefaultMethod(proxy, method, args);</span></p>
@@ -5287,15 +2556,16 @@ invokeDefaultMethod(proxy, method, args);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    } catch (Throwable t) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      throw ExceptionUtil.unwrapThrowable(t);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>      throw
+ExceptionUtil.unwrapThrowable(t);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    final MapperMethod mapperMethod
-= cachedMapperMethod(method);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    final MapperMethod
+mapperMethod = cachedMapperMethod(method);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    return mapperMethod.execute(sqlSession,
-args);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    return
+mapperMethod.execute(sqlSession, args);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -5304,8 +2574,9 @@ args);</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>  private MapperMethod
 cachedMapperMethod(Method method) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    return methodCache.computeIfAbsent(method,
-k -&gt; new MapperMethod(mapperInterface, method, sqlSession.getConfiguration()));</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    return
+methodCache.computeIfAbsent(method, k -&gt; new MapperMethod(mapperInterface,
+method, sqlSession.getConfiguration()));</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  }</span></p>
 
@@ -5316,25 +2587,27 @@ invokeDefaultMethod(Object proxy, Method method, Object[] args)</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      throws Throwable {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    final
-Constructor&lt;MethodHandles.Lookup&gt; constructor = MethodHandles.Lookup.class</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    final Constructor&lt;MethodHandles.Lookup&gt;
+constructor = MethodHandles.Lookup.class</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>       
 .getDeclaredConstructor(Class.class, int.class);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    if (!constructor.isAccessible())
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    if
+(!constructor.isAccessible()) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>      constructor.setAccessible(true);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>     
+constructor.setAccessible(true);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    final Class&lt;?&gt; declaringClass
-= method.getDeclaringClass();</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    final Class&lt;?&gt;
+declaringClass = method.getDeclaringClass();</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    return constructor</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        .newInstance(declaringClass,</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>       
+.newInstance(declaringClass,</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>           
 MethodHandles.Lookup.PRIVATE | MethodHandles.Lookup.PROTECTED</span></p>
@@ -5355,7 +2628,7 @@ declaringClass).bindTo(proxy).invokeWithArguments(args);</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397326"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397709"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>7.2 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>MapperMethod</span></a></h3>
 
@@ -5374,7 +2647,8 @@ style='color:black;background:white'>execute </span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private final SqlCommand command;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private final SqlCommand
+command;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private final
 MethodSignature method;</span></p>
@@ -5382,8 +2656,8 @@ MethodSignature method;</span></p>
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  public
-MapperMethod(Class&lt;?&gt; mapperInterface, Method method, Configuration config)
-{</span></p>
+MapperMethod(Class&lt;?&gt; mapperInterface, Method method, Configuration
+config) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    this.command = new
 SqlCommand(config, mapperInterface, method);</span></p>
@@ -5395,17 +2669,18 @@ MethodSignature(config, mapperInterface, method);</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  public Object
-execute(SqlSession sqlSession, Object[] args) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  public Object execute(SqlSession
+sqlSession, Object[] args) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    Object result;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>    switch (command.getType())
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>    switch
+(command.getType()) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      case INSERT: {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        Object param = method.convertArgsToSqlCommandParam(args);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        Object param =
+method.convertArgsToSqlCommandParam(args);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        result =
 rowCountResult(sqlSession.insert(command.getName(), param));</span></p>
@@ -5416,7 +2691,8 @@ rowCountResult(sqlSession.insert(command.getName(), param));</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      case UPDATE: {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        Object param = method.convertArgsToSqlCommandParam(args);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        Object param =
+method.convertArgsToSqlCommandParam(args);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        result =
 rowCountResult(sqlSession.update(command.getName(), param));</span></p>
@@ -5427,7 +2703,8 @@ rowCountResult(sqlSession.update(command.getName(), param));</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      case DELETE: {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        Object param = method.convertArgsToSqlCommandParam(args);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        Object param =
+method.convertArgsToSqlCommandParam(args);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        result =
 rowCountResult(sqlSession.delete(command.getName(), param));</span></p>
@@ -5438,43 +2715,45 @@ rowCountResult(sqlSession.delete(command.getName(), param));</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>      case SELECT:</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        if (method.returnsVoid()
-&amp;&amp; method.hasResultHandler()) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        if
+(method.returnsVoid() &amp;&amp; method.hasResultHandler()) {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>         
-executeWithResultHandler(sqlSession, args);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          executeWithResultHandler(sqlSession,
+args);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          result = null;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        } else if (method.returnsMany())
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        } else if
+(method.returnsMany()) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          result =
 executeForMany(sqlSession, args);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        } else if (method.returnsMap())
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        } else if
+(method.returnsMap()) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          result =
 executeForMap(sqlSession, args);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>        } else if (method.returnsCursor())
-{</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>        } else if
+(method.returnsCursor()) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          result =
 executeForCursor(sqlSession, args);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        } else {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          Object param = method.convertArgsToSqlCommandParam(args);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          Object param =
+method.convertArgsToSqlCommandParam(args);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          result = sqlSession.selectOne(command.getName(),
-param);</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          result =
+sqlSession.selectOne(command.getName(), param);</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>          if (method.returnsOptional()</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>          if
+(method.returnsOptional()</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>              &amp;&amp; (result
-== null || !method.getReturnType().equals(result.getClass()))) {</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>              &amp;&amp;
+(result == null || !method.getReturnType().equals(result.getClass()))) {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>            result =
 Optional.ofNullable(result);</span></p>
@@ -5494,7 +2773,8 @@ Optional.ofNullable(result);</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>      default:</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>        throw new
-BindingException(&quot;Unknown execution method for: &quot; + command.getName());</span></p>
+BindingException(&quot;Unknown execution method for: &quot; +
+command.getName());</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
@@ -5506,8 +2786,8 @@ BindingException(&quot;Unknown execution method for: &quot; + command.getName())
 BindingException(&quot;Mapper method '&quot; + command.getName()</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>          + &quot; attempted
-to return null from a method with a primitive return type (&quot; + method.getReturnType()
-+ &quot;).&quot;);</span></p>
+to return null from a method with a primitive return type (&quot; +
+method.getReturnType() + &quot;).&quot;);</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>    }</span></p>
 
@@ -5521,12 +2801,12 @@ to return null from a method with a primitive return type (&quot; + method.getRe
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397327"><span
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397710"><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>8.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>mapping</span></a></h2>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397328"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397711"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>8.1 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>BoundSql</span></a></h3>
 
@@ -5550,12 +2830,14 @@ Consolas;color:black;background:#E8F2FE'>&nbsp;</span></b></p>
 <p class=COR-><span lang=EN-US style='color:black'>  private final
 List&lt;ParameterMapping&gt; parameterMappings;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private final Object parameterObject;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private final Object
+parameterObject;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private final
 Map&lt;String, Object&gt; additionalParameters;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private final MetaObject metaParameters;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private final MetaObject
+metaParameters;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>}</span></p>
 
@@ -5563,7 +2845,7 @@ Map&lt;String, Object&gt; additionalParameters;</span></p>
 
 <p class=MsoBodyTextFirstIndent style='text-indent:10.5pt'><span lang=EN-US>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397329"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397712"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>8.2 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>MappedStatement</span></a></h3>
 
@@ -5584,7 +2866,8 @@ MappedStatement {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private String resource;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Configuration configuration;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Configuration
+configuration;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private String id;</span></p>
 
@@ -5592,42 +2875,55 @@ MappedStatement {</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private Integer timeout;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private StatementType statementType;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private StatementType
+statementType;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private ResultSetType resultSetType;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private ResultSetType
+resultSetType;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private SqlSource sqlSource;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private SqlSource
+sqlSource;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private Cache cache;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private ParameterMap parameterMap;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private ParameterMap
+parameterMap;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private
 List&lt;ResultMap&gt; resultMaps;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private boolean flushCacheRequired;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private boolean
+flushCacheRequired;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private boolean useCache;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private boolean resultOrdered;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private boolean
+resultOrdered;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private SqlCommandType sqlCommandType;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private SqlCommandType
+sqlCommandType;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private KeyGenerator keyGenerator;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private KeyGenerator
+keyGenerator;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private String[] keyProperties;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private String[]
+keyProperties;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private String[] keyColumns;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private String[]
+keyColumns;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private boolean hasNestedResultMaps;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private boolean
+hasNestedResultMaps;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private String databaseId;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private Log statementLog;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private LanguageDriver lang;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private LanguageDriver
+lang;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private String[] resultSets;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private String[]
+resultSets;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>}</span></p>
 
@@ -5637,7 +2933,7 @@ lang=EN-US style='font-size:14.0pt;font-family:Consolas'>&nbsp;</span></p>
 <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
 lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397330"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397713"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>8.3 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>ParameterMapping</span></a></h3>
 
@@ -5655,27 +2951,32 @@ ParameterMapping {</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Configuration configuration;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Configuration
+configuration;</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private String property;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private ParameterMode mode;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private ParameterMode
+mode;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Class&lt;?&gt; javaType
-= Object.class;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Class&lt;?&gt;
+javaType = Object.class;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private JdbcType jdbcType;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Integer numericScale;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Integer
+numericScale;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private
 TypeHandler&lt;?&gt; typeHandler;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private String resultMapId;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private String
+resultMapId;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private String jdbcTypeName;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private String
+jdbcTypeName;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private String expression;</span></p>
 
@@ -5695,7 +2996,8 @@ style='font-family:宋体;color:black;background:white'>内容</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private String id;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Class&lt;?&gt; type;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Class&lt;?&gt;
+type;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private
 List&lt;ParameterMapping&gt; parameterMappings;</span></p>
@@ -5704,7 +3006,7 @@ List&lt;ParameterMapping&gt; parameterMappings;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397331"><span
+<h3 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397714"><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>8.4 </span><span
 lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'>ResultMapping</span></a></h3>
 
@@ -5718,26 +3020,32 @@ style='font-family:宋体;color:black;background:white'>内容</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>public class ResultMapping {</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Configuration configuration;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Configuration
+configuration;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private String property;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private String column;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Class&lt;?&gt; javaType;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Class&lt;?&gt;
+javaType;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private JdbcType jdbcType;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private
 TypeHandler&lt;?&gt; typeHandler;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private String nestedResultMapId;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private String
+nestedResultMapId;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private String nestedQueryId;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private String
+nestedQueryId;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Set&lt;String&gt; notNullColumns;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Set&lt;String&gt;
+notNullColumns;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private String columnPrefix;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private String
+columnPrefix;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private
 List&lt;ResultFlag&gt; flags;</span></p>
@@ -5747,7 +3055,8 @@ List&lt;ResultMapping&gt; composites;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private String resultSet;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private String foreignColumn;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private String
+foreignColumn;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private boolean lazy;</span></p>
 
@@ -5777,7 +3086,8 @@ Configuration configuration;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private String id;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Class&lt;?&gt; type;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Class&lt;?&gt;
+type;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private
 List&lt;ResultMapping&gt; resultMappings;</span></p>
@@ -5791,17 +3101,22 @@ List&lt;ResultMapping&gt; constructorResultMappings;</span></p>
 <p class=COR-><span lang=EN-US style='color:black'>  private
 List&lt;ResultMapping&gt; propertyResultMappings;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Set&lt;String&gt; mappedColumns;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Set&lt;String&gt;
+mappedColumns;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Set&lt;String&gt; mappedProperties;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Set&lt;String&gt;
+mappedProperties;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Discriminator discriminator;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Discriminator
+discriminator;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private boolean hasNestedResultMaps;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private boolean
+hasNestedResultMaps;</span></p>
 
 <p class=COR-><span lang=EN-US style='color:black'>  private boolean hasNestedQueries;</span></p>
 
-<p class=COR-><span lang=EN-US style='color:black'>  private Boolean autoMapping;</span></p>
+<p class=COR-><span lang=EN-US style='color:black'>  private Boolean
+autoMapping;</span></p>
 
 <p class=COR-><span lang=EN-US>&nbsp;</span></p>
 
@@ -5815,7 +3130,7 @@ List&lt;ResultMapping&gt; propertyResultMappings;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397332"><span
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc127397715"><span
 lang=EN-US style='font-size:12.0pt;line-height:172%;font-family:"Calibri",sans-serif'>9.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
 style='font-size:12.0pt;line-height:172%;font-family:黑体'>参考文献</span></a></h2>
@@ -5827,12 +3142,9 @@ lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
 lang=EN-US style='color:black;background:white'>Mybatis</span><span
 style='font-family:宋体;color:black;background:white'>官网</span></p>
 
-<p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%;font-variant-ligatures: normal;
-font-variant-caps: normal;orphans: 2;widows: 2;-webkit-text-stroke-width: 0px;
-text-decoration-thickness: initial;text-decoration-style: initial;text-decoration-color: initial;
-word-spacing:0px'><span lang=EN-US style='color:black;background:white'><a
-href="https://blog.mybatis.org/p/about.html"><span style='color:black;
-text-decoration:none'>https://blog.mybatis.org/p/about.html</span></a></span></p>
+<p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
+lang=EN-US><a href="https://blog.mybatis.org/p/about.html"><span
+style='color:black;background:white;text-decoration:none'>https://blog.mybatis.org/p/about.html</span></a></span></p>
 
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
 lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
@@ -5842,8 +3154,7 @@ lang=EN-US style='color:black;background:white'>Mybatis</span><span
 style='font-family:宋体;color:black;background:white'>二级缓存</span></p>
 
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
-lang=EN-US style='color:black;background:white'><a
-href="https://blog.csdn.net/qq_39470742/article/details/88600176"><span
+lang=EN-US><a href="https://blog.csdn.net/qq_39470742/article/details/88600176"><span
 style='color:black;text-decoration:none'>https://blog.csdn.net/qq_39470742/article/details/88600176</span></a></span></p>
 
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
@@ -5853,28 +3164,19 @@ lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
 lang=EN-US style='color:black;background:white'>Mybatis</span><span
 style='font-family:宋体;color:black;background:white'>基本原理</span></p>
 
-<p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%;font-variant-ligatures: normal;
-font-variant-caps: normal;orphans: 2;widows: 2;-webkit-text-stroke-width: 0px;
-text-decoration-thickness: initial;text-decoration-style: initial;text-decoration-color: initial;
-word-spacing:0px'><span lang=EN-US style='color:black;background:white'><a
-href="https://segmentfault.com/a/1190000041688841"><span style='color:black;
-text-decoration:none'>https://segmentfault.com/a/1190000041688841</span></a></span></p>
+<p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
+lang=EN-US><a href="https://segmentfault.com/a/1190000041688841"><span
+style='color:black;background:white;text-decoration:none'>https://segmentfault.com/a/1190000041688841</span></a></span></p>
 
-<p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%;font-variant-ligatures: normal;
-font-variant-caps: normal;orphans: 2;widows: 2;-webkit-text-stroke-width: 0px;
-text-decoration-thickness: initial;text-decoration-style: initial;text-decoration-color: initial;
-word-spacing:0px'><span lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
+<p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
 
-<p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%;font-variant-ligatures: normal;
-font-variant-caps: normal;orphans: 2;widows: 2;-webkit-text-stroke-width: 0px;
-text-decoration-thickness: initial;text-decoration-style: initial;text-decoration-color: initial;
-word-spacing:0px'><span lang=EN-US style='color:black;background:white'>Mybatis
-sqlsession</span><span style='font-family:宋体;color:black;background:white'>流程</span></p>
+<p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='color:black;background:white'>Mybatis sqlsession</span><span
+style='font-family:宋体;color:black;background:white'>流程</span></p>
 
-<p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%;font-variant-ligatures: normal;
-font-variant-caps: normal;orphans: 2;widows: 2;-webkit-text-stroke-width: 0px;
-text-decoration-thickness: initial;text-decoration-style: initial;text-decoration-color: initial;
-word-spacing:0px'><span lang=EN-US style='color:black;background:white'>https://blog.csdn.net/javalingyu/article/details/124504454</span></p>
+<p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
+lang=EN-US style='color:black;background:white'>https://blog.csdn.net/javalingyu/article/details/124504454</span></p>
 
 <p style='margin-top:14.4pt;text-indent:24.0pt;line-height:150%'><span
 lang=EN-US style='color:black;background:white'>&nbsp;</span></p>
