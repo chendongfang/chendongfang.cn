@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复利计算器</title>
+</head>
+<body>
+    <h1>复利计算器</h1>
+    <form id="compoundInterestForm">
+        <label for="principal">本金：</label>
+        <input type="number" id="principal" name="principal" required><br><br>
+        
+        <label for="rate">年增长率（%）：</label>
+        <input type="number" id="rate" name="rate" required><br><br>
+        
+        <label for="time">周期（年）：</label>
+        <input type="number" id="time" name="time" required><br><br>
+        
+        <button type="button" onclick="calculateCompoundInterest()">计算</button>
+    </form>
+    <h2>结果：</h2>
+    <p id="result"></p>
+    
+    <script >
+    // script.js
+function calculateCompoundInterest() {
+    // 获取输入值
+    const principal = parseFloat(document.getElementById('principal').value);
+    const rate = parseFloat(document.getElementById('rate').value) / 100;
+    const time = parseInt(document.getElementById('time').value);
+
+    // 计算复利
+    const amount = principal * Math.pow((1 + rate), time);
+
+    // 显示结果
+    document.getElementById('result').innerText = `经过 ${time} 年后，本金为 ${principal} 元的投资将变成 ${amount.toFixed(2)} 元。`;
+}
+
+    </script>
+</body>
+</html>
