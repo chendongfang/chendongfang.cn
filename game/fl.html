@@ -11,10 +11,10 @@
         <label for="principal">本金：</label>
         <input type="number" id="principal" name="principal" required><br><br>
         
-        <label for="rate">年增长率（%）：</label>
+        <label for="rate">增长率（%）：</label>
         <input type="number" id="rate" name="rate" required><br><br>
         
-        <label for="time">周期（年）：</label>
+        <label for="time">周期：</label>
         <input type="number" id="time" name="time" required><br><br>
         
         <button type="button" onclick="calculateCompoundInterest()">计算</button>
@@ -34,7 +34,7 @@ function calculateCompoundInterest() {
     const amount = principal * Math.pow((1 + rate), time);
 
     // 显示结果
-    document.getElementById('result').innerText = `经过 ${time} 年后，本金为 ${principal} 元的投资将变成 ${amount.toFixed(2)} 元。`;
+    document.getElementById('result').innerText = `经过 ${time} 周期后，本金为 ${principal} 元的投资将变成 ${amount.toFixed(2)} 元。`;
 }
 
     </script>
