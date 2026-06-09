@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国象棋 - 人机对弈</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #2c3e50;
+            font-family: '楷体', 'KaiTi', '华文楷体', 'STKaiti', '宋体', serif;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .game-container {
+            background: #deb887;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .board-wrapper {
+            position: relative;
+            width: 320px;
+            height: 360px;
+            margin-bottom: 20px;
+        }
+        canvas#boardCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 8px;
+            background: #f5deb3;
+        }
+        #pieces-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .piece {
+            position: absolute;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #fff9e6, #d4a76a);
+            border: 2px solid #8b5a2b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+            pointer-events: auto;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+            user-select: none;
+            transition: box-shadow 0.1s;
+            z-index: 10;
+        }
+        .piece.red {
+            color: #c0392b;
+            text-shadow: 0 0 2px #fff;
+        }
+        .piece.black {
+            color: #1e272e;
+            text-shadow: 0 0 2px #ddd;
+        }
+        .piece.selected {
+            box-shadow: 0 0 0 4px gold, 0 0 15px yellow;
+            z-index: 20;
+        }
+        .legal-dot {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: rgba(0, 200, 0, 0.7);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: auto;
+            cursor: pointer;
+            z-index: 15;
+            box-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+            transition: transform 0.1s;
+        }
+        .legal-dot:hover {
+            transform: translate(-50%, -50%) scale(1.3);
+            background: rgba(0, 255, 0, 0.9);
+        }
+        .controls {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            padding: 10px 22px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            background: #ecf0f1;
+            color: #2c3e50;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .btn:hover {
+            background: #bdc3c7;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+        .btn.active {
+            background: #f39c12;
+            color: white;
+            box-shadow: 0 0 15px #f39c12;
+        }
+        .status {
+            font-size: 22px;
+            font-weight: bold;
+            color: #f1c40f;
+            text-shadow: 2px 2px 4px black;
+            min-height: 36px;
+            margin-top: 5px;
+        }
+        .turn-indicator {
+            font-size: 18px;
+            color: #ecf0f1;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="turn-indicator" id="turnIndicator">🔴 红方走棋 (你)</div>
+        <div class="board-wrapper" id="boardWrapper">
+            <canvas id="boardCanvas" width="320" height="360"></canvas>
+            <div id="pieces-layer"></div>
+        </div>
+        <div class="status" id="status"></div>
+        <div class="controls">
+            <button class="btn active" id="btnEasy" onclick="setDifficulty('easy')">初级</button>
+            <button class="btn" id="btnMedium" onclick="setDifficulty('medium')">中级</button>
+            <button class="btn" id="btnHard" onclick="setDifficulty('hard')">高级</button>
+            <button class="btn" onclick="resetGame()">🔄 新游戏</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // ---------- 棋盘定义 ----------
+            const ROWS = 10;
+            const COLS = 9;
+            const CELL_SIZE = 40;
+            const BOARD_WIDTH = COLS * CELL_SIZE;  // 320
+            const BOARD_HEIGHT = ROWS * CELL_SIZE; // 360
+
+            const PIECE_NAMES = {
+                'rK': '帅',
+                'rA': '仕',
+                'rB': '相',
+                'rN': '馬',
+                'rR': '車',
+                'rC': '炮',
+                'rP': '兵',
+                'bK': '将',
+                'bA': '士',
+                'bB': '象',
+                'bN': '馬',
+                'bR': '車',
+                'bC': '砲',
+                'bP': '卒'
+            };
+
+            const PIECE_VALUES = {
+                'K': 10000,
+                'R': 900,
+                'C': 450,
+                'N': 400,
+                'B': 200,
+                'A': 200,
+                'P': 100
+            };
+
+            let board = [];
+            let currentPlayer = 'r';
+            let gameOver = false;
+            let selectedPiece = null;
+            let legalMoves = [];
+            let aiThinking = false;
+            let difficulty = 'easy';
+            let searchDepth = 1;
+
+            const boardWrapper = document.getElementById('boardWrapper');
+            const piecesLayer = document.getElementById('pieces-layer');
+            const canvas = document.getElementById('boardCanvas');
+            const ctx = canvas.getContext('2d');
+            const statusDiv = document.getElementById('status');
+            const turnIndicator = document.getElementById('turnIndicator');
+            const btnEasy = document.getElementById('btnEasy');
+            const btnMedium = document.getElementById('btnMedium');
+            const btnHard = document.getElementById('btnHard');
+
+            // ---------- 棋盘绘制 ----------
+            function drawBoardBackground() {
+                ctx.clearRect(0, 0, BOARD_WIDTH, BOARD_HEIGHT);
+                ctx.strokeStyle = '#5c4033';
+                ctx.lineWidth = 1.8;
+                for (let r = 0; r < ROWS; r++) {
+                    ctx.beginPath();
+                    ctx.moveTo(0, r * CELL_SIZE);
+                    ctx.lineTo(BOARD_WIDTH, r * CELL_SIZE);
+                    ctx.stroke();
+                }
+                for (let c = 0; c < COLS; c++) {
+                    ctx.beginPath();
+                    ctx.moveTo(c * CELL_SIZE, 0);
+                    ctx.lineTo(c * CELL_SIZE, 4 * CELL_SIZE);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(c * CELL_SIZE, 5 * CELL_SIZE);
+                    ctx.lineTo(c * CELL_SIZE, 9 * CELL_SIZE);
+                    ctx.stroke();
+                }
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.lineTo(0, BOARD_HEIGHT);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(BOARD_WIDTH, 0);
+                ctx.lineTo(BOARD_WIDTH, BOARD_HEIGHT);
+                ctx.stroke();
+
+                ctx.strokeStyle = '#5c4033';
+                ctx.lineWidth = 1.2;
+                ctx.beginPath();
+                ctx.moveTo(3 * CELL_SIZE, 0);
+                ctx.lineTo(5 * CELL_SIZE, 2 * CELL_SIZE);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(5 * CELL_SIZE, 0);
+                ctx.lineTo(3 * CELL_SIZE, 2 * CELL_SIZE);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(3 * CELL_SIZE, 7 * CELL_SIZE);
+                ctx.lineTo(5 * CELL_SIZE, 9 * CELL_SIZE);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(5 * CELL_SIZE, 7 * CELL_SIZE);
+                ctx.lineTo(3 * CELL_SIZE, 9 * CELL_SIZE);
+                ctx.stroke();
+
+                ctx.font = '18px "楷体", "KaiTi", serif';
+                ctx.fillStyle = '#5c4033';
+                ctx.fillText('楚  河', 60, 4.7 * CELL_SIZE);
+                ctx.fillText('汉  界', 190, 4.7 * CELL_SIZE);
+            }
+
+            function initBoard() {
+                const b = Array(ROWS).fill().map(() => Array(COLS).fill(null));
+                b[0][0] = 'bR'; b[0][1] = 'bN'; b[0][2] = 'bB'; b[0][3] = 'bA'; b[0][4] = 'bK';
+                b[0][5] = 'bA'; b[0][6] = 'bB'; b[0][7] = 'bN'; b[0][8] = 'bR';
+                b[1][1] = 'bC'; b[1][7] = 'bC';
+                b[2][0] = 'bP'; b[2][2] = 'bP'; b[2][4] = 'bP'; b[2][6] = 'bP'; b[2][8] = 'bP';
+
+                b[9][0] = 'rR'; b[9][1] = 'rN'; b[9][2] = 'rB'; b[9][3] = 'rA'; b[9][4] = 'rK';
+                b[9][5] = 'rA'; b[9][6] = 'rB'; b[9][7] = 'rN'; b[9][8] = 'rR';
+                b[8][1] = 'rC'; b[8][7] = 'rC';
+                b[7][0] = 'rP'; b[7][2] = 'rP'; b[7][4] = 'rP'; b[7][6] = 'rP'; b[7][8] = 'rP';
+                return b;
+            }
+
+            function cloneBoard(board) {
+                return board.map(row => row.slice());
+            }
+
+            function findKing(board, color) {
+                const kingChar = color === 'r' ? 'rK' : 'bK';
+                for (let r = 0; r < ROWS; r++) {
+                    for (let c = 0; c < COLS; c++) {
+                        if (board[r][c] === kingChar) return { row: r, col: c };
+                    }
+                }
+                return null;
+            }
+
+            function getRawMoves(row, col, board) {
+                const piece = board[row][col];
+                if (!piece) return [];
+                const color = piece[0];
+                const type = piece[1];
+                const moves = [];
+                const opponentColor = color === 'r' ? 'b' : 'r';
+
+                function addMove(r, c) {
+                    if (r >= 0 && r < ROWS && c >= 0 && c < COLS) {
+                        const target = board[r][c];
+                        if (!target || target[0] === opponentColor) {
+                            moves.push({ row: r, col: c });
+                        }
+                    }
+                }
+
+                function slideMoves(dr, dc) {
+                    let r = row + dr;
+                    let c = col + dc;
+                    while (r >= 0 && r < ROWS && c >= 0 && c < COLS) {
+                        if (board[r][c] === null) {
+                            moves.push({ row: r, col: c });
+                        } else {
+                            if (board[r][c][0] === opponentColor) moves.push({ row: r, col: c });
+                            break;
+                        }
+                        r += dr;
+                        c += dc;
+                    }
+                }
+
+                switch (type) {
+                    case 'K':
+                        const kingMoves = [[-1,0],[1,0],[0,-1],[0,1]];
+                        for (let [dr,dc] of kingMoves) {
+                            const nr = row+dr, nc = col+dc;
+                            if (nr<0||nr>=ROWS||nc<0||nc>=COLS) continue;
+                            const inPalace = (color==='r' && nr>=7 && nr<=9 && nc>=3 && nc<=5) ||
+                                            (color==='b' && nr>=0 && nr<=2 && nc>=3 && nc<=5);
+                            if (!inPalace) continue;
+                            const target = board[nr][nc];
+                            if (!target || target[0]===opponentColor) moves.push({row:nr, col:nc});
+                        }
+                        break;
+                    case 'A':
+                        const advisorMoves = [[-1,-1],[-1,1],[1,-1],[1,1]];
+                        for (let [dr,dc] of advisorMoves) {
+                            const nr = row+dr, nc = col+dc;
+                            if (nr<0||nr>=ROWS||nc<0||nc>=COLS) continue;
+                            const inPalace = (color==='r' && nr>=7 && nr<=9 && nc>=3 && nc<=5) ||
+                                            (color==='b' && nr>=0 && nr<=2 && nc>=3 && nc<=5);
+                            if (!inPalace) continue;
+                            const target = board[nr][nc];
+                            if (!target || target[0]===opponentColor) moves.push({row:nr, col:nc});
+                        }
+                        break;
+                    case 'B':
+                        const elephantMoves = [[-2,-2],[-2,2],[2,-2],[2,2]];
+                        const eyeOffsets = [[-1,-1],[-1,1],[1,-1],[1,1]];
+                        for (let i=0; i<4; i++) {
+                            const nr = row+elephantMoves[i][0], nc = col+elephantMoves[i][1];
+                            if (nr<0||nr>=ROWS||nc<0||nc>=COLS) continue;
+                            if (color==='r' && nr<5) continue;
+                            if (color==='b' && nr>4) continue;
+                            const eyeR = row+eyeOffsets[i][0], eyeC = col+eyeOffsets[i][1];
+                            if (board[eyeR][eyeC] !== null) continue;
+                            const target = board[nr][nc];
+                            if (!target || target[0]===opponentColor) moves.push({row:nr, col:nc});
+                        }
+                        break;
+                    case 'N':
+                        const knightMoves = [[-2,-1],[-2,1],[-1,-2],[-1,2],[1,-2],[1,2],[2,-1],[2,1]];
+                        const legOffsets = [[-1,0],[-1,0],[0,-1],[0,1],[0,-1],[0,1],[1,0],[1,0]];
+                        for (let i=0; i<8; i++) {
+                            const nr = row+knightMoves[i][0], nc = col+knightMoves[i][1];
+                            if (nr<0||nr>=ROWS||nc<0||nc>=COLS) continue;
+                            const legR = row+legOffsets[i][0], legC = col+legOffsets[i][1];
+                            if (board[legR][legC] !== null) continue;
+                            const target = board[nr][nc];
+                            if (!target || target[0]===opponentColor) moves.push({row:nr, col:nc});
+                        }
+                        break;
+                    case 'R':
+                        slideMoves(-1,0); slideMoves(1,0); slideMoves(0,-1); slideMoves(0,1);
+                        break;
+                    case 'C':
+                        const dirs = [[-1,0],[1,0],[0,-1],[0,1]];
+                        for (let [dr,dc] of dirs) {
+                            let r = row+dr, c = col+dc;
+                            while (r>=0 && r<ROWS && c>=0 && c<COLS) {
+                                if (board[r][c] === null) {
+                                    moves.push({row:r, col:c});
+                                } else {
+                                    let r2 = r+dr, c2 = c+dc;
+                                    while (r2>=0 && r2<ROWS && c2>=0 && c2<COLS) {
+                                        if (board[r2][c2] !== null) {
+                                            if (board[r2][c2][0] === opponentColor) moves.push({row:r2, col:c2});
+                                            break;
+                                        }
+                                        r2 += dr; c2 += dc;
+                                    }
+                                    break;
+                                }
+                                r += dr; c += dc;
+                            }
+                        }
+                        break;
+                    case 'P':
+                        const forward = color==='r' ? -1 : 1;
+                        const crossed = (color==='r' && row<=4) || (color==='b' && row>=5);
+                        addMove(row+forward, col);
+                        if (crossed) {
+                            addMove(row, col-1);
+                            addMove(row, col+1);
+                        }
+                        break;
+                }
+                return moves;
+            }
+
+            function isSquareAttacked(row, col, attackerColor, board) {
+                for (let r=0; r<ROWS; r++) {
+                    for (let c=0; c<COLS; c++) {
+                        const piece = board[r][c];
+                        if (piece && piece[0]===attackerColor) {
+                            const raw = getRawMoves(r,c,board);
+                            for (let m of raw) {
+                                if (m.row===row && m.col===col) return true;
+                            }
+                        }
+                    }
+                }
+                const attackerKing = findKing(board, attackerColor);
+                const defenderColor = attackerColor==='r'?'b':'r';
+                const defenderKing = findKing(board, defenderColor);
+                if (attackerKing && defenderKing && attackerKing.col===defenderKing.col) {
+                    const colK = attackerKing.col;
+                    const minRow = Math.min(attackerKing.row, defenderKing.row);
+                    const maxRow = Math.max(attackerKing.row, defenderKing.row);
+                    let blocked = false;
+                    for (let r=minRow+1; r<maxRow; r++) {
+                        if (board[r][colK] !== null) { blocked = true; break; }
+                    }
+                    if (!blocked && row===defenderKing.row && col===defenderKing.col) return true;
+                }
+                return false;
+            }
+
+            function isKingInCheck(color, board) {
+                const king = findKing(board, color);
+                if (!king) return true;
+                const opp = color==='r'?'b':'r';
+                return isSquareAttacked(king.row, king.col, opp, board);
+            }
+
+            function getLegalMoves(row, col, board) {
+                const piece = board[row][col];
+                if (!piece) return [];
+                const color = piece[0];
+                const raw = getRawMoves(row, col, board);
+                return raw.filter(move => {
+                    const nb = cloneBoard(board);
+                    nb[move.row][move.col] = piece;
+                    nb[row][col] = null;
+                    return !isKingInCheck(color, nb);
+                });
+            }
+
+            function getAllLegalMoves(color, board) {
+                const moves = [];
+                for (let r=0; r<ROWS; r++) {
+                    for (let c=0; c<COLS; c++) {
+                        if (board[r][c] && board[r][c][0]===color) {
+                            const pieceMoves = getLegalMoves(r,c,board);
+                            for (let m of pieceMoves) {
+                                moves.push({fromRow:r, fromCol:c, toRow:m.row, toCol:m.col, piece:board[r][c]});
+                            }
+                        }
+                    }
+                }
+                return moves;
+            }
+
+            function applyMove(board, move) {
+                const nb = cloneBoard(board);
+                nb[move.toRow][move.toCol] = move.piece;
+                nb[move.fromRow][move.fromCol] = null;
+                return nb;
+            }
+
+            function evaluate(board) {
+                let score = 0;
+                for (let r=0; r<ROWS; r++) {
+                    for (let c=0; c<COLS; c++) {
+                        const piece = board[r][c];
+                        if (!piece) continue;
+                        const color = piece[0];
+                        const type = piece[1];
+                        let val = PIECE_VALUES[type] || 0;
+                        if (type==='P') {
+                            if (color==='r' && r<=4) val = 200;
+                            if (color==='b' && r>=5) val = 200;
+                        }
+                        score += (color==='r' ? val : -val);
+                    }
+                }
+                return score;
+            }
+
+            function alphaBeta(board, depth, alpha, beta, maximizingForRed) {
+                if (depth===0) return evaluate(board);
+                const currentColor = maximizingForRed ? 'r' : 'b';
+                const moves = getAllLegalMoves(currentColor, board);
+                if (moves.length===0) return maximizingForRed ? -99999 : 99999;
+                moves.sort((a,b)=>{
+                    const ta = board[a.toRow][a.toCol], tb = board[b.toRow][b.toCol];
+                    const va = ta ? (PIECE_VALUES[ta[1]]||0) : 0;
+                    const vb = tb ? (PIECE_VALUES[tb[1]]||0) : 0;
+                    return vb - va;
+                });
+                if (maximizingForRed) {
+                    let maxEval = -Infinity;
+                    for (let move of moves) {
+                        const nb = applyMove(board, move);
+                        const val = alphaBeta(nb, depth-1, alpha, beta, false);
+                        maxEval = Math.max(maxEval, val);
+                        alpha = Math.max(alpha, val);
+                        if (beta <= alpha) break;
+                    }
+                    return maxEval;
+                } else {
+                    let minEval = Infinity;
+                    for (let move of moves) {
+                        const nb = applyMove(board, move);
+                        const val = alphaBeta(nb, depth-1, alpha, beta, true);
+                        minEval = Math.min(minEval, val);
+                        beta = Math.min(beta, val);
+                        if (beta <= alpha) break;
+                    }
+                    return minEval;
+                }
+            }
+
+            function getBestAIMove() {
+                const moves = getAllLegalMoves('b', board);
+                if (moves.length===0) return null;
+                let bestMove = moves[0];
+                let bestVal = Infinity;
+                const depth = searchDepth;
+                for (let move of moves) {
+                    const nb = applyMove(board, move);
+                    const val = alphaBeta(nb, depth-1, -Infinity, Infinity, true);
+                    if (val < bestVal) {
+                        bestVal = val;
+                        bestMove = move;
+                    }
+                }
+                return bestMove;
+            }
+
+            // ---------- UI 渲染 ----------
+            function renderBoard() {
+                piecesLayer.innerHTML = '';
+                for (let r=0; r<ROWS; r++) {
+                    for (let c=0; c<COLS; c++) {
+                        const piece = board[r][c];
+                        if (!piece) continue;
+                        const div = document.createElement('div');
+                        div.className = 'piece ' + (piece[0]==='r'?'red':'black');
+                        div.textContent = PIECE_NAMES[piece];
+                        div.style.left = (c*CELL_SIZE)+'px';
+                        div.style.top = (r*CELL_SIZE)+'px';
+                        div.dataset.row = r;
+                        div.dataset.col = c;
+                        div.addEventListener('click', onPieceClick);
+                        piecesLayer.appendChild(div);
+                    }
+                }
+                if (selectedPiece) {
+                    const sel = document.querySelector(`.piece[data-row="${selectedPiece.row}"][data-col="${selectedPiece.col}"]`);
+                    if (sel) sel.classList.add('selected');
+                }
+                legalMoves.forEach(m => {
+                    const dot = document.createElement('div');
+                    dot.className = 'legal-dot';
+                    dot.style.left = (m.col*CELL_SIZE)+'px';
+                    dot.style.top = (m.row*CELL_SIZE)+'px';
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        onLegalDotClick(m.row, m.col);
+                    });
+                    piecesLayer.appendChild(dot);
+                });
+            }
+
+            function clearSelection() {
+                selectedPiece = null;
+                legalMoves = [];
+                renderBoard();
+            }
+
+            function onPieceClick(e) {
+                if (gameOver || aiThinking || currentPlayer!=='r') return;
+                const row = parseInt(e.currentTarget.dataset.row);
+                const col = parseInt(e.currentTarget.dataset.col);
+                const piece = board[row][col];
+                if (!piece || piece[0]!=='r') {
+                    if (selectedPiece) {
+                        const moveTarget = legalMoves.find(m => m.row===row && m.col===col);
+                        if (moveTarget) {
+                            executeMove(selectedPiece.row, selectedPiece.col, row, col);
+                        } else {
+                            clearSelection();
+                        }
+                    }
+                    return;
+                }
+                if (selectedPiece && selectedPiece.row===row && selectedPiece.col===col) {
+                    clearSelection();
+                } else {
+                    selectedPiece = {row, col};
+                    legalMoves = getLegalMoves(row, col, board);
+                    renderBoard();
+                }
+            }
+
+            function onLegalDotClick(row, col) {
+                if (!selectedPiece || gameOver || aiThinking || currentPlayer!=='r') return;
+                executeMove(selectedPiece.row, selectedPiece.col, row, col);
+            }
+
+            boardWrapper.addEventListener('click', function(e) {
+                if (e.target === boardWrapper || e.target === canvas || e.target === piecesLayer) {
+                    if (selectedPiece && !gameOver && currentPlayer==='r') {
+                        clearSelection();
+                    }
+                }
+            });
+
+            function executeMove(fromRow, fromCol, toRow, toCol) {
+                if (gameOver || aiThinking) return;
+                const piece = board[fromRow][fromCol];
+                if (!piece || piece[0]!==currentPlayer) return;
+                const legal = getLegalMoves(fromRow, fromCol, board).some(m => m.row===toRow && m.col===toCol);
+                if (!legal) { clearSelection(); return; }
+                board[toRow][toCol] = piece;
+                board[fromRow][fromCol] = null;
+                clearSelection();
+                renderBoard();
+                const opponent = 'b';
+                if (checkGameEnd(opponent)) return;
+                currentPlayer = 'b';
+                updateTurnIndicator();
+                aiThinking = true;
+                statusDiv.textContent = '🤖 AI 思考中...';
+                setTimeout(() => { aiDoMove(); }, 50);
+            }
+
+            function aiDoMove() {
+                if (gameOver) { aiThinking = false; return; }
+                const move = getBestAIMove();
+                if (!move) {
+                    gameOver = true;
+                    statusDiv.textContent = '🎉 黑方无棋可走，红方胜！';
+                    turnIndicator.textContent = '🏆 红方胜利';
+                    aiThinking = false;
+                    renderBoard();
+                    return;
+                }
+                board[move.toRow][move.toCol] = move.piece;
+                board[move.fromRow][move.fromCol] = null;
+                renderBoard();
+                aiThinking = false;
+                if (checkGameEnd('r')) return;
+                currentPlayer = 'r';
+                updateTurnIndicator();
+                statusDiv.textContent = '';
+                clearSelection();
+            }
+
+            function checkGameEnd(color) {
+                const moves = getAllLegalMoves(color, board);
+                if (moves.length === 0) {
+                    gameOver = true;
+                    const winner = color==='r' ? '黑方' : '红方';
+                    statusDiv.textContent = `🏆 ${winner}胜利！${color==='r'?'红方':'黑方'}无棋可走`;
+                    turnIndicator.textContent = `🏆 ${winner}获胜`;
+                    renderBoard();
+                    return true;
+                }
+                return false;
+            }
+
+            function updateTurnIndicator() {
+                if (gameOver) return;
+                turnIndicator.textContent = currentPlayer==='r' ? '🔴 红方走棋 (你)' : '⚫ 黑方走棋 (AI)';
+            }
+
+            function setDifficulty(level) {
+                difficulty = level;
+                btnEasy.classList.remove('active');
+                btnMedium.classList.remove('active');
+                btnHard.classList.remove('active');
+                if (level === 'easy') {
+                    searchDepth = 1;
+                    btnEasy.classList.add('active');
+                } else if (level === 'medium') {
+                    searchDepth = 2;
+                    btnMedium.classList.add('active');
+                } else if (level === 'hard') {
+                    searchDepth = 3;
+                    btnHard.classList.add('active');
+                }
+                resetGame();
+            }
+
+            function resetGame() {
+                board = initBoard();
+                currentPlayer = 'r';
+                gameOver = false;
+                selectedPiece = null;
+                legalMoves = [];
+                aiThinking = false;
+                statusDiv.textContent = '';
+                updateTurnIndicator();
+                renderBoard();
+            }
+
+            // 将需要由 HTML onclick 调用的函数暴露到全局
+            window.setDifficulty = setDifficulty;
+            window.resetGame = resetGame;
+
+            // 启动游戏
+            drawBoardBackground();
+            board = initBoard();
+            renderBoard();
+            updateTurnIndicator();
+            setDifficulty('easy');
+        })();
+    </script>
+</body>
+</html>
